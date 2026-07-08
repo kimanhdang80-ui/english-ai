@@ -1,0 +1,150 @@
+{
+  "id": "general-02",
+  "trackId": "general",
+  "order": 2,
+  "title": "Family & People",
+  "goal": "Talk about your family and describe people.",
+  "difficulty": "easy",
+  "estimatedMinutes": 12,
+  "prerequisite": "general-01",
+  "completionCriteria": {
+    "type": "min_quiz_score",
+    "minQuizScore": 0.8,
+    "summary": "Finish the quiz with at least 80%."
+  },
+  "vocabulary": [
+    {
+      "word": "family",
+      "ipa": "/ˈfæməli/",
+      "meaning": "gia đình",
+      "example": "I love my family."
+    },
+    {
+      "word": "mother",
+      "ipa": "/ˈmʌðər/",
+      "meaning": "mẹ",
+      "example": "My mother cooks dinner."
+    },
+    {
+      "word": "father",
+      "ipa": "/ˈfɑːðər/",
+      "meaning": "bố",
+      "example": "My father drives a car."
+    },
+    {
+      "word": "brother",
+      "ipa": "/ˈbrʌðər/",
+      "meaning": "anh/em trai",
+      "example": "My brother plays football."
+    },
+    {
+      "word": "sister",
+      "ipa": "/ˈsɪstər/",
+      "meaning": "chị/em gái",
+      "example": "My sister reads books."
+    },
+    {
+      "word": "baby",
+      "ipa": "/ˈbeɪbi/",
+      "meaning": "em bé",
+      "example": "The baby is sleeping."
+    },
+    {
+      "word": "old",
+      "ipa": "/oʊld/",
+      "meaning": "già, lớn tuổi",
+      "example": "My grandfather is old."
+    },
+    {
+      "word": "young",
+      "ipa": "/jʌŋ/",
+      "meaning": "trẻ",
+      "example": "My sister is young."
+    }
+  ],
+  "dialogue": [
+    { "speaker": "A", "line": "Is this a photo of your family?" },
+    { "speaker": "B", "line": "Yes, this is my mother and my father." },
+    { "speaker": "A", "line": "Who is the boy?" },
+    { "speaker": "B", "line": "That's my brother. He is young." },
+    { "speaker": "A", "line": "Do you have a sister?" },
+    { "speaker": "B", "line": "Yes, and we have a new baby too." },
+    { "speaker": "A", "line": "Your family is big and happy." },
+    { "speaker": "B", "line": "Thank you! I love my family." }
+  ],
+  "exercises": {
+    "multipleChoice": [
+      {
+        "prompt": "What word means 'mẹ'?",
+        "options": ["father", "mother", "brother", "sister"],
+        "answerIndex": 1,
+        "explanation": "'Mother' means mẹ."
+      },
+      {
+        "prompt": "A very small child is a ___.",
+        "options": ["baby", "old", "family", "father"],
+        "answerIndex": 0,
+        "explanation": "A 'baby' is a very small child."
+      },
+      {
+        "prompt": "The opposite of 'young' is ___.",
+        "options": ["baby", "old", "sister", "family"],
+        "answerIndex": 1,
+        "explanation": "The opposite of young is old."
+      },
+      {
+        "prompt": "Your male parent is your ___.",
+        "options": ["mother", "sister", "father", "baby"],
+        "answerIndex": 2,
+        "explanation": "Your father is your male parent."
+      },
+      {
+        "prompt": "Mother, father, and children are a ___.",
+        "options": ["family", "friend", "baby", "young"],
+        "answerIndex": 0,
+        "explanation": "Together they are a family."
+      }
+    ],
+    "fillBlank": [
+      {
+        "prompt": "My ___ cooks dinner every day.",
+        "answer": "mother",
+        "hint": "mẹ",
+        "explanation": "'Mother' is the correct word."
+      },
+      {
+        "prompt": "The ___ is sleeping in the room.",
+        "answer": "baby",
+        "hint": "em bé",
+        "explanation": "A small child is a baby."
+      },
+      {
+        "prompt": "My grandfather is very ___.",
+        "answer": "old",
+        "hint": "già",
+        "explanation": "'Old' means lớn tuổi."
+      }
+    ],
+    "matching": [
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "family", "right": "gia đình" },
+          { "left": "mother", "right": "mẹ" },
+          { "left": "father", "right": "bố" },
+          { "left": "baby", "right": "em bé" }
+        ]
+      },
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "brother", "right": "anh/em trai" },
+          { "left": "sister", "right": "chị/em gái" },
+          { "left": "old", "right": "già, lớn tuổi" },
+          { "left": "young", "right": "trẻ" }
+        ]
+      }
+    ]
+  },
+  "reviewFocus": ["family", "mother", "father", "sister", "baby"]
+}

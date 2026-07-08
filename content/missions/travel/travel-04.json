@@ -1,0 +1,155 @@
+{
+  "id": "travel-04",
+  "trackId": "travel",
+  "order": 4,
+  "title": "Transport & Tickets",
+  "goal": "Buy tickets and use public transport with simple questions and answers.",
+  "difficulty": "easy",
+  "estimatedMinutes": 13,
+  "prerequisite": "travel-03",
+  "completionCriteria": {
+    "type": "min_quiz_score",
+    "minQuizScore": 0.8,
+    "summary": "Finish the quiz with at least 80%."
+  },
+  "vocabulary": [
+    {
+      "word": "bus",
+      "ipa": "/bʌs/",
+      "meaning": "xe buýt",
+      "example": "The bus is here."
+    },
+    {
+      "word": "train",
+      "ipa": "/treɪn/",
+      "meaning": "tàu hỏa",
+      "example": "The train is fast."
+    },
+    {
+      "word": "taxi",
+      "ipa": "/ˈtæk.si/",
+      "meaning": "xe taxi",
+      "example": "I take a taxi to the hotel."
+    },
+    {
+      "word": "station",
+      "ipa": "/ˈsteɪ.ʃən/",
+      "meaning": "nhà ga, bến xe",
+      "example": "The station is very big."
+    },
+    {
+      "word": "stop",
+      "ipa": "/stɒp/",
+      "meaning": "trạm dừng",
+      "example": "The bus stop is over there."
+    },
+    {
+      "word": "fare",
+      "ipa": "/fer/",
+      "meaning": "tiền vé",
+      "example": "How much is the fare?"
+    },
+    {
+      "word": "platform",
+      "ipa": "/ˈplæt.fɔːrm/",
+      "meaning": "sân ga",
+      "example": "Go to platform two."
+    },
+    {
+      "word": "schedule",
+      "ipa": "/ˈskedʒ.uːl/",
+      "meaning": "lịch trình",
+      "example": "Check the schedule for the time."
+    }
+  ],
+  "dialogue": [
+    { "speaker": "A", "line": "Hello, I want to buy a train ticket." },
+    { "speaker": "B", "line": "Where do you want to go?" },
+    { "speaker": "A", "line": "I want to go to the city center." },
+    { "speaker": "B", "line": "One ticket is five dollars." },
+    { "speaker": "A", "line": "How much is the fare for two people?" },
+    { "speaker": "B", "line": "It is ten dollars for two." },
+    { "speaker": "A", "line": "Which platform is the train?" },
+    { "speaker": "B", "line": "Go to platform two." },
+    { "speaker": "A", "line": "What time does the train leave?" },
+    {
+      "speaker": "B",
+      "line": "Check the schedule. It leaves at three o'clock."
+    }
+  ],
+  "exercises": {
+    "multipleChoice": [
+      {
+        "prompt": "You want to travel on rails. You take a...",
+        "options": ["Train", "Chair", "Boat only", "Door"],
+        "answerIndex": 0,
+        "explanation": "A train travels on rails."
+      },
+      {
+        "prompt": "How much money you pay to ride is the...",
+        "options": ["Fare", "Corner", "Map", "Key"],
+        "answerIndex": 0,
+        "explanation": "The fare is the price to ride."
+      },
+      {
+        "prompt": "Where do you wait for the train inside the station?",
+        "options": ["The platform", "The kitchen", "The bed", "The pool"],
+        "answerIndex": 0,
+        "explanation": "You wait on the platform."
+      },
+      {
+        "prompt": "A car you pay to drive you is a...",
+        "options": ["Taxi", "Tree", "Cup", "Shoe"],
+        "answerIndex": 0,
+        "explanation": "A taxi drives you for money."
+      },
+      {
+        "prompt": "What tells you the times of buses and trains?",
+        "options": ["The schedule", "The pillow", "The window", "The plate"],
+        "answerIndex": 0,
+        "explanation": "The schedule shows the times."
+      }
+    ],
+    "fillBlank": [
+      {
+        "prompt": "How much is the ___?",
+        "answer": "fare",
+        "hint": "tiền vé",
+        "explanation": "The fare is the price to ride."
+      },
+      {
+        "prompt": "Go to ___ two.",
+        "answer": "platform",
+        "hint": "sân ga",
+        "explanation": "The platform is where you catch the train."
+      },
+      {
+        "prompt": "The bus ___ is over there.",
+        "answer": "stop",
+        "hint": "trạm dừng",
+        "explanation": "A stop is where the bus picks you up."
+      }
+    ],
+    "matching": [
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "bus", "right": "xe buýt" },
+          { "left": "train", "right": "tàu hỏa" },
+          { "left": "taxi", "right": "xe taxi" },
+          { "left": "station", "right": "nhà ga, bến xe" }
+        ]
+      },
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "stop", "right": "trạm dừng" },
+          { "left": "fare", "right": "tiền vé" },
+          { "left": "platform", "right": "sân ga" },
+          { "left": "schedule", "right": "lịch trình" }
+        ]
+      }
+    ]
+  },
+  "reviewFocus": ["bus", "train", "taxi", "fare", "platform"]
+}

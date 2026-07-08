@@ -1,0 +1,54 @@
+# Local development stack: PostgreSQL + Redis + the Next.js app.
+# App is optional locally (usually run via `npm run dev`); DB/Redis are the
+# services Sprint 2+ depends on.
+
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: englishai_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: englishai
+      POSTGRES_PASSWORD: englishai
+      POSTGRES_DB: englishai
+    ports:
+      - '5432:5432'
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U englishai']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: englishai_redis
+    restart: unless-stopped
+    ports:
+      - '6379:6379'
+    volumes:
+      - redis_data:/data
+
+  # Optional: run the full app in a container. Prefer `npm run dev` for DX.
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: englishai_app
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      NODE_ENV: production
+      DATABASE_URL: postgresql://englishai:englishai@db:5432/englishai?schema=public
+      NEXT_PUBLIC_APP_URL: http://localhost:3000
+    ports:
+      - '3000:3000'
+    profiles:
+      - full
+
+volumes:
+  db_data:
+  redis_data:

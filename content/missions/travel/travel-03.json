@@ -1,0 +1,155 @@
+{
+  "id": "travel-03",
+  "trackId": "travel",
+  "order": 3,
+  "title": "Directions in the City",
+  "goal": "Ask for and follow simple directions to find places in a city.",
+  "difficulty": "easy",
+  "estimatedMinutes": 12,
+  "prerequisite": "travel-02",
+  "completionCriteria": {
+    "type": "min_quiz_score",
+    "minQuizScore": 0.8,
+    "summary": "Finish the quiz with at least 80%."
+  },
+  "vocabulary": [
+    {
+      "word": "left",
+      "ipa": "/left/",
+      "meaning": "bên trái",
+      "example": "Turn left at the shop."
+    },
+    {
+      "word": "right",
+      "ipa": "/raɪt/",
+      "meaning": "bên phải",
+      "example": "The bank is on the right."
+    },
+    {
+      "word": "straight",
+      "ipa": "/streɪt/",
+      "meaning": "thẳng",
+      "example": "Go straight for two minutes."
+    },
+    {
+      "word": "corner",
+      "ipa": "/ˈkɔːr.nɚ/",
+      "meaning": "góc đường",
+      "example": "The cafe is on the corner."
+    },
+    {
+      "word": "street",
+      "ipa": "/striːt/",
+      "meaning": "đường phố",
+      "example": "This street is very long."
+    },
+    {
+      "word": "map",
+      "ipa": "/mæp/",
+      "meaning": "bản đồ",
+      "example": "I look at the map."
+    },
+    {
+      "word": "near",
+      "ipa": "/nɪr/",
+      "meaning": "gần",
+      "example": "The park is near here."
+    },
+    {
+      "word": "cross",
+      "ipa": "/krɒs/",
+      "meaning": "băng qua",
+      "example": "Cross the road carefully."
+    }
+  ],
+  "dialogue": [
+    { "speaker": "A", "line": "Excuse me, where is the train station?" },
+    { "speaker": "B", "line": "Go straight down this street." },
+    { "speaker": "A", "line": "Is it near here?" },
+    { "speaker": "B", "line": "Yes, it is very near." },
+    { "speaker": "A", "line": "Do I turn left or right?" },
+    { "speaker": "B", "line": "Turn right at the corner." },
+    { "speaker": "A", "line": "And then?" },
+    {
+      "speaker": "B",
+      "line": "Cross the road, and the station is on the left."
+    },
+    { "speaker": "A", "line": "Thank you! Can you show me on the map?" },
+    { "speaker": "B", "line": "Sure, it is right here." }
+  ],
+  "exercises": {
+    "multipleChoice": [
+      {
+        "prompt": "You want to go this way: ←. What do you say?",
+        "options": ["Turn left", "Turn right", "Go up", "Sit down"],
+        "answerIndex": 0,
+        "explanation": "Left is the ← direction."
+      },
+      {
+        "prompt": "How do you say 'do not turn, keep going'?",
+        "options": ["Go straight", "Turn left", "Turn right", "Stop"],
+        "answerIndex": 0,
+        "explanation": "Go straight means keep going."
+      },
+      {
+        "prompt": "Where two streets meet is the...",
+        "options": ["Corner", "Roof", "Sky", "Chair"],
+        "answerIndex": 0,
+        "explanation": "A corner is where two streets meet."
+      },
+      {
+        "prompt": "What helps you find your way in a city?",
+        "options": ["A map", "A shoe", "A cup", "A song"],
+        "answerIndex": 0,
+        "explanation": "A map helps you find your way."
+      },
+      {
+        "prompt": "The park is close to you. It is...",
+        "options": ["Near", "Far only", "Closed", "Loud"],
+        "answerIndex": 0,
+        "explanation": "Near means close to you."
+      }
+    ],
+    "fillBlank": [
+      {
+        "prompt": "Turn ___ at the corner.",
+        "answer": "right",
+        "hint": "bên phải",
+        "explanation": "Right is the → direction."
+      },
+      {
+        "prompt": "Go ___ down this street.",
+        "answer": "straight",
+        "hint": "thẳng",
+        "explanation": "Straight means keep going forward."
+      },
+      {
+        "prompt": "Please ___ the road carefully.",
+        "answer": "cross",
+        "hint": "băng qua",
+        "explanation": "Cross means go over the road."
+      }
+    ],
+    "matching": [
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "left", "right": "bên trái" },
+          { "left": "right", "right": "bên phải" },
+          { "left": "straight", "right": "thẳng" },
+          { "left": "corner", "right": "góc đường" }
+        ]
+      },
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "street", "right": "đường phố" },
+          { "left": "map", "right": "bản đồ" },
+          { "left": "near", "right": "gần" },
+          { "left": "cross", "right": "băng qua" }
+        ]
+      }
+    ]
+  },
+  "reviewFocus": ["left", "right", "straight", "corner", "map"]
+}

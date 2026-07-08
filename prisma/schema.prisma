@@ -1,0 +1,1063 @@
+// English AI — Prisma schema.
+// Sprint 2.1: Authentication foundation (Supabase-Auth-centric identity + RBAC).
+//
+// IMPORTANT: Supabase owns `auth.users` (credentials, OAuth identities, email
+// verification, tokens). Our `public` schema owns the application identity and
+// authorization. `Profile.id` EQUALS the Supabase auth user id (uuid) — there is no
+// cross-schema FK; the link is by convention + a DB trigger/webhook (wired at deploy).
+// Rationale: see docs/adr/ADR-0002.md. Conventions: snake_case tables via @@map, UUID PKs.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  // Runtime connection — use the Supabase POOLED URL (PgBouncer, port 6543) on Vercel.
+  url       = env("DATABASE_URL")
+  // Direct (non-pooled) connection for `prisma migrate deploy` / introspection. On Supabase
+  // this is the port-5432 URL; falls back to DATABASE_URL locally if unset. See VERCEL_DEPLOY.md.
+  directUrl = env("DIRECT_URL")
+}
+
+// ---------------------------------------------------------------------------
+// Enums
+// ---------------------------------------------------------------------------
+
+enum UserStatus {
+  active
+  suspended
+  deleted
+}
+
+enum LearningGoal {
+  general
+  conversation
+  exam
+  business
+  kids
+}
+
+enum DevicePlatform {
+  web
+  ios
+  android
+}
+
+enum NotificationChannel {
+  email
+  push
+  in_app
+}
+
+enum CourseTrack {
+  general
+  toeic
+  ielts
+  business
+  kids
+}
+
+// --- Learning Engine (Sprint 3.1) ---
+
+/// Publish lifecycle for versioned content (Course, Lesson, LessonVersion, LearningPath).
+enum ContentStatus {
+  draft
+  published
+  archived
+}
+
+/// Generic pedagogical step type — shared by ALL lesson kinds (not English-specific).
+enum ActivityType {
+  intro
+  teach
+  practice
+  quiz
+  review
+  assessment
+}
+
+/// Generic exercise format — the rendering/interaction shape, not the subject.
+enum ExerciseType {
+  flashcard
+  multiple_choice
+  fill_blank
+  matching
+  ordering
+  dictation
+  speaking
+  listening
+  open_response
+}
+
+/// Generic question shape.
+enum QuestionType {
+  single_choice
+  multiple_choice
+  true_false
+  fill_blank
+  short_answer
+  matching
+  ordering
+}
+
+/// Lesson prerequisite graph edge type.
+enum DependencyType {
+  prerequisite
+  recommended
+}
+
+/// What a learning-path step points at.
+enum PathStepType {
+  course
+  lesson
+  objective
+}
+
+// --- Vocabulary (Sprint 4.1) ---
+
+enum PartOfSpeech {
+  noun
+  verb
+  adjective
+  adverb
+  pronoun
+  preposition
+  conjunction
+  determiner
+  interjection
+  phrase
+}
+
+/// A learner's mastery state for a word.
+enum VocabularyStatus {
+  new
+  learning
+  known
+  mastered
+}
+
+/// Review grade (drives the deterministic SRS scheduler — no AI).
+enum ReviewRating {
+  again
+  hard
+  good
+  easy
+}
+
+enum Accent {
+  us
+  uk
+}
+
+// ---------------------------------------------------------------------------
+// Identity & Access (Sprint 2.1)
+// ---------------------------------------------------------------------------
+
+/// Application user profile. `id` == Supabase auth.users.id.
+model Profile {
+  id               String       @id @db.Uuid
+  email            String?      @unique
+  displayName      String?      @map("display_name")
+  avatarUrl        String?      @map("avatar_url")
+  status           UserStatus   @default(active)
+  isKid            Boolean      @default(false) @map("is_kid")
+  nativeLanguageId String?      @map("native_language_id") @db.Uuid
+  learningGoal     LearningGoal @default(general) @map("learning_goal")
+  currentCefr      String?      @map("current_cefr")
+  targetCefr       String?      @map("target_cefr")
+  dailyMinutesGoal Int          @default(15) @map("daily_minutes_goal")
+  timezone         String       @default("UTC")
+  uiLocale         String       @default("en") @map("ui_locale")
+  onboardedAt      DateTime?    @map("onboarded_at")
+  lastSeenAt       DateTime?    @map("last_seen_at")
+  createdAt        DateTime     @default(now()) @map("created_at")
+  updatedAt        DateTime     @updatedAt @map("updated_at")
+  deletedAt        DateTime?    @map("deleted_at")
+
+  nativeLanguage          Language?                @relation(fields: [nativeLanguageId], references: [id])
+  roles                   UserRole[]
+  settings                UserSettings?
+  devices                 UserDevice[]
+  sessions                UserSession[]
+  auditLogs               AuditLog[]
+  notificationPreferences NotificationPreference[]
+  vocabularyEntries       UserVocabulary[]
+  reviewHistory           ReviewHistory[]
+  aiUsageLogs             AiUsageLog[]
+  learningSessions        LearningSession[]
+  lessonPlan              LessonPlanRecord?
+  missionProgress         MissionProgress[]
+
+  @@index([status])
+  @@index([nativeLanguageId])
+  @@map("profiles")
+}
+
+/// A role groups a set of permissions. Roles are data, not code (no hard-coding).
+model Role {
+  id          String   @id @default(uuid()) @db.Uuid
+  code        String   @unique // admin | teacher | content_manager | student
+  name        String
+  description String?
+  isSystem    Boolean  @default(true) @map("is_system")
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  permissions RolePermission[]
+  users       UserRole[]
+
+  @@map("roles")
+}
+
+/// A single, atomic permission. Format: `<resource>.<action>` (e.g. content.publish).
+model Permission {
+  id          String   @id @default(uuid()) @db.Uuid
+  code        String   @unique
+  resource    String
+  action      String
+  description String?
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  roles RolePermission[]
+
+  @@index([resource])
+  @@map("permissions")
+}
+
+/// Join: which permissions a role grants.
+model RolePermission {
+  id           String   @id @default(uuid()) @db.Uuid
+  roleId       String   @map("role_id") @db.Uuid
+  permissionId String   @map("permission_id") @db.Uuid
+  createdAt    DateTime @default(now()) @map("created_at")
+
+  role       Role       @relation(fields: [roleId], references: [id], onDelete: Cascade)
+  permission Permission @relation(fields: [permissionId], references: [id], onDelete: Cascade)
+
+  @@unique([roleId, permissionId])
+  @@index([permissionId])
+  @@map("role_permissions")
+}
+
+/// Join: which roles a user holds.
+model UserRole {
+  id         String   @id @default(uuid()) @db.Uuid
+  userId     String   @map("user_id") @db.Uuid
+  roleId     String   @map("role_id") @db.Uuid
+  assignedBy String?  @map("assigned_by") @db.Uuid
+  createdAt  DateTime @default(now()) @map("created_at")
+
+  user Profile @relation(fields: [userId], references: [id], onDelete: Cascade)
+  role Role    @relation(fields: [roleId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, roleId])
+  @@index([roleId])
+  @@map("user_roles")
+}
+
+/// Per-user application preferences (distinct from granular notification prefs).
+model UserSettings {
+  id                 String   @id @default(uuid()) @db.Uuid
+  userId             String   @unique @map("user_id") @db.Uuid
+  theme              String   @default("system") // light | dark | system
+  locale             String   @default("en")
+  timezone           String   @default("UTC")
+  reducedMotion      Boolean  @default(false) @map("reduced_motion")
+  emailNotifications Boolean  @default(true) @map("email_notifications")
+  pushNotifications  Boolean  @default(true) @map("push_notifications")
+  marketingEmails    Boolean  @default(false) @map("marketing_emails")
+  createdAt          DateTime @default(now()) @map("created_at")
+  updatedAt          DateTime @updatedAt @map("updated_at")
+
+  user Profile @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("user_settings")
+}
+
+/// A device/browser a user has authenticated from (for push + session context).
+model UserDevice {
+  id           String         @id @default(uuid()) @db.Uuid
+  userId       String         @map("user_id") @db.Uuid
+  platform     DevicePlatform @default(web)
+  deviceName   String?        @map("device_name")
+  userAgent    String?        @map("user_agent")
+  pushToken    String?        @unique @map("push_token")
+  ipAddress    String?        @map("ip_address")
+  lastActiveAt DateTime?      @map("last_active_at")
+  createdAt    DateTime       @default(now()) @map("created_at")
+
+  user     Profile       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  sessions UserSession[]
+
+  @@index([userId])
+  @@map("user_devices")
+}
+
+/// Mirror of active sessions for audit + "log out everywhere". Supabase issues the
+/// actual JWT/refresh tokens; we store only a hash + metadata, never raw tokens.
+model UserSession {
+  id               String    @id @default(uuid()) @db.Uuid
+  userId           String    @map("user_id") @db.Uuid
+  deviceId         String?   @map("device_id") @db.Uuid
+  refreshTokenHash String?   @map("refresh_token_hash")
+  ipAddress        String?   @map("ip_address")
+  userAgent        String?   @map("user_agent")
+  expiresAt        DateTime  @map("expires_at")
+  revokedAt        DateTime? @map("revoked_at")
+  lastUsedAt       DateTime? @map("last_used_at")
+  createdAt        DateTime  @default(now()) @map("created_at")
+
+  user   Profile     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  device UserDevice? @relation(fields: [deviceId], references: [id], onDelete: SetNull)
+
+  @@index([userId])
+  @@index([expiresAt])
+  @@map("user_sessions")
+}
+
+/// Append-only security/audit trail (partition by created_at at scale).
+model AuditLog {
+  id         String   @id @default(uuid()) @db.Uuid
+  userId     String?  @map("user_id") @db.Uuid
+  action     String // e.g. auth.login, auth.logout, role.assigned
+  resource   String?
+  resourceId String?  @map("resource_id")
+  ipAddress  String?  @map("ip_address")
+  userAgent  String?  @map("user_agent")
+  metadata   Json?
+  createdAt  DateTime @default(now()) @map("created_at")
+
+  user Profile? @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  @@index([userId, createdAt])
+  @@index([action])
+  @@map("audit_logs")
+}
+
+/// Granular per-category, per-channel notification opt-in.
+model NotificationPreference {
+  id        String              @id @default(uuid()) @db.Uuid
+  userId    String              @map("user_id") @db.Uuid
+  channel   NotificationChannel
+  category  String // reminders | streak | review_due | achievements | system | marketing
+  enabled   Boolean             @default(true)
+  createdAt DateTime            @default(now()) @map("created_at")
+  updatedAt DateTime            @updatedAt @map("updated_at")
+
+  user Profile @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, channel, category])
+  @@index([userId])
+  @@map("notification_preferences")
+}
+
+// ===========================================================================
+// LEARNING ENGINE — shared content domain for ALL lesson kinds (Sprint 3.1).
+// Not vocabulary/grammar-specific. See docs/DECISIONS.md and DATABASE.md.
+// Content tree: Course → Unit → Lesson → LessonVersion → Activity → Exercise
+//               → Question → (Choice | Answer). Versioning snapshots content.
+// ===========================================================================
+
+// --- Reference / taxonomy ---
+
+model Language {
+  id            String  @id @default(uuid()) @db.Uuid
+  code          String  @unique // ISO 639-1
+  name          String
+  nativeName    String? @map("native_name")
+  isUiSupported Boolean @default(false) @map("is_ui_supported")
+
+  profiles Profile[]
+  courses  Course[]
+
+  @@map("languages")
+}
+
+model CefrLevel {
+  id          String  @id @default(uuid()) @db.Uuid
+  code        String  @unique // A1..C2
+  rank        Int
+  description String?
+
+  courses      Course[]
+  lessons      Lesson[]
+  vocabularies Vocabulary[]
+
+  @@map("cefr_levels")
+}
+
+model Skill {
+  id          String  @id @default(uuid()) @db.Uuid
+  code        String  @unique // vocabulary | listening | reading | grammar | speaking | pronunciation | conversation
+  name        String
+  description String?
+  icon        String?
+  sortOrder   Int     @default(0) @map("sort_order")
+
+  lessons Lesson[]
+
+  @@map("skills")
+}
+
+/// Intra-level difficulty (distinct from CEFR). Modeled as data so it can evolve.
+model Difficulty {
+  id          String  @id @default(uuid()) @db.Uuid
+  code        String  @unique // e.g. easy | medium | hard | numeric bands
+  name        String
+  level       Int // ordinal for sorting/adaptive targeting
+  description String?
+
+  lessons   Lesson[]
+  exercises Exercise[]
+  questions Question[]
+
+  @@map("difficulties")
+}
+
+/// Free-form reusable label attached to content.
+model Tag {
+  id        String   @id @default(uuid()) @db.Uuid
+  slug      String   @unique
+  name      String
+  kind      String? // optional grouping (topic, theme, grammar-point, …)
+  createdAt DateTime @default(now()) @map("created_at")
+
+  lessons      LessonTag[]
+  vocabularies VocabularyTag[]
+
+  @@map("tags")
+}
+
+// --- Curriculum hierarchy ---
+
+model Course {
+  id          String        @id @default(uuid()) @db.Uuid
+  slug        String        @unique
+  title       String
+  description String?
+  track       CourseTrack   @default(general)
+  status      ContentStatus @default(draft)
+  languageId  String        @map("language_id") @db.Uuid
+  cefrLevelId String?       @map("cefr_level_id") @db.Uuid
+  version     Int           @default(1)
+  sortOrder   Int           @default(0) @map("sort_order")
+  createdAt   DateTime      @default(now()) @map("created_at")
+  updatedAt   DateTime      @updatedAt @map("updated_at")
+  deletedAt   DateTime?     @map("deleted_at")
+
+  language  Language           @relation(fields: [languageId], references: [id])
+  cefrLevel CefrLevel?         @relation(fields: [cefrLevelId], references: [id])
+  units     Unit[]
+  pathSteps LearningPathStep[]
+
+  @@index([track])
+  @@index([status])
+  @@index([cefrLevelId])
+  @@map("courses")
+}
+
+model Unit {
+  id          String        @id @default(uuid()) @db.Uuid
+  courseId    String        @map("course_id") @db.Uuid
+  title       String
+  description String?
+  status      ContentStatus @default(draft)
+  sortOrder   Int           @default(0) @map("sort_order")
+  createdAt   DateTime      @default(now()) @map("created_at")
+  updatedAt   DateTime      @updatedAt @map("updated_at")
+  deletedAt   DateTime?     @map("deleted_at")
+
+  course  Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  lessons Lesson[]
+
+  @@index([courseId, sortOrder])
+  @@index([status])
+  @@map("units")
+}
+
+model Lesson {
+  id               String        @id @default(uuid()) @db.Uuid
+  unitId           String        @map("unit_id") @db.Uuid
+  slug             String        @unique
+  title            String
+  summary          String?
+  primarySkillId   String?       @map("primary_skill_id") @db.Uuid
+  cefrLevelId      String?       @map("cefr_level_id") @db.Uuid
+  difficultyId     String?       @map("difficulty_id") @db.Uuid
+  status           ContentStatus @default(draft)
+  estimatedMinutes Int           @default(5) @map("estimated_minutes")
+  xpReward         Int           @default(10) @map("xp_reward")
+  sortOrder        Int           @default(0) @map("sort_order")
+  isAiGenerated    Boolean       @default(false) @map("is_ai_generated")
+  currentVersionId String?       @unique @map("current_version_id") @db.Uuid
+  createdAt        DateTime      @default(now()) @map("created_at")
+  updatedAt        DateTime      @updatedAt @map("updated_at")
+  deletedAt        DateTime?     @map("deleted_at")
+
+  unit           Unit               @relation(fields: [unitId], references: [id], onDelete: Cascade)
+  primarySkill   Skill?             @relation(fields: [primarySkillId], references: [id])
+  cefrLevel      CefrLevel?         @relation(fields: [cefrLevelId], references: [id])
+  difficulty     Difficulty?        @relation(fields: [difficultyId], references: [id])
+  currentVersion LessonVersion?     @relation("current_version", fields: [currentVersionId], references: [id])
+  versions       LessonVersion[]    @relation("lesson_versions")
+  tags           LessonTag[]
+  objectives     LessonObjective[]
+  dependencies   LessonDependency[] @relation("dependent")
+  dependents     LessonDependency[] @relation("prerequisite")
+  pathSteps      LearningPathStep[]
+
+  @@index([unitId, sortOrder])
+  @@index([primarySkillId])
+  @@index([cefrLevelId])
+  @@index([difficultyId])
+  @@index([status])
+  @@map("lessons")
+}
+
+/// Immutable content snapshot of a lesson. Publishing points Lesson.currentVersion here.
+model LessonVersion {
+  id            String        @id @default(uuid()) @db.Uuid
+  lessonId      String        @map("lesson_id") @db.Uuid
+  versionNumber Int           @map("version_number")
+  status        ContentStatus @default(draft)
+  notes         String?
+  publishedAt   DateTime?     @map("published_at")
+  createdAt     DateTime      @default(now()) @map("created_at")
+  updatedAt     DateTime      @updatedAt @map("updated_at")
+
+  lesson     Lesson     @relation("lesson_versions", fields: [lessonId], references: [id], onDelete: Cascade)
+  currentOf  Lesson?    @relation("current_version")
+  activities Activity[]
+
+  @@unique([lessonId, versionNumber])
+  @@index([status])
+  @@map("lesson_versions")
+}
+
+// --- Content tree (within a LessonVersion) ---
+
+model Activity {
+  id              String       @id @default(uuid()) @db.Uuid
+  lessonVersionId String       @map("lesson_version_id") @db.Uuid
+  type            ActivityType
+  title           String?
+  instructions    String?
+  sortOrder       Int          @default(0) @map("sort_order")
+  createdAt       DateTime     @default(now()) @map("created_at")
+  updatedAt       DateTime     @updatedAt @map("updated_at")
+
+  lessonVersion LessonVersion @relation(fields: [lessonVersionId], references: [id], onDelete: Cascade)
+  exercises     Exercise[]
+
+  @@index([lessonVersionId, sortOrder])
+  @@map("activities")
+}
+
+model Exercise {
+  id           String       @id @default(uuid()) @db.Uuid
+  activityId   String       @map("activity_id") @db.Uuid
+  type         ExerciseType
+  prompt       String?
+  difficultyId String?      @map("difficulty_id") @db.Uuid
+  config       Json? // format-specific, schemaless payload (no logic in DB)
+  sortOrder    Int          @default(0) @map("sort_order")
+  createdAt    DateTime     @default(now()) @map("created_at")
+  updatedAt    DateTime     @updatedAt @map("updated_at")
+
+  activity   Activity    @relation(fields: [activityId], references: [id], onDelete: Cascade)
+  difficulty Difficulty? @relation(fields: [difficultyId], references: [id])
+  questions  Question[]
+
+  @@index([activityId, sortOrder])
+  @@index([difficultyId])
+  @@map("exercises")
+}
+
+model Question {
+  id           String       @id @default(uuid()) @db.Uuid
+  exerciseId   String       @map("exercise_id") @db.Uuid
+  type         QuestionType
+  prompt       String
+  explanation  String?
+  difficultyId String?      @map("difficulty_id") @db.Uuid
+  metadata     Json?
+  sortOrder    Int          @default(0) @map("sort_order")
+  createdAt    DateTime     @default(now()) @map("created_at")
+  updatedAt    DateTime     @updatedAt @map("updated_at")
+
+  exercise   Exercise    @relation(fields: [exerciseId], references: [id], onDelete: Cascade)
+  difficulty Difficulty? @relation(fields: [difficultyId], references: [id])
+  choices    Choice[]
+  answers    Answer[]
+
+  @@index([exerciseId, sortOrder])
+  @@index([difficultyId])
+  @@map("questions")
+}
+
+/// A selectable option (for choice-type questions).
+model Choice {
+  id         String   @id @default(uuid()) @db.Uuid
+  questionId String   @map("question_id") @db.Uuid
+  label      String? // A/B/C… optional
+  content    String
+  isCorrect  Boolean  @default(false) @map("is_correct")
+  sortOrder  Int      @default(0) @map("sort_order")
+  createdAt  DateTime @default(now()) @map("created_at")
+
+  question Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+  @@index([questionId, sortOrder])
+  @@map("choices")
+}
+
+/// Answer KEY for a question (correct value / accepted variants). Not user submissions.
+model Answer {
+  id         String   @id @default(uuid()) @db.Uuid
+  questionId String   @map("question_id") @db.Uuid
+  value      String
+  isPrimary  Boolean  @default(true) @map("is_primary")
+  matchMode  String   @default("exact") @map("match_mode") // exact | ci | regex | contains
+  createdAt  DateTime @default(now()) @map("created_at")
+
+  question Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+  @@index([questionId])
+  @@map("answers")
+}
+
+// --- Sequencing & objectives ---
+
+/// Directed prerequisite/recommended edge between two lessons.
+model LessonDependency {
+  id                String         @id @default(uuid()) @db.Uuid
+  lessonId          String         @map("lesson_id") @db.Uuid
+  dependsOnLessonId String         @map("depends_on_lesson_id") @db.Uuid
+  type              DependencyType @default(prerequisite)
+  createdAt         DateTime       @default(now()) @map("created_at")
+
+  lesson    Lesson @relation("dependent", fields: [lessonId], references: [id], onDelete: Cascade)
+  dependsOn Lesson @relation("prerequisite", fields: [dependsOnLessonId], references: [id], onDelete: Cascade)
+
+  @@unique([lessonId, dependsOnLessonId])
+  @@index([dependsOnLessonId])
+  @@map("lesson_dependencies")
+}
+
+/// A measurable learning goal (e.g. "can order food"). Reusable across content.
+model LearningObjective {
+  id          String   @id @default(uuid()) @db.Uuid
+  code        String?  @unique
+  title       String
+  description String?
+  skillId     String?  @map("skill_id") @db.Uuid
+  cefrLevelId String?  @map("cefr_level_id") @db.Uuid
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  lessons   LessonObjective[]
+  pathSteps LearningPathStep[]
+
+  @@index([skillId])
+  @@map("learning_objectives")
+}
+
+/// An ordered, curated route through content (independent of the Course hierarchy).
+model LearningPath {
+  id          String        @id @default(uuid()) @db.Uuid
+  slug        String        @unique
+  title       String
+  description String?
+  track       CourseTrack   @default(general)
+  status      ContentStatus @default(draft)
+  createdAt   DateTime      @default(now()) @map("created_at")
+  updatedAt   DateTime      @updatedAt @map("updated_at")
+  deletedAt   DateTime?     @map("deleted_at")
+
+  steps LearningPathStep[]
+
+  @@index([track])
+  @@index([status])
+  @@map("learning_paths")
+}
+
+model LearningPathStep {
+  id          String       @id @default(uuid()) @db.Uuid
+  pathId      String       @map("path_id") @db.Uuid
+  stepType    PathStepType
+  courseId    String?      @map("course_id") @db.Uuid
+  lessonId    String?      @map("lesson_id") @db.Uuid
+  objectiveId String?      @map("objective_id") @db.Uuid
+  sortOrder   Int          @default(0) @map("sort_order")
+  createdAt   DateTime     @default(now()) @map("created_at")
+
+  path      LearningPath       @relation(fields: [pathId], references: [id], onDelete: Cascade)
+  course    Course?            @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  lesson    Lesson?            @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  objective LearningObjective? @relation(fields: [objectiveId], references: [id], onDelete: Cascade)
+
+  @@index([pathId, sortOrder])
+  @@map("learning_path_steps")
+}
+
+// --- Join tables ---
+
+model LessonTag {
+  lessonId String @map("lesson_id") @db.Uuid
+  tagId    String @map("tag_id") @db.Uuid
+
+  lesson Lesson @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  tag    Tag    @relation(fields: [tagId], references: [id], onDelete: Cascade)
+
+  @@id([lessonId, tagId])
+  @@index([tagId])
+  @@map("lesson_tags")
+}
+
+model LessonObjective {
+  lessonId    String @map("lesson_id") @db.Uuid
+  objectiveId String @map("objective_id") @db.Uuid
+
+  lesson    Lesson            @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  objective LearningObjective @relation(fields: [objectiveId], references: [id], onDelete: Cascade)
+
+  @@id([lessonId, objectiveId])
+  @@index([objectiveId])
+  @@map("lesson_objectives")
+}
+
+// ===========================================================================
+// VOCABULARY (Sprint 4.1) — first learnable feature. Content authored as data;
+// learner state (UserVocabulary) drives a deterministic SRS scheduler (no AI).
+// ===========================================================================
+
+model Vocabulary {
+  id            String        @id @default(uuid()) @db.Uuid
+  word          String
+  slug          String        @unique
+  lemma         String?
+  cefrLevelId   String?       @map("cefr_level_id") @db.Uuid
+  frequencyRank Int?          @map("frequency_rank")
+  status        ContentStatus @default(published)
+  createdAt     DateTime      @default(now()) @map("created_at")
+  updatedAt     DateTime      @updatedAt @map("updated_at")
+  deletedAt     DateTime?     @map("deleted_at")
+
+  cefrLevel      CefrLevel?                @relation(fields: [cefrLevelId], references: [id])
+  meanings       VocabularyMeaning[]
+  examples       VocabularyExample[]
+  pronunciations VocabularyPronunciation[]
+  audios         VocabularyAudio[]
+  images         VocabularyImage[]
+  tags           VocabularyTag[]
+  userEntries    UserVocabulary[]
+
+  @@index([cefrLevelId])
+  @@index([status])
+  @@index([word])
+  @@map("vocabularies")
+}
+
+model VocabularyMeaning {
+  id           String       @id @default(uuid()) @db.Uuid
+  vocabularyId String       @map("vocabulary_id") @db.Uuid
+  partOfSpeech PartOfSpeech @map("part_of_speech")
+  definition   String // plain-English definition
+  translation  String? // learner's native language (e.g. vi)
+  sortOrder    Int          @default(0) @map("sort_order")
+
+  vocabulary Vocabulary          @relation(fields: [vocabularyId], references: [id], onDelete: Cascade)
+  examples   VocabularyExample[]
+
+  @@index([vocabularyId, sortOrder])
+  @@map("vocabulary_meanings")
+}
+
+model VocabularyExample {
+  id           String  @id @default(uuid()) @db.Uuid
+  vocabularyId String  @map("vocabulary_id") @db.Uuid
+  meaningId    String? @map("meaning_id") @db.Uuid
+  text         String
+  translation  String?
+  sortOrder    Int     @default(0) @map("sort_order")
+
+  vocabulary Vocabulary         @relation(fields: [vocabularyId], references: [id], onDelete: Cascade)
+  meaning    VocabularyMeaning? @relation(fields: [meaningId], references: [id], onDelete: SetNull)
+
+  @@index([vocabularyId, sortOrder])
+  @@map("vocabulary_examples")
+}
+
+model VocabularyPronunciation {
+  id           String  @id @default(uuid()) @db.Uuid
+  vocabularyId String  @map("vocabulary_id") @db.Uuid
+  ipa          String
+  accent       Accent  @default(us)
+  isPrimary    Boolean @default(false) @map("is_primary")
+
+  vocabulary Vocabulary @relation(fields: [vocabularyId], references: [id], onDelete: Cascade)
+
+  @@index([vocabularyId])
+  @@map("vocabulary_pronunciations")
+}
+
+model VocabularyAudio {
+  id           String   @id @default(uuid()) @db.Uuid
+  vocabularyId String   @map("vocabulary_id") @db.Uuid
+  url          String
+  accent       Accent?
+  createdAt    DateTime @default(now()) @map("created_at")
+
+  vocabulary Vocabulary @relation(fields: [vocabularyId], references: [id], onDelete: Cascade)
+
+  @@index([vocabularyId])
+  @@map("vocabulary_audios")
+}
+
+model VocabularyImage {
+  id           String  @id @default(uuid()) @db.Uuid
+  vocabularyId String  @map("vocabulary_id") @db.Uuid
+  url          String
+  alt          String?
+  isPrimary    Boolean @default(false) @map("is_primary")
+
+  vocabulary Vocabulary @relation(fields: [vocabularyId], references: [id], onDelete: Cascade)
+
+  @@index([vocabularyId])
+  @@map("vocabulary_images")
+}
+
+model VocabularyTag {
+  vocabularyId String @map("vocabulary_id") @db.Uuid
+  tagId        String @map("tag_id") @db.Uuid
+
+  vocabulary Vocabulary @relation(fields: [vocabularyId], references: [id], onDelete: Cascade)
+  tag        Tag        @relation(fields: [tagId], references: [id], onDelete: Cascade)
+
+  @@id([vocabularyId, tagId])
+  @@index([tagId])
+  @@map("vocabulary_tags")
+}
+
+/// Learner ↔ word relationship + SRS scheduling state.
+model UserVocabulary {
+  id             String           @id @default(uuid()) @db.Uuid
+  userId         String           @map("user_id") @db.Uuid
+  vocabularyId   String           @map("vocabulary_id") @db.Uuid
+  status         VocabularyStatus @default(new)
+  isFavorite     Boolean          @default(false) @map("is_favorite")
+  // SRS state (SM-2 lite; deterministic)
+  ease           Float            @default(2.5)
+  intervalDays   Int              @default(0) @map("interval_days")
+  repetitions    Int              @default(0)
+  lapses         Int              @default(0)
+  dueAt          DateTime         @default(now()) @map("due_at")
+  lastReviewedAt DateTime?        @map("last_reviewed_at")
+  createdAt      DateTime         @default(now()) @map("created_at")
+  updatedAt      DateTime         @updatedAt @map("updated_at")
+
+  user       Profile         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  vocabulary Vocabulary      @relation(fields: [vocabularyId], references: [id], onDelete: Cascade)
+  reviews    ReviewHistory[]
+
+  @@unique([userId, vocabularyId])
+  @@index([userId, status])
+  @@index([userId, dueAt])
+  @@map("user_vocabulary")
+}
+
+/// Append-only log of each review (audit + analytics + SRS replay).
+model ReviewHistory {
+  id               String       @id @default(uuid()) @db.Uuid
+  userVocabularyId String       @map("user_vocabulary_id") @db.Uuid
+  userId           String       @map("user_id") @db.Uuid
+  rating           ReviewRating
+  prevIntervalDays Int          @map("prev_interval_days")
+  newIntervalDays  Int          @map("new_interval_days")
+  prevEase         Float        @map("prev_ease")
+  newEase          Float        @map("new_ease")
+  reviewedAt       DateTime     @default(now()) @map("reviewed_at")
+
+  userVocabulary UserVocabulary @relation(fields: [userVocabularyId], references: [id], onDelete: Cascade)
+  user           Profile        @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userVocabularyId])
+  @@index([userId, reviewedAt])
+  @@map("review_history")
+}
+
+// ---------------------------------------------------------------------------
+// AI observability (ADR-0003)
+// ---------------------------------------------------------------------------
+
+/// Append-only telemetry for every AI provider call: cost, latency, and outcome
+/// (AI_ENGINE.md §1.4/§5). Written fire-and-forget by the AI capability services;
+/// `user_id` is nullable (system calls). Never holds prompt text or secrets.
+model AiUsageLog {
+  id           String   @id @default(uuid()) @db.Uuid
+  userId       String?  @map("user_id") @db.Uuid
+  feature      String
+  provider     String
+  model        String
+  tokensIn     Int      @default(0) @map("tokens_in")
+  tokensOut    Int      @default(0) @map("tokens_out")
+  costMicroUsd Int      @default(0) @map("cost_micro_usd")
+  latencyMs    Int      @default(0) @map("latency_ms")
+  status       String   @default("success")
+  cacheHit     Boolean  @default(false) @map("cache_hit")
+  errorCode    String?  @map("error_code")
+  occurredAt   DateTime @default(now()) @map("occurred_at")
+
+  user Profile? @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  @@index([occurredAt])
+  @@index([feature])
+  @@index([model])
+  @@map("ai_usage_logs")
+}
+
+// ===========================================================================
+// PERSISTENCE STORES (RC-03) — durable replacements for the in-memory runtime
+// repositories (Session / Lesson Plan / Mission Library / Mission Progress /
+// Prompt Template / Generation History). See docs/adr/ADR-0005.md.
+// ===========================================================================
+
+/// A completed learning session (Daily Loop). Durable replacement for the
+/// in-memory session store (DEBT-016). Feeds streak/history/dashboard.
+model LearningSession {
+  id           String   @id @default(uuid()) @db.Uuid
+  userId       String   @map("user_id") @db.Uuid
+  startedAt    DateTime @map("started_at")
+  completedAt  DateTime @map("completed_at")
+  durationMs   Int      @map("duration_ms")
+  wordsStudied Int      @default(0) @map("words_studied")
+  quizScore    Int      @default(0) @map("quiz_score")
+  quizTotal    Int      @default(0) @map("quiz_total")
+  createdAt    DateTime @default(now()) @map("created_at")
+
+  user Profile @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, completedAt])
+  @@map("learning_sessions")
+}
+
+/// The latest generated lesson plan per user (Task 02 planner). One row per
+/// user (upserted each planning); the plan document is stored as JSON.
+model LessonPlanRecord {
+  id        String   @id @default(uuid()) @db.Uuid
+  userId    String   @unique @map("user_id") @db.Uuid
+  planDate  String   @map("plan_date") // YYYY-MM-DD
+  data      Json // serialized LessonPlan
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  user Profile @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("lesson_plans")
+}
+
+/// Mission Library — track document (Task 04). Authored JSON is seeded here;
+/// the runtime reads tracks/missions from the DB, never the filesystem.
+model ContentTrack {
+  key       String   @id // e.g. 'general'
+  trackId   String   @map("track_id") // e.g. 'general-a1'
+  title     String
+  goal      String
+  cefr      String
+  data      Json // full TrackContent
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  missions ContentMission[]
+
+  @@map("content_tracks")
+}
+
+/// Mission Library — mission document (Task 04). `data` holds the validated
+/// MissionContent; scalar columns are indexed for querying/ordering.
+model ContentMission {
+  id               String   @id // e.g. 'general-01'
+  trackKey         String   @map("track_key")
+  order            Int      @map("mission_order")
+  title            String
+  difficulty       String
+  estimatedMinutes Int      @map("estimated_minutes")
+  data             Json // full MissionContent
+  createdAt        DateTime @default(now()) @map("created_at")
+  updatedAt        DateTime @updatedAt @map("updated_at")
+
+  track ContentTrack @relation(fields: [trackKey], references: [key], onDelete: Cascade)
+
+  @@index([trackKey, order])
+  @@map("content_missions")
+}
+
+/// A learner's progress against a mission (Mission Engine, Task 03). Durable
+/// replacement for the in-memory progress store.
+model MissionProgress {
+  id                   String    @id @default(uuid()) @db.Uuid
+  userId               String    @map("user_id") @db.Uuid
+  missionId            String    @map("mission_id")
+  completedActivityIds Json      @map("completed_activity_ids") // string[]
+  quizScore            Float?    @map("quiz_score")
+  quizTotal            Int?      @map("quiz_total")
+  completedAt          DateTime? @map("completed_at")
+  createdAt            DateTime  @default(now()) @map("created_at")
+  updatedAt            DateTime  @updatedAt @map("updated_at")
+
+  user Profile @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, missionId])
+  @@index([userId])
+  @@map("mission_progress")
+}
+
+/// Prompt template (AI). Seeded from the code registry (config/prompt-templates.ts);
+/// served from the DB so authoring can evolve without a redeploy (DEBT-014).
+model PromptTemplate {
+  id            String   @id // e.g. 'tpl-vocabulary-lesson'
+  key           String   @unique
+  name          String
+  description   String
+  category      String
+  variables     Json // PromptVariable[]
+  activeVersion Int?     @map("active_version")
+  createdAt     DateTime @default(now()) @map("created_at")
+  updatedAt     DateTime @updatedAt @map("updated_at")
+
+  versions PromptVersion[]
+
+  @@map("prompt_templates")
+}
+
+/// An immutable version of a prompt template (body + model + budget).
+model PromptVersion {
+  id              String   @id // e.g. 'tpl-vocabulary-lesson-v1'
+  templateId      String   @map("template_id")
+  version         Int
+  body            String
+  model           String
+  maxOutputTokens Int      @map("max_output_tokens")
+  status          String // draft | active | archived
+  notes           String?
+  createdAt       DateTime @map("created_at")
+
+  template PromptTemplate @relation(fields: [templateId], references: [id], onDelete: Cascade)
+
+  @@unique([templateId, version])
+  @@map("prompt_versions")
+}
+
+/// AI generation history (Sprint 7.1). Append-only record of each generation
+/// (previewed/completed/failed). Durable replacement for the in-memory store.
+model AiGenerationJob {
+  id         String   @id // domain-provided id
+  request    Json
+  result     Json
+  occurredAt DateTime @map("occurred_at")
+  createdAt  DateTime @default(now()) @map("created_at")
+
+  @@index([occurredAt])
+  @@map("ai_generation_jobs")
+}

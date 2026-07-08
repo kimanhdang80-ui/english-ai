@@ -1,0 +1,150 @@
+{
+  "id": "general-07",
+  "trackId": "general",
+  "order": 7,
+  "title": "Shopping & Money",
+  "goal": "Shop for items and talk about prices.",
+  "difficulty": "medium",
+  "estimatedMinutes": 14,
+  "prerequisite": "general-06",
+  "completionCriteria": {
+    "type": "min_quiz_score",
+    "minQuizScore": 0.8,
+    "summary": "Finish the quiz with at least 80%."
+  },
+  "vocabulary": [
+    {
+      "word": "shop",
+      "ipa": "/ʃɑːp/",
+      "meaning": "cửa hàng",
+      "example": "The shop is open now."
+    },
+    {
+      "word": "money",
+      "ipa": "/ˈmʌni/",
+      "meaning": "tiền",
+      "example": "I have some money."
+    },
+    {
+      "word": "buy",
+      "ipa": "/baɪ/",
+      "meaning": "mua",
+      "example": "I want to buy a hat."
+    },
+    {
+      "word": "price",
+      "ipa": "/praɪs/",
+      "meaning": "giá cả",
+      "example": "The price is very low."
+    },
+    {
+      "word": "cheap",
+      "ipa": "/tʃiːp/",
+      "meaning": "rẻ",
+      "example": "This shirt is cheap."
+    },
+    {
+      "word": "expensive",
+      "ipa": "/ɪkˈspensɪv/",
+      "meaning": "đắt",
+      "example": "That car is expensive."
+    },
+    {
+      "word": "pay",
+      "ipa": "/peɪ/",
+      "meaning": "trả tiền",
+      "example": "I pay with cash."
+    },
+    {
+      "word": "bag",
+      "ipa": "/bæɡ/",
+      "meaning": "cái túi",
+      "example": "Put the fruit in the bag."
+    }
+  ],
+  "dialogue": [
+    { "speaker": "A", "line": "Welcome to the shop. Can I help you?" },
+    { "speaker": "B", "line": "Yes, I want to buy this hat." },
+    { "speaker": "A", "line": "It is a good price and very cheap." },
+    { "speaker": "B", "line": "Great. Is the bag expensive?" },
+    { "speaker": "A", "line": "No, the bag is cheap too." },
+    { "speaker": "B", "line": "How do I pay?" },
+    { "speaker": "A", "line": "You can pay with money or card." },
+    { "speaker": "B", "line": "Here is my money. Thank you!" }
+  ],
+  "exercises": {
+    "multipleChoice": [
+      {
+        "prompt": "Where do you buy things?",
+        "options": ["shop", "school", "bag", "night"],
+        "answerIndex": 0,
+        "explanation": "You buy things in a shop."
+      },
+      {
+        "prompt": "The opposite of 'cheap' is ___.",
+        "options": ["price", "money", "expensive", "buy"],
+        "answerIndex": 2,
+        "explanation": "Expensive is the opposite of cheap."
+      },
+      {
+        "prompt": "You use ___ to buy things.",
+        "options": ["bag", "money", "shop", "price"],
+        "answerIndex": 1,
+        "explanation": "You buy with money."
+      },
+      {
+        "prompt": "How much a thing costs is its ___.",
+        "options": ["price", "bag", "shop", "pay"],
+        "answerIndex": 0,
+        "explanation": "The price is the cost."
+      },
+      {
+        "prompt": "You carry your shopping in a ___.",
+        "options": ["shop", "money", "bag", "price"],
+        "answerIndex": 2,
+        "explanation": "A bag carries your shopping."
+      }
+    ],
+    "fillBlank": [
+      {
+        "prompt": "I want to ___ a new hat.",
+        "answer": "buy",
+        "hint": "mua",
+        "explanation": "'Buy' means mua."
+      },
+      {
+        "prompt": "This shirt is very ___, not expensive.",
+        "answer": "cheap",
+        "hint": "rẻ",
+        "explanation": "'Cheap' means low price."
+      },
+      {
+        "prompt": "I will ___ with cash.",
+        "answer": "pay",
+        "hint": "trả tiền",
+        "explanation": "'Pay' means give money."
+      }
+    ],
+    "matching": [
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "shop", "right": "cửa hàng" },
+          { "left": "money", "right": "tiền" },
+          { "left": "buy", "right": "mua" },
+          { "left": "price", "right": "giá cả" }
+        ]
+      },
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "cheap", "right": "rẻ" },
+          { "left": "expensive", "right": "đắt" },
+          { "left": "pay", "right": "trả tiền" },
+          { "left": "bag", "right": "cái túi" }
+        ]
+      }
+    ]
+  },
+  "reviewFocus": ["shop", "money", "buy", "cheap", "expensive"]
+}

@@ -1,0 +1,150 @@
+{
+  "id": "general-04",
+  "trackId": "general",
+  "order": 4,
+  "title": "Food & Drink",
+  "goal": "Name common foods and drinks and order simply.",
+  "difficulty": "easy",
+  "estimatedMinutes": 13,
+  "prerequisite": "general-03",
+  "completionCriteria": {
+    "type": "min_quiz_score",
+    "minQuizScore": 0.8,
+    "summary": "Finish the quiz with at least 80%."
+  },
+  "vocabulary": [
+    {
+      "word": "rice",
+      "ipa": "/raɪs/",
+      "meaning": "cơm, gạo",
+      "example": "I eat rice for lunch."
+    },
+    {
+      "word": "bread",
+      "ipa": "/bred/",
+      "meaning": "bánh mì",
+      "example": "She likes bread and butter."
+    },
+    {
+      "word": "water",
+      "ipa": "/ˈwɔːtər/",
+      "meaning": "nước",
+      "example": "Please give me some water."
+    },
+    {
+      "word": "milk",
+      "ipa": "/mɪlk/",
+      "meaning": "sữa",
+      "example": "The baby drinks milk."
+    },
+    {
+      "word": "apple",
+      "ipa": "/ˈæpəl/",
+      "meaning": "quả táo",
+      "example": "An apple is red and sweet."
+    },
+    {
+      "word": "eat",
+      "ipa": "/iːt/",
+      "meaning": "ăn",
+      "example": "We eat dinner at seven."
+    },
+    {
+      "word": "drink",
+      "ipa": "/drɪŋk/",
+      "meaning": "uống",
+      "example": "I drink tea in the morning."
+    },
+    {
+      "word": "hungry",
+      "ipa": "/ˈhʌŋɡri/",
+      "meaning": "đói",
+      "example": "I am hungry now."
+    }
+  ],
+  "dialogue": [
+    { "speaker": "A", "line": "I am hungry. Let's eat." },
+    { "speaker": "B", "line": "Good idea. Do you like rice?" },
+    { "speaker": "A", "line": "Yes, I eat rice every day." },
+    { "speaker": "B", "line": "I want bread and an apple." },
+    { "speaker": "A", "line": "What do you want to drink?" },
+    { "speaker": "B", "line": "Just water, please." },
+    { "speaker": "A", "line": "I will drink some milk." },
+    { "speaker": "B", "line": "Great. Let's eat together." }
+  ],
+  "exercises": {
+    "multipleChoice": [
+      {
+        "prompt": "What do you do with water?",
+        "options": ["drink", "eat", "read", "sleep"],
+        "answerIndex": 0,
+        "explanation": "You drink water."
+      },
+      {
+        "prompt": "What word means 'đói'?",
+        "options": ["rice", "hungry", "milk", "apple"],
+        "answerIndex": 1,
+        "explanation": "'Hungry' means đói."
+      },
+      {
+        "prompt": "The baby drinks ___.",
+        "options": ["bread", "rice", "milk", "apple"],
+        "answerIndex": 2,
+        "explanation": "Babies drink milk."
+      },
+      {
+        "prompt": "A red, sweet fruit is an ___.",
+        "options": ["apple", "water", "bread", "rice"],
+        "answerIndex": 0,
+        "explanation": "An apple is a sweet fruit."
+      },
+      {
+        "prompt": "We ___ dinner at seven.",
+        "options": ["drink", "eat", "milk", "hungry"],
+        "answerIndex": 1,
+        "explanation": "We eat dinner."
+      }
+    ],
+    "fillBlank": [
+      {
+        "prompt": "I eat ___ for lunch.",
+        "answer": "rice",
+        "hint": "cơm",
+        "explanation": "Rice is a common lunch food."
+      },
+      {
+        "prompt": "Please give me some ___.",
+        "answer": "water",
+        "hint": "nước",
+        "explanation": "You drink water."
+      },
+      {
+        "prompt": "I am ___, let's eat now.",
+        "answer": "hungry",
+        "hint": "đói",
+        "explanation": "'Hungry' means you want food."
+      }
+    ],
+    "matching": [
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "rice", "right": "cơm, gạo" },
+          { "left": "bread", "right": "bánh mì" },
+          { "left": "water", "right": "nước" },
+          { "left": "milk", "right": "sữa" }
+        ]
+      },
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "apple", "right": "quả táo" },
+          { "left": "eat", "right": "ăn" },
+          { "left": "drink", "right": "uống" },
+          { "left": "hungry", "right": "đói" }
+        ]
+      }
+    ]
+  },
+  "reviewFocus": ["rice", "water", "eat", "drink", "hungry"]
+}

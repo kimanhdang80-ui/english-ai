@@ -1,0 +1,161 @@
+{
+  "id": "travel-01",
+  "trackId": "travel",
+  "order": 1,
+  "title": "At the Airport",
+  "goal": "Understand and use basic airport words to check in and pass through the gate.",
+  "difficulty": "easy",
+  "estimatedMinutes": 12,
+  "prerequisite": null,
+  "completionCriteria": {
+    "type": "min_quiz_score",
+    "minQuizScore": 0.8,
+    "summary": "Finish the quiz with at least 80%."
+  },
+  "vocabulary": [
+    {
+      "word": "passport",
+      "ipa": "/ˈpɑːs.pɔːrt/",
+      "meaning": "hộ chiếu",
+      "example": "Here is my passport."
+    },
+    {
+      "word": "boarding pass",
+      "ipa": "/ˈbɔːr.dɪŋ pæs/",
+      "meaning": "thẻ lên máy bay",
+      "example": "Please show your boarding pass."
+    },
+    {
+      "word": "luggage",
+      "ipa": "/ˈlʌɡ.ɪdʒ/",
+      "meaning": "hành lý",
+      "example": "My luggage is very heavy."
+    },
+    {
+      "word": "gate",
+      "ipa": "/ɡeɪt/",
+      "meaning": "cửa ra máy bay",
+      "example": "The gate is number ten."
+    },
+    {
+      "word": "flight",
+      "ipa": "/flaɪt/",
+      "meaning": "chuyến bay",
+      "example": "My flight is at nine o'clock."
+    },
+    {
+      "word": "ticket",
+      "ipa": "/ˈtɪk.ɪt/",
+      "meaning": "vé",
+      "example": "I have my ticket here."
+    },
+    {
+      "word": "security",
+      "ipa": "/sɪˈkjʊə.rə.ti/",
+      "meaning": "an ninh",
+      "example": "We wait at security."
+    },
+    {
+      "word": "departure",
+      "ipa": "/dɪˈpɑːr.tʃɚ/",
+      "meaning": "khởi hành",
+      "example": "The departure board is over there."
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "A",
+      "line": "Good morning. Can I see your passport, please?"
+    },
+    { "speaker": "B", "line": "Yes, here is my passport." },
+    { "speaker": "A", "line": "Thank you. Where are you flying today?" },
+    { "speaker": "B", "line": "I am flying to London." },
+    { "speaker": "A", "line": "How many bags do you have?" },
+    { "speaker": "B", "line": "I have one bag of luggage." },
+    {
+      "speaker": "A",
+      "line": "Here is your boarding pass. The gate is number ten."
+    },
+    { "speaker": "B", "line": "What time does the flight leave?" },
+    {
+      "speaker": "A",
+      "line": "The departure is at nine o'clock. Please go to security."
+    },
+    { "speaker": "B", "line": "Thank you very much!" }
+  ],
+  "exercises": {
+    "multipleChoice": [
+      {
+        "prompt": "What do you need to show to fly to another country?",
+        "options": ["A passport", "A menu", "A key", "A map"],
+        "answerIndex": 0,
+        "explanation": "You need a passport to fly to another country."
+      },
+      {
+        "prompt": "Where do you go to get on the plane?",
+        "options": ["The gate", "The kitchen", "The pool", "The garden"],
+        "answerIndex": 0,
+        "explanation": "You go to the gate to get on the plane."
+      },
+      {
+        "prompt": "What is another word for your bags?",
+        "options": ["Luggage", "Windows", "Shoes", "Books"],
+        "answerIndex": 0,
+        "explanation": "Luggage means your bags."
+      },
+      {
+        "prompt": "What lets you get on the plane after check-in?",
+        "options": ["A boarding pass", "A photo", "A pillow", "A phone"],
+        "answerIndex": 0,
+        "explanation": "A boarding pass lets you get on the plane."
+      },
+      {
+        "prompt": "Where do they check your bags for safety?",
+        "options": ["Security", "The cafe", "The taxi", "The hotel"],
+        "answerIndex": 0,
+        "explanation": "Security checks your bags for safety."
+      }
+    ],
+    "fillBlank": [
+      {
+        "prompt": "Here is my ___.",
+        "answer": "passport",
+        "hint": "hộ chiếu",
+        "explanation": "You show your passport at the airport."
+      },
+      {
+        "prompt": "My ___ is at nine o'clock.",
+        "answer": "flight",
+        "hint": "chuyến bay",
+        "explanation": "A flight is your trip on the plane."
+      },
+      {
+        "prompt": "The ___ is number ten.",
+        "answer": "gate",
+        "hint": "cửa ra máy bay",
+        "explanation": "The gate is where you board the plane."
+      }
+    ],
+    "matching": [
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "passport", "right": "hộ chiếu" },
+          { "left": "luggage", "right": "hành lý" },
+          { "left": "gate", "right": "cửa ra máy bay" },
+          { "left": "flight", "right": "chuyến bay" }
+        ]
+      },
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "ticket", "right": "vé" },
+          { "left": "security", "right": "an ninh" },
+          { "left": "departure", "right": "khởi hành" },
+          { "left": "boarding pass", "right": "thẻ lên máy bay" }
+        ]
+      }
+    ]
+  },
+  "reviewFocus": ["passport", "boarding pass", "luggage", "gate", "flight"]
+}

@@ -1,0 +1,160 @@
+{
+  "id": "travel-06",
+  "trackId": "travel",
+  "order": 6,
+  "title": "Shopping & Souvenirs",
+  "goal": "Ask about prices and sizes and buy souvenirs in a shop.",
+  "difficulty": "medium",
+  "estimatedMinutes": 13,
+  "prerequisite": "travel-05",
+  "completionCriteria": {
+    "type": "min_quiz_score",
+    "minQuizScore": 0.8,
+    "summary": "Finish the quiz with at least 80%."
+  },
+  "vocabulary": [
+    {
+      "word": "price",
+      "ipa": "/praɪs/",
+      "meaning": "giá",
+      "example": "What is the price of this?"
+    },
+    {
+      "word": "size",
+      "ipa": "/saɪz/",
+      "meaning": "kích cỡ",
+      "example": "Do you have a bigger size?"
+    },
+    {
+      "word": "buy",
+      "ipa": "/baɪ/",
+      "meaning": "mua",
+      "example": "I want to buy this hat."
+    },
+    {
+      "word": "cheap",
+      "ipa": "/tʃiːp/",
+      "meaning": "rẻ",
+      "example": "This shirt is very cheap."
+    },
+    {
+      "word": "expensive",
+      "ipa": "/ɪkˈspen.sɪv/",
+      "meaning": "đắt",
+      "example": "That bag is too expensive."
+    },
+    {
+      "word": "souvenir",
+      "ipa": "/ˌsuː.vəˈnɪr/",
+      "meaning": "quà lưu niệm",
+      "example": "I want a small souvenir."
+    },
+    {
+      "word": "shop",
+      "ipa": "/ʃɒp/",
+      "meaning": "cửa hàng",
+      "example": "The shop is open now."
+    },
+    {
+      "word": "discount",
+      "ipa": "/ˈdɪs.kaʊnt/",
+      "meaning": "giảm giá",
+      "example": "Can I get a discount?"
+    }
+  ],
+  "dialogue": [
+    { "speaker": "A", "line": "Hello. Can I help you?" },
+    { "speaker": "B", "line": "Yes, I want to buy a souvenir." },
+    { "speaker": "A", "line": "This hat is very popular." },
+    { "speaker": "B", "line": "What is the price?" },
+    { "speaker": "A", "line": "It is twenty dollars." },
+    {
+      "speaker": "B",
+      "line": "That is a little expensive. Can I get a discount?"
+    },
+    { "speaker": "A", "line": "Okay, fifteen dollars for you." },
+    { "speaker": "B", "line": "Do you have a bigger size?" },
+    { "speaker": "A", "line": "Yes, here is a bigger one." },
+    { "speaker": "B", "line": "Great, I will buy it. Thank you!" }
+  ],
+  "exercises": {
+    "multipleChoice": [
+      {
+        "prompt": "What do you ask to know how much money something costs?",
+        "options": [
+          "What is the price?",
+          "What is the time?",
+          "Where is the gate?",
+          "What is your name?"
+        ],
+        "answerIndex": 0,
+        "explanation": "The price is how much it costs."
+      },
+      {
+        "prompt": "A gift to remember your trip is a...",
+        "options": ["Souvenir", "Ticket", "Passport", "Menu"],
+        "answerIndex": 0,
+        "explanation": "A souvenir helps you remember a trip."
+      },
+      {
+        "prompt": "Something that costs a lot of money is...",
+        "options": ["Expensive", "Cheap", "Small", "Fast"],
+        "answerIndex": 0,
+        "explanation": "Expensive means it costs a lot."
+      },
+      {
+        "prompt": "Something that costs little money is...",
+        "options": ["Cheap", "Expensive", "Loud", "Tall"],
+        "answerIndex": 0,
+        "explanation": "Cheap means it costs little."
+      },
+      {
+        "prompt": "You ask for a lower price. You ask for a...",
+        "options": ["Discount", "Corner", "Platform", "Floor"],
+        "answerIndex": 0,
+        "explanation": "A discount is a lower price."
+      }
+    ],
+    "fillBlank": [
+      {
+        "prompt": "What is the ___ of this?",
+        "answer": "price",
+        "hint": "giá",
+        "explanation": "The price is how much it costs."
+      },
+      {
+        "prompt": "Do you have a bigger ___?",
+        "answer": "size",
+        "hint": "kích cỡ",
+        "explanation": "Size means how big or small it is."
+      },
+      {
+        "prompt": "Can I get a ___?",
+        "answer": "discount",
+        "hint": "giảm giá",
+        "explanation": "A discount is a lower price."
+      }
+    ],
+    "matching": [
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "price", "right": "giá" },
+          { "left": "size", "right": "kích cỡ" },
+          { "left": "buy", "right": "mua" },
+          { "left": "cheap", "right": "rẻ" }
+        ]
+      },
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "expensive", "right": "đắt" },
+          { "left": "souvenir", "right": "quà lưu niệm" },
+          { "left": "shop", "right": "cửa hàng" },
+          { "left": "discount", "right": "giảm giá" }
+        ]
+      }
+    ]
+  },
+  "reviewFocus": ["price", "size", "cheap", "expensive", "souvenir"]
+}

@@ -1,0 +1,155 @@
+{
+  "id": "construction-04",
+  "trackId": "construction",
+  "order": 4,
+  "title": "On the Site (roles)",
+  "goal": "Name the people and roles you meet on a construction site.",
+  "difficulty": "easy",
+  "estimatedMinutes": 13,
+  "prerequisite": "construction-03",
+  "completionCriteria": {
+    "type": "min_quiz_score",
+    "minQuizScore": 0.8,
+    "summary": "Finish the quiz with at least 80%."
+  },
+  "vocabulary": [
+    {
+      "word": "worker",
+      "ipa": "/ˈwɜː.kər/",
+      "meaning": "công nhân",
+      "example": "Every worker needs a helmet."
+    },
+    {
+      "word": "foreman",
+      "ipa": "/ˈfɔː.mən/",
+      "meaning": "đốc công",
+      "example": "Ask the foreman for the plan."
+    },
+    {
+      "word": "engineer",
+      "ipa": "/ˌen.dʒɪˈnɪər/",
+      "meaning": "kỹ sư",
+      "example": "The engineer checks the design."
+    },
+    {
+      "word": "supervisor",
+      "ipa": "/ˈsuː.pə.vaɪ.zər/",
+      "meaning": "người giám sát",
+      "example": "The supervisor is on site now."
+    },
+    {
+      "word": "electrician",
+      "ipa": "/ɪˌlekˈtrɪʃ.ən/",
+      "meaning": "thợ điện",
+      "example": "The electrician fixes the wire."
+    },
+    {
+      "word": "plumber",
+      "ipa": "/ˈplʌm.ər/",
+      "meaning": "thợ ống nước",
+      "example": "The plumber connects the pipe."
+    },
+    {
+      "word": "driver",
+      "ipa": "/ˈdraɪ.vər/",
+      "meaning": "tài xế",
+      "example": "The driver moves the truck."
+    },
+    {
+      "word": "team",
+      "ipa": "/tiːm/",
+      "meaning": "đội, nhóm",
+      "example": "Our team works fast."
+    }
+  ],
+  "dialogue": [
+    { "speaker": "A", "line": "Who is the boss on this site?" },
+    { "speaker": "B", "line": "The foreman is the boss of our team." },
+    { "speaker": "A", "line": "Where is the engineer?" },
+    { "speaker": "B", "line": "The engineer is checking the design." },
+    { "speaker": "A", "line": "I need help with the wire." },
+    { "speaker": "B", "line": "Ask the electrician. He is over there." },
+    { "speaker": "A", "line": "And who fixes the water pipe?" },
+    { "speaker": "B", "line": "The plumber does. He starts at nine." },
+    { "speaker": "A", "line": "Okay. Who drives the truck today?" },
+    {
+      "speaker": "B",
+      "line": "The driver is here. The supervisor will tell him."
+    }
+  ],
+  "exercises": {
+    "multipleChoice": [
+      {
+        "prompt": "Who is the boss of the workers on site?",
+        "options": ["driver", "foreman", "plumber", "electrician"],
+        "answerIndex": 1,
+        "explanation": "The foreman leads the workers."
+      },
+      {
+        "prompt": "Who fixes electric wires?",
+        "options": ["plumber", "engineer", "electrician", "driver"],
+        "answerIndex": 2,
+        "explanation": "An electrician works with wires."
+      },
+      {
+        "prompt": "Who connects the water pipes?",
+        "options": ["plumber", "foreman", "worker", "engineer"],
+        "answerIndex": 0,
+        "explanation": "A plumber connects pipes."
+      },
+      {
+        "prompt": "Who checks the building design?",
+        "options": ["driver", "worker", "plumber", "engineer"],
+        "answerIndex": 3,
+        "explanation": "An engineer checks the design."
+      },
+      {
+        "prompt": "Who moves the truck?",
+        "options": ["driver", "electrician", "foreman", "plumber"],
+        "answerIndex": 0,
+        "explanation": "The driver moves vehicles."
+      }
+    ],
+    "fillBlank": [
+      {
+        "prompt": "The ___ tells the team what to do.",
+        "answer": "foreman",
+        "hint": "đốc công",
+        "explanation": "The foreman gives the team orders."
+      },
+      {
+        "prompt": "The ___ fixes the broken wire.",
+        "answer": "electrician",
+        "hint": "thợ điện",
+        "explanation": "An electrician fixes wires."
+      },
+      {
+        "prompt": "Our ___ works fast and together.",
+        "answer": "team",
+        "hint": "đội, nhóm",
+        "explanation": "A team is a group of workers."
+      }
+    ],
+    "matching": [
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "worker", "right": "công nhân" },
+          { "left": "foreman", "right": "đốc công" },
+          { "left": "engineer", "right": "kỹ sư" },
+          { "left": "supervisor", "right": "người giám sát" }
+        ]
+      },
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "electrician", "right": "thợ điện" },
+          { "left": "plumber", "right": "thợ ống nước" },
+          { "left": "driver", "right": "tài xế" },
+          { "left": "team", "right": "đội, nhóm" }
+        ]
+      }
+    ]
+  },
+  "reviewFocus": ["worker", "foreman", "engineer", "electrician", "plumber"]
+}

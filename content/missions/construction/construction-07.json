@@ -1,0 +1,152 @@
+{
+  "id": "construction-07",
+  "trackId": "construction",
+  "order": 7,
+  "title": "Machines & Vehicles",
+  "goal": "Name common site machines and vehicles and talk about their use.",
+  "difficulty": "medium",
+  "estimatedMinutes": 14,
+  "prerequisite": "construction-06",
+  "completionCriteria": {
+    "type": "min_quiz_score",
+    "minQuizScore": 0.8,
+    "summary": "Finish the quiz with at least 80%."
+  },
+  "vocabulary": [
+    {
+      "word": "crane",
+      "ipa": "/kreɪn/",
+      "meaning": "cần cẩu",
+      "example": "The crane lifts the steel."
+    },
+    {
+      "word": "excavator",
+      "ipa": "/ˈek.skə.veɪ.tər/",
+      "meaning": "máy xúc",
+      "example": "The excavator digs the ground."
+    },
+    {
+      "word": "truck",
+      "ipa": "/trʌk/",
+      "meaning": "xe tải",
+      "example": "The truck brings the sand."
+    },
+    {
+      "word": "bulldozer",
+      "ipa": "/ˈbʊlˌdəʊ.zər/",
+      "meaning": "máy ủi",
+      "example": "The bulldozer moves the soil."
+    },
+    {
+      "word": "forklift",
+      "ipa": "/ˈfɔːk.lɪft/",
+      "meaning": "xe nâng",
+      "example": "The forklift carries the bricks."
+    },
+    {
+      "word": "mixer",
+      "ipa": "/ˈmɪk.sər/",
+      "meaning": "máy trộn bê tông",
+      "example": "The mixer makes the concrete."
+    },
+    {
+      "word": "ladder",
+      "ipa": "/ˈlæd.ər/",
+      "meaning": "cái thang",
+      "example": "Climb the ladder carefully."
+    },
+    {
+      "word": "engine",
+      "ipa": "/ˈen.dʒɪn/",
+      "meaning": "động cơ",
+      "example": "Turn off the engine now."
+    }
+  ],
+  "dialogue": [
+    { "speaker": "A", "line": "The crane will lift the steel bars." },
+    { "speaker": "B", "line": "Good. Where is the excavator?" },
+    { "speaker": "A", "line": "It is digging the ground over there." },
+    { "speaker": "B", "line": "When does the truck bring the sand?" },
+    { "speaker": "A", "line": "At ten. The mixer will make the concrete." },
+    { "speaker": "B", "line": "Can the forklift carry these bricks?" },
+    { "speaker": "A", "line": "Yes, but drive slowly and be careful." },
+    { "speaker": "B", "line": "I need to reach the roof." },
+    { "speaker": "A", "line": "Use the ladder. Climb it carefully." },
+    { "speaker": "B", "line": "Okay. Please turn off the engine first." }
+  ],
+  "exercises": {
+    "multipleChoice": [
+      {
+        "prompt": "Which machine lifts heavy steel to high places?",
+        "options": ["crane", "truck", "mixer", "ladder"],
+        "answerIndex": 0,
+        "explanation": "A crane lifts heavy things high up."
+      },
+      {
+        "prompt": "Which machine digs the ground?",
+        "options": ["mixer", "excavator", "forklift", "ladder"],
+        "answerIndex": 1,
+        "explanation": "An excavator digs the ground."
+      },
+      {
+        "prompt": "Which machine makes concrete?",
+        "options": ["crane", "truck", "mixer", "bulldozer"],
+        "answerIndex": 2,
+        "explanation": "A mixer makes concrete."
+      },
+      {
+        "prompt": "You want to reach the roof. Use the ___.",
+        "options": ["truck", "engine", "mixer", "ladder"],
+        "answerIndex": 3,
+        "explanation": "A ladder helps you climb up."
+      },
+      {
+        "prompt": "Before you leave the machine, you should turn off the ___.",
+        "options": ["ladder", "engine", "brick", "helmet"],
+        "answerIndex": 1,
+        "explanation": "Turn off the engine for safety."
+      }
+    ],
+    "fillBlank": [
+      {
+        "prompt": "The ___ lifts the heavy steel to the top.",
+        "answer": "crane",
+        "hint": "cần cẩu",
+        "explanation": "A crane lifts heavy loads high."
+      },
+      {
+        "prompt": "The ___ brings the sand to the site.",
+        "answer": "truck",
+        "hint": "xe tải",
+        "explanation": "A truck carries materials."
+      },
+      {
+        "prompt": "Climb the ___ carefully to reach the roof.",
+        "answer": "ladder",
+        "hint": "cái thang",
+        "explanation": "A ladder is used to climb."
+      }
+    ],
+    "matching": [
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "crane", "right": "cần cẩu" },
+          { "left": "excavator", "right": "máy xúc" },
+          { "left": "truck", "right": "xe tải" },
+          { "left": "bulldozer", "right": "máy ủi" }
+        ]
+      },
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "forklift", "right": "xe nâng" },
+          { "left": "mixer", "right": "máy trộn bê tông" },
+          { "left": "ladder", "right": "cái thang" },
+          { "left": "engine", "right": "động cơ" }
+        ]
+      }
+    ]
+  },
+  "reviewFocus": ["crane", "excavator", "truck", "mixer", "ladder"]
+}

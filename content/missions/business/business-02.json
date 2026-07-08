@@ -1,0 +1,152 @@
+{
+  "id": "business-02",
+  "trackId": "business",
+  "order": 2,
+  "title": "Job Titles & Departments",
+  "goal": "Talk about your job title and which department you work in.",
+  "difficulty": "easy",
+  "estimatedMinutes": 12,
+  "prerequisite": "business-01",
+  "completionCriteria": {
+    "type": "min_quiz_score",
+    "minQuizScore": 0.8,
+    "summary": "Finish the quiz with at least 80%."
+  },
+  "vocabulary": [
+    {
+      "word": "department",
+      "ipa": "/dɪˈpɑːt.mənt/",
+      "meaning": "phòng ban",
+      "example": "I work in the sales department."
+    },
+    {
+      "word": "manager",
+      "ipa": "/ˈmæn.ɪ.dʒər/",
+      "meaning": "quản lý",
+      "example": "She is my manager."
+    },
+    {
+      "word": "job",
+      "ipa": "/dʒɒb/",
+      "meaning": "công việc",
+      "example": "I like my job."
+    },
+    {
+      "word": "title",
+      "ipa": "/ˈtaɪ.təl/",
+      "meaning": "chức danh",
+      "example": "My job title is engineer."
+    },
+    {
+      "word": "engineer",
+      "ipa": "/ˌen.dʒɪˈnɪər/",
+      "meaning": "kỹ sư",
+      "example": "He is an engineer."
+    },
+    {
+      "word": "sales",
+      "ipa": "/seɪlz/",
+      "meaning": "bán hàng",
+      "example": "I work in sales."
+    },
+    {
+      "word": "staff",
+      "ipa": "/stɑːf/",
+      "meaning": "nhân viên",
+      "example": "We have ten staff."
+    },
+    {
+      "word": "boss",
+      "ipa": "/bɒs/",
+      "meaning": "sếp",
+      "example": "My boss is kind."
+    }
+  ],
+  "dialogue": [
+    { "speaker": "A", "line": "What is your job title?" },
+    { "speaker": "B", "line": "I am an engineer." },
+    { "speaker": "A", "line": "Which department do you work in?" },
+    { "speaker": "B", "line": "I work in the sales department." },
+    { "speaker": "A", "line": "Who is your manager?" },
+    { "speaker": "B", "line": "My manager is Mr. Long." },
+    { "speaker": "A", "line": "Is he a good boss?" },
+    { "speaker": "B", "line": "Yes, he is very kind." },
+    { "speaker": "A", "line": "How many staff are on your team?" },
+    { "speaker": "B", "line": "We have eight staff." }
+  ],
+  "exercises": {
+    "multipleChoice": [
+      {
+        "prompt": "A person who leads a team is a ___.",
+        "options": ["manager", "chair", "door", "cup"],
+        "answerIndex": 0,
+        "explanation": "A manager leads a team."
+      },
+      {
+        "prompt": "Your job name is your job ___.",
+        "options": ["title", "coffee", "shoe", "bus"],
+        "answerIndex": 0,
+        "explanation": "\"Job title\" is the name of your role."
+      },
+      {
+        "prompt": "A group in a company is a ___.",
+        "options": ["department", "morning", "pen", "rain"],
+        "answerIndex": 0,
+        "explanation": "A department is a group in a company."
+      },
+      {
+        "prompt": "Your top leader is your ___.",
+        "options": ["boss", "lunch", "table", "sky"],
+        "answerIndex": 0,
+        "explanation": "The boss is the top leader."
+      },
+      {
+        "prompt": "A person who builds machines is an ___.",
+        "options": ["engineer", "apple", "office", "hour"],
+        "answerIndex": 0,
+        "explanation": "An engineer builds or designs machines."
+      }
+    ],
+    "fillBlank": [
+      {
+        "prompt": "I work in the sales ___.",
+        "answer": "department",
+        "hint": "phòng ban",
+        "explanation": "A department is a group in a company."
+      },
+      {
+        "prompt": "My ___ is Mr. Long.",
+        "answer": "manager",
+        "hint": "quản lý",
+        "explanation": "A manager leads the team."
+      },
+      {
+        "prompt": "We have eight ___.",
+        "answer": "staff",
+        "hint": "nhân viên",
+        "explanation": "\"Staff\" means the workers."
+      }
+    ],
+    "matching": [
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "department", "right": "phòng ban" },
+          { "left": "manager", "right": "quản lý" },
+          { "left": "job", "right": "công việc" },
+          { "left": "title", "right": "chức danh" }
+        ]
+      },
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "engineer", "right": "kỹ sư" },
+          { "left": "sales", "right": "bán hàng" },
+          { "left": "staff", "right": "nhân viên" },
+          { "left": "boss", "right": "sếp" }
+        ]
+      }
+    ]
+  },
+  "reviewFocus": ["department", "manager", "title", "engineer", "boss"]
+}

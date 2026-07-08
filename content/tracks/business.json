@@ -1,0 +1,20 @@
+{
+  "id": "business",
+  "key": "business",
+  "title": "Business English",
+  "goal": "business",
+  "cefr": "A1",
+  "description": "Simple, practical English for the workplace. Learn to introduce yourself, use the phone and email, join meetings, and make small talk with colleagues.",
+  "missionIds": [
+    "business-01",
+    "business-02",
+    "business-03",
+    "business-04",
+    "business-05",
+    "business-06",
+    "business-07",
+    "business-08",
+    "business-09",
+    "business-10"
+  ]
+}

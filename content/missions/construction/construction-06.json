@@ -1,0 +1,152 @@
+{
+  "id": "construction-06",
+  "trackId": "construction",
+  "order": 6,
+  "title": "Instructions & Commands",
+  "goal": "Understand and give simple instructions on site.",
+  "difficulty": "medium",
+  "estimatedMinutes": 13,
+  "prerequisite": "construction-05",
+  "completionCriteria": {
+    "type": "min_quiz_score",
+    "minQuizScore": 0.8,
+    "summary": "Finish the quiz with at least 80%."
+  },
+  "vocabulary": [
+    {
+      "word": "lift",
+      "ipa": "/lɪft/",
+      "meaning": "nâng lên",
+      "example": "Lift the box together."
+    },
+    {
+      "word": "push",
+      "ipa": "/pʊʃ/",
+      "meaning": "đẩy",
+      "example": "Push the cart to the wall."
+    },
+    {
+      "word": "pull",
+      "ipa": "/pʊl/",
+      "meaning": "kéo",
+      "example": "Pull the rope slowly."
+    },
+    {
+      "word": "stop",
+      "ipa": "/stɒp/",
+      "meaning": "dừng lại",
+      "example": "Stop! There is danger."
+    },
+    {
+      "word": "wait",
+      "ipa": "/weɪt/",
+      "meaning": "chờ, đợi",
+      "example": "Wait for the signal."
+    },
+    {
+      "word": "hold",
+      "ipa": "/həʊld/",
+      "meaning": "giữ",
+      "example": "Hold the ladder for me."
+    },
+    {
+      "word": "move",
+      "ipa": "/muːv/",
+      "meaning": "di chuyển",
+      "example": "Move the bricks over here."
+    },
+    {
+      "word": "slowly",
+      "ipa": "/ˈsləʊ.li/",
+      "meaning": "chậm rãi",
+      "example": "Drive slowly on the site."
+    }
+  ],
+  "dialogue": [
+    { "speaker": "A", "line": "Can you help me with this box?" },
+    { "speaker": "B", "line": "Yes. Let us lift it together." },
+    { "speaker": "A", "line": "Push the cart to the wall, please." },
+    { "speaker": "B", "line": "Okay. Now pull the rope slowly." },
+    { "speaker": "A", "line": "Stop! Wait for the signal." },
+    { "speaker": "B", "line": "I am waiting. Is it safe now?" },
+    { "speaker": "A", "line": "Yes. Hold the ladder for me." },
+    { "speaker": "B", "line": "I am holding it. Go up slowly." },
+    { "speaker": "A", "line": "Move the bricks over here, please." },
+    { "speaker": "B", "line": "No problem. I will move them now." }
+  ],
+  "exercises": {
+    "multipleChoice": [
+      {
+        "prompt": "The word 'lift' means to ___.",
+        "options": ["put down", "raise up", "throw", "break"],
+        "answerIndex": 1,
+        "explanation": "Lift means to raise up."
+      },
+      {
+        "prompt": "There is danger ahead. You should shout:",
+        "options": ["Go!", "Stop!", "Faster!", "Push!"],
+        "answerIndex": 1,
+        "explanation": "Stop means do not go."
+      },
+      {
+        "prompt": "'Push' is the opposite of ___.",
+        "options": ["pull", "lift", "hold", "wait"],
+        "answerIndex": 0,
+        "explanation": "Push and pull are opposites."
+      },
+      {
+        "prompt": "'Hold the ladder' means you should ___ it.",
+        "options": ["drop", "keep", "throw", "cut"],
+        "answerIndex": 1,
+        "explanation": "Hold means keep it steady."
+      },
+      {
+        "prompt": "Drive ___ on the site to stay safe.",
+        "options": ["fast", "slowly", "loud", "high"],
+        "answerIndex": 1,
+        "explanation": "Drive slowly to be safe."
+      }
+    ],
+    "fillBlank": [
+      {
+        "prompt": "Please ___ the box together, it is heavy.",
+        "answer": "lift",
+        "hint": "nâng lên",
+        "explanation": "Lift means raise up."
+      },
+      {
+        "prompt": "___! There is danger ahead.",
+        "answer": "stop",
+        "hint": "dừng lại",
+        "explanation": "Stop means do not move."
+      },
+      {
+        "prompt": "Please ___ the ladder while I climb.",
+        "answer": "hold",
+        "hint": "giữ",
+        "explanation": "Hold means keep steady."
+      }
+    ],
+    "matching": [
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "lift", "right": "nâng lên" },
+          { "left": "push", "right": "đẩy" },
+          { "left": "pull", "right": "kéo" },
+          { "left": "stop", "right": "dừng lại" }
+        ]
+      },
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "wait", "right": "chờ, đợi" },
+          { "left": "hold", "right": "giữ" },
+          { "left": "move", "right": "di chuyển" },
+          { "left": "slowly", "right": "chậm rãi" }
+        ]
+      }
+    ]
+  },
+  "reviewFocus": ["lift", "push", "pull", "stop", "hold"]
+}

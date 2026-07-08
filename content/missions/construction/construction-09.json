@@ -1,0 +1,152 @@
+{
+  "id": "construction-09",
+  "trackId": "construction",
+  "order": 9,
+  "title": "Time & Schedule on Site",
+  "goal": "Talk about work times, breaks, and the daily schedule.",
+  "difficulty": "hard",
+  "estimatedMinutes": 14,
+  "prerequisite": "construction-08",
+  "completionCriteria": {
+    "type": "min_quiz_score",
+    "minQuizScore": 0.8,
+    "summary": "Finish the quiz with at least 80%."
+  },
+  "vocabulary": [
+    {
+      "word": "shift",
+      "ipa": "/ʃɪft/",
+      "meaning": "ca làm việc",
+      "example": "My shift starts at seven."
+    },
+    {
+      "word": "break",
+      "ipa": "/breɪk/",
+      "meaning": "giờ nghỉ",
+      "example": "We have a break at noon."
+    },
+    {
+      "word": "early",
+      "ipa": "/ˈɜː.li/",
+      "meaning": "sớm",
+      "example": "Please come early tomorrow."
+    },
+    {
+      "word": "late",
+      "ipa": "/leɪt/",
+      "meaning": "muộn, trễ",
+      "example": "Do not be late for work."
+    },
+    {
+      "word": "deadline",
+      "ipa": "/ˈded.laɪn/",
+      "meaning": "hạn chót",
+      "example": "The deadline is Friday."
+    },
+    {
+      "word": "overtime",
+      "ipa": "/ˈəʊ.və.taɪm/",
+      "meaning": "làm thêm giờ",
+      "example": "We work overtime tonight."
+    },
+    {
+      "word": "finish",
+      "ipa": "/ˈfɪn.ɪʃ/",
+      "meaning": "hoàn thành, xong",
+      "example": "We finish work at five."
+    },
+    {
+      "word": "schedule",
+      "ipa": "/ˈʃed.juːl/",
+      "meaning": "lịch làm việc",
+      "example": "Check the schedule for today."
+    }
+  ],
+  "dialogue": [
+    { "speaker": "A", "line": "What time does your shift start?" },
+    { "speaker": "B", "line": "My shift starts at seven o'clock." },
+    { "speaker": "A", "line": "Please do not be late tomorrow." },
+    { "speaker": "B", "line": "I will come early. When is the break?" },
+    { "speaker": "A", "line": "We have a break at noon." },
+    { "speaker": "B", "line": "What time do we finish today?" },
+    { "speaker": "A", "line": "We finish at five, but we have overtime." },
+    { "speaker": "B", "line": "Why do we work overtime tonight?" },
+    { "speaker": "A", "line": "The deadline is Friday. Check the schedule." },
+    { "speaker": "B", "line": "Okay. I understand the schedule now." }
+  ],
+  "exercises": {
+    "multipleChoice": [
+      {
+        "prompt": "Your work period for the day is called a ___.",
+        "options": ["shift", "break", "crack", "leak"],
+        "answerIndex": 0,
+        "explanation": "A shift is a work period."
+      },
+      {
+        "prompt": "You rest and eat during a ___.",
+        "options": ["shift", "break", "deadline", "schedule"],
+        "answerIndex": 1,
+        "explanation": "A break is a rest time."
+      },
+      {
+        "prompt": "The last day to finish the job is the ___.",
+        "options": ["shift", "break", "deadline", "overtime"],
+        "answerIndex": 2,
+        "explanation": "A deadline is the final day."
+      },
+      {
+        "prompt": "You arrive after the start time. You are ___.",
+        "options": ["early", "late", "level", "loose"],
+        "answerIndex": 1,
+        "explanation": "Late means after the time."
+      },
+      {
+        "prompt": "Extra work after normal hours is called ___.",
+        "options": ["break", "shift", "schedule", "overtime"],
+        "answerIndex": 3,
+        "explanation": "Overtime is extra work hours."
+      }
+    ],
+    "fillBlank": [
+      {
+        "prompt": "My ___ starts at seven in the morning.",
+        "answer": "shift",
+        "hint": "ca làm việc",
+        "explanation": "A shift is a work period."
+      },
+      {
+        "prompt": "Please do not be ___ for work.",
+        "answer": "late",
+        "hint": "muộn, trễ",
+        "explanation": "Late means after the start time."
+      },
+      {
+        "prompt": "We must ___ the job before Friday.",
+        "answer": "finish",
+        "hint": "hoàn thành, xong",
+        "explanation": "Finish means complete the job."
+      }
+    ],
+    "matching": [
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "shift", "right": "ca làm việc" },
+          { "left": "break", "right": "giờ nghỉ" },
+          { "left": "early", "right": "sớm" },
+          { "left": "late", "right": "muộn, trễ" }
+        ]
+      },
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "deadline", "right": "hạn chót" },
+          { "left": "overtime", "right": "làm thêm giờ" },
+          { "left": "finish", "right": "hoàn thành, xong" },
+          { "left": "schedule", "right": "lịch làm việc" }
+        ]
+      }
+    ]
+  },
+  "reviewFocus": ["shift", "break", "late", "deadline", "overtime"]
+}

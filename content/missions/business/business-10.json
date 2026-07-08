@@ -1,0 +1,152 @@
+{
+  "id": "business-10",
+  "trackId": "business",
+  "order": 10,
+  "title": "Presentation Basics",
+  "goal": "Give a short, simple presentation and thank your audience.",
+  "difficulty": "hard",
+  "estimatedMinutes": 15,
+  "prerequisite": "business-09",
+  "completionCriteria": {
+    "type": "min_quiz_score",
+    "minQuizScore": 0.8,
+    "summary": "Finish the quiz with at least 80%."
+  },
+  "vocabulary": [
+    {
+      "word": "presentation",
+      "ipa": "/ˌprez.ənˈteɪ.ʃən/",
+      "meaning": "bài thuyết trình",
+      "example": "I have a presentation today."
+    },
+    {
+      "word": "slide",
+      "ipa": "/slaɪd/",
+      "meaning": "trang trình chiếu",
+      "example": "Please look at this slide."
+    },
+    {
+      "word": "topic",
+      "ipa": "/ˈtɒp.ɪk/",
+      "meaning": "chủ đề",
+      "example": "My topic is our new plan."
+    },
+    {
+      "word": "explain",
+      "ipa": "/ɪkˈspleɪn/",
+      "meaning": "giải thích",
+      "example": "I will explain the chart."
+    },
+    {
+      "word": "question",
+      "ipa": "/ˈkwes.tʃən/",
+      "meaning": "câu hỏi",
+      "example": "Do you have a question?"
+    },
+    {
+      "word": "audience",
+      "ipa": "/ˈɔː.di.əns/",
+      "meaning": "khán giả",
+      "example": "The audience is ready."
+    },
+    {
+      "word": "start",
+      "ipa": "/stɑːt/",
+      "meaning": "bắt đầu",
+      "example": "Let's start now."
+    },
+    {
+      "word": "thank",
+      "ipa": "/θæŋk/",
+      "meaning": "cảm ơn",
+      "example": "Thank you for listening."
+    }
+  ],
+  "dialogue": [
+    { "speaker": "A", "line": "Good morning, everyone. Let's start." },
+    { "speaker": "B", "line": "Great. What is your topic today?" },
+    { "speaker": "A", "line": "My topic is our new sales plan." },
+    { "speaker": "A", "line": "Please look at this first slide." },
+    { "speaker": "B", "line": "Can you explain the numbers?" },
+    { "speaker": "A", "line": "Yes, I will explain the chart now." },
+    { "speaker": "A", "line": "Do you have any questions?" },
+    { "speaker": "B", "line": "Yes, one question about the price." },
+    { "speaker": "A", "line": "Good question. The price is lower now." },
+    { "speaker": "A", "line": "Thank you all for listening." }
+  ],
+  "exercises": {
+    "multipleChoice": [
+      {
+        "prompt": "A talk to show your work is a ___.",
+        "options": ["presentation", "weekend", "invoice", "coffee"],
+        "answerIndex": 0,
+        "explanation": "A presentation is a talk to show your work."
+      },
+      {
+        "prompt": "One screen of a presentation is a ___.",
+        "options": ["slide", "chair", "door", "river"],
+        "answerIndex": 0,
+        "explanation": "A slide is one screen."
+      },
+      {
+        "prompt": "The main subject of a talk is the ___.",
+        "options": ["topic", "shoe", "hat", "cloud"],
+        "answerIndex": 0,
+        "explanation": "The topic is the main subject."
+      },
+      {
+        "prompt": "To make something clear is to ___ it.",
+        "options": ["explain", "throw", "wash", "run"],
+        "answerIndex": 0,
+        "explanation": "\"Explain\" means make something clear."
+      },
+      {
+        "prompt": "The people who listen are the ___.",
+        "options": ["audience", "window", "cup", "tree"],
+        "answerIndex": 0,
+        "explanation": "The audience is the people who listen."
+      }
+    ],
+    "fillBlank": [
+      {
+        "prompt": "Please look at this ___.",
+        "answer": "slide",
+        "hint": "trang trình chiếu",
+        "explanation": "A slide is one screen of a presentation."
+      },
+      {
+        "prompt": "Do you have a ___?",
+        "answer": "question",
+        "hint": "câu hỏi",
+        "explanation": "A question asks for information."
+      },
+      {
+        "prompt": "I will ___ the chart.",
+        "answer": "explain",
+        "hint": "giải thích",
+        "explanation": "\"Explain\" means make something clear."
+      }
+    ],
+    "matching": [
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "presentation", "right": "bài thuyết trình" },
+          { "left": "slide", "right": "trang trình chiếu" },
+          { "left": "topic", "right": "chủ đề" },
+          { "left": "explain", "right": "giải thích" }
+        ]
+      },
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "question", "right": "câu hỏi" },
+          { "left": "audience", "right": "khán giả" },
+          { "left": "start", "right": "bắt đầu" },
+          { "left": "thank", "right": "cảm ơn" }
+        ]
+      }
+    ]
+  },
+  "reviewFocus": ["presentation", "slide", "topic", "explain", "audience"]
+}

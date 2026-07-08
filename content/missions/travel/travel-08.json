@@ -1,0 +1,157 @@
+{
+  "id": "travel-08",
+  "trackId": "travel",
+  "order": 8,
+  "title": "Emergencies & Health",
+  "goal": "Ask for help and describe a simple health problem in an emergency.",
+  "difficulty": "medium",
+  "estimatedMinutes": 14,
+  "prerequisite": "travel-07",
+  "completionCriteria": {
+    "type": "min_quiz_score",
+    "minQuizScore": 0.8,
+    "summary": "Finish the quiz with at least 80%."
+  },
+  "vocabulary": [
+    {
+      "word": "help",
+      "ipa": "/help/",
+      "meaning": "giúp đỡ",
+      "example": "Please help me."
+    },
+    {
+      "word": "doctor",
+      "ipa": "/ˈdɒk.tɚ/",
+      "meaning": "bác sĩ",
+      "example": "I need a doctor."
+    },
+    {
+      "word": "hospital",
+      "ipa": "/ˈhɒs.pɪ.təl/",
+      "meaning": "bệnh viện",
+      "example": "The hospital is near here."
+    },
+    {
+      "word": "sick",
+      "ipa": "/sɪk/",
+      "meaning": "bị ốm",
+      "example": "I feel sick today."
+    },
+    {
+      "word": "pain",
+      "ipa": "/peɪn/",
+      "meaning": "cơn đau",
+      "example": "I have a pain in my leg."
+    },
+    {
+      "word": "medicine",
+      "ipa": "/ˈmed.ɪ.sɪn/",
+      "meaning": "thuốc",
+      "example": "I need some medicine."
+    },
+    {
+      "word": "police",
+      "ipa": "/pəˈliːs/",
+      "meaning": "cảnh sát",
+      "example": "Please call the police."
+    },
+    {
+      "word": "pharmacy",
+      "ipa": "/ˈfɑːr.mə.si/",
+      "meaning": "hiệu thuốc",
+      "example": "The pharmacy is open now."
+    }
+  ],
+  "dialogue": [
+    { "speaker": "A", "line": "Excuse me, can you help me?" },
+    { "speaker": "B", "line": "Yes, what is wrong?" },
+    { "speaker": "A", "line": "I feel sick. I have a pain in my head." },
+    { "speaker": "B", "line": "Do you need a doctor?" },
+    { "speaker": "A", "line": "Yes, please. Where is the hospital?" },
+    { "speaker": "B", "line": "The hospital is near here." },
+    { "speaker": "A", "line": "I also need some medicine." },
+    { "speaker": "B", "line": "The pharmacy is next to the hospital." },
+    { "speaker": "A", "line": "Thank you so much for your help." },
+    { "speaker": "B", "line": "You are welcome. Take care!" }
+  ],
+  "exercises": {
+    "multipleChoice": [
+      {
+        "prompt": "What do you say when you need someone to assist you?",
+        "options": [
+          "Please help me.",
+          "Good night.",
+          "See you soon.",
+          "Nice to meet you."
+        ],
+        "answerIndex": 0,
+        "explanation": "You say 'Please help me' when you need help."
+      },
+      {
+        "prompt": "Who do you see when you are ill?",
+        "options": ["A doctor", "A waiter", "A pilot", "A driver"],
+        "answerIndex": 0,
+        "explanation": "A doctor helps you when you are ill."
+      },
+      {
+        "prompt": "Where do you go for serious health care?",
+        "options": ["The hospital", "The shop", "The gate", "The park"],
+        "answerIndex": 0,
+        "explanation": "The hospital gives serious health care."
+      },
+      {
+        "prompt": "You take this to feel better when you are sick.",
+        "options": ["Medicine", "A ticket", "A coin", "A map"],
+        "answerIndex": 0,
+        "explanation": "You take medicine to feel better."
+      },
+      {
+        "prompt": "Where do you buy medicine?",
+        "options": ["The pharmacy", "The platform", "The corner", "The table"],
+        "answerIndex": 0,
+        "explanation": "You buy medicine at the pharmacy."
+      }
+    ],
+    "fillBlank": [
+      {
+        "prompt": "Please ___ me.",
+        "answer": "help",
+        "hint": "giúp đỡ",
+        "explanation": "You ask people to help you."
+      },
+      {
+        "prompt": "I feel ___ today.",
+        "answer": "sick",
+        "hint": "bị ốm",
+        "explanation": "Sick means you feel ill."
+      },
+      {
+        "prompt": "I need some ___.",
+        "answer": "medicine",
+        "hint": "thuốc",
+        "explanation": "Medicine helps you feel better."
+      }
+    ],
+    "matching": [
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "help", "right": "giúp đỡ" },
+          { "left": "doctor", "right": "bác sĩ" },
+          { "left": "hospital", "right": "bệnh viện" },
+          { "left": "sick", "right": "bị ốm" }
+        ]
+      },
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "pain", "right": "cơn đau" },
+          { "left": "medicine", "right": "thuốc" },
+          { "left": "police", "right": "cảnh sát" },
+          { "left": "pharmacy", "right": "hiệu thuốc" }
+        ]
+      }
+    ]
+  },
+  "reviewFocus": ["help", "doctor", "hospital", "sick", "medicine"]
+}

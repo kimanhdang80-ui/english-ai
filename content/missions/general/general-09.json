@@ -1,0 +1,150 @@
+{
+  "id": "general-09",
+  "trackId": "general",
+  "order": 9,
+  "title": "Directions & Places",
+  "goal": "Ask for and give simple directions to places.",
+  "difficulty": "hard",
+  "estimatedMinutes": 15,
+  "prerequisite": "general-08",
+  "completionCriteria": {
+    "type": "min_quiz_score",
+    "minQuizScore": 0.8,
+    "summary": "Finish the quiz with at least 80%."
+  },
+  "vocabulary": [
+    {
+      "word": "left",
+      "ipa": "/left/",
+      "meaning": "bên trái",
+      "example": "Turn left at the shop."
+    },
+    {
+      "word": "right",
+      "ipa": "/raɪt/",
+      "meaning": "bên phải",
+      "example": "The bank is on the right."
+    },
+    {
+      "word": "street",
+      "ipa": "/striːt/",
+      "meaning": "đường phố",
+      "example": "Walk down this street."
+    },
+    {
+      "word": "map",
+      "ipa": "/mæp/",
+      "meaning": "bản đồ",
+      "example": "I use a map to find it."
+    },
+    {
+      "word": "near",
+      "ipa": "/nɪr/",
+      "meaning": "gần",
+      "example": "The park is near my home."
+    },
+    {
+      "word": "far",
+      "ipa": "/fɑːr/",
+      "meaning": "xa",
+      "example": "The airport is far away."
+    },
+    {
+      "word": "corner",
+      "ipa": "/ˈkɔːrnər/",
+      "meaning": "góc đường",
+      "example": "The store is on the corner."
+    },
+    {
+      "word": "straight",
+      "ipa": "/streɪt/",
+      "meaning": "thẳng",
+      "example": "Go straight for two blocks."
+    }
+  ],
+  "dialogue": [
+    { "speaker": "A", "line": "Excuse me, where is the bank?" },
+    { "speaker": "B", "line": "Go straight down this street." },
+    { "speaker": "A", "line": "Is it near or far?" },
+    { "speaker": "B", "line": "It is near, only two minutes." },
+    { "speaker": "A", "line": "Do I turn left or right?" },
+    { "speaker": "B", "line": "Turn right at the corner." },
+    { "speaker": "A", "line": "Can I see it on a map?" },
+    { "speaker": "B", "line": "Yes, look, the bank is here." }
+  ],
+  "exercises": {
+    "multipleChoice": [
+      {
+        "prompt": "The opposite of 'left' is ___.",
+        "options": ["near", "right", "far", "map"],
+        "answerIndex": 1,
+        "explanation": "Right is the opposite of left."
+      },
+      {
+        "prompt": "The opposite of 'near' is ___.",
+        "options": ["far", "corner", "street", "straight"],
+        "answerIndex": 0,
+        "explanation": "Far is the opposite of near."
+      },
+      {
+        "prompt": "You walk down a ___.",
+        "options": ["map", "corner", "street", "right"],
+        "answerIndex": 2,
+        "explanation": "You walk down a street."
+      },
+      {
+        "prompt": "Do not turn. Just go ___.",
+        "options": ["left", "corner", "straight", "map"],
+        "answerIndex": 2,
+        "explanation": "'Straight' means no turning."
+      },
+      {
+        "prompt": "You use a ___ to find a place.",
+        "options": ["map", "street", "corner", "far"],
+        "answerIndex": 0,
+        "explanation": "A map helps you find places."
+      }
+    ],
+    "fillBlank": [
+      {
+        "prompt": "Turn ___ at the shop, not right.",
+        "answer": "left",
+        "hint": "bên trái",
+        "explanation": "'Left' is the opposite of right."
+      },
+      {
+        "prompt": "The store is on the ___.",
+        "answer": "corner",
+        "hint": "góc đường",
+        "explanation": "A corner is where two streets meet."
+      },
+      {
+        "prompt": "Go ___ for two blocks.",
+        "answer": "straight",
+        "hint": "thẳng",
+        "explanation": "'Straight' means keep going forward."
+      }
+    ],
+    "matching": [
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "left", "right": "bên trái" },
+          { "left": "right", "right": "bên phải" },
+          { "left": "street", "right": "đường phố" },
+          { "left": "map", "right": "bản đồ" }
+        ]
+      },
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "near", "right": "gần" },
+          { "left": "far", "right": "xa" },
+          { "left": "corner", "right": "góc đường" },
+          { "left": "straight", "right": "thẳng" }
+        ]
+      }
+    ]
+  },
+  "reviewFocus": ["left", "right", "street", "near", "straight"]
+}

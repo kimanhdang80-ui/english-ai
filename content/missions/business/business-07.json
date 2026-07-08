@@ -1,0 +1,152 @@
+{
+  "id": "business-07",
+  "trackId": "business",
+  "order": 7,
+  "title": "Numbers, Prices & Invoices",
+  "goal": "Talk about prices, quantities, and simple invoices at work.",
+  "difficulty": "medium",
+  "estimatedMinutes": 14,
+  "prerequisite": "business-06",
+  "completionCriteria": {
+    "type": "min_quiz_score",
+    "minQuizScore": 0.8,
+    "summary": "Finish the quiz with at least 80%."
+  },
+  "vocabulary": [
+    {
+      "word": "price",
+      "ipa": "/praɪs/",
+      "meaning": "giá",
+      "example": "What is the price?"
+    },
+    {
+      "word": "invoice",
+      "ipa": "/ˈɪn.vɔɪs/",
+      "meaning": "hóa đơn",
+      "example": "Please send the invoice."
+    },
+    {
+      "word": "cost",
+      "ipa": "/kɒst/",
+      "meaning": "chi phí",
+      "example": "The cost is high."
+    },
+    {
+      "word": "pay",
+      "ipa": "/peɪ/",
+      "meaning": "thanh toán",
+      "example": "We pay on Friday."
+    },
+    {
+      "word": "total",
+      "ipa": "/ˈtəʊ.təl/",
+      "meaning": "tổng cộng",
+      "example": "The total is 500 dollars."
+    },
+    {
+      "word": "discount",
+      "ipa": "/ˈdɪs.kaʊnt/",
+      "meaning": "giảm giá",
+      "example": "We give a small discount."
+    },
+    {
+      "word": "order",
+      "ipa": "/ˈɔː.dər/",
+      "meaning": "đơn hàng",
+      "example": "Your order is ready."
+    },
+    {
+      "word": "amount",
+      "ipa": "/əˈmaʊnt/",
+      "meaning": "số lượng, số tiền",
+      "example": "What is the amount?"
+    }
+  ],
+  "dialogue": [
+    { "speaker": "A", "line": "What is the price of this order?" },
+    { "speaker": "B", "line": "The price is 400 dollars." },
+    { "speaker": "A", "line": "Is there a discount?" },
+    { "speaker": "B", "line": "Yes, a ten percent discount." },
+    { "speaker": "A", "line": "So what is the total?" },
+    { "speaker": "B", "line": "The total is 360 dollars." },
+    { "speaker": "A", "line": "When do we pay?" },
+    { "speaker": "B", "line": "You pay when you get the invoice." },
+    { "speaker": "A", "line": "Please send the invoice today." },
+    { "speaker": "B", "line": "Sure, I will send it this afternoon." }
+  ],
+  "exercises": {
+    "multipleChoice": [
+      {
+        "prompt": "How much something costs is the ___.",
+        "options": ["price", "cloud", "shoe", "song"],
+        "answerIndex": 0,
+        "explanation": "The price is how much something costs."
+      },
+      {
+        "prompt": "A bill for a customer is an ___.",
+        "options": ["invoice", "apple", "hour", "office"],
+        "answerIndex": 0,
+        "explanation": "An invoice is a bill."
+      },
+      {
+        "prompt": "To give money for a product is to ___.",
+        "options": ["pay", "run", "sing", "swim"],
+        "answerIndex": 0,
+        "explanation": "\"Pay\" means give money."
+      },
+      {
+        "prompt": "A lower price is a ___.",
+        "options": ["discount", "window", "chair", "river"],
+        "answerIndex": 0,
+        "explanation": "A discount is a lower price."
+      },
+      {
+        "prompt": "All the numbers added is the ___.",
+        "options": ["total", "door", "hat", "tree"],
+        "answerIndex": 0,
+        "explanation": "The total is the full amount."
+      }
+    ],
+    "fillBlank": [
+      {
+        "prompt": "Please send the ___ today.",
+        "answer": "invoice",
+        "hint": "hóa đơn",
+        "explanation": "An invoice is a bill for the customer."
+      },
+      {
+        "prompt": "The ___ is 360 dollars.",
+        "answer": "total",
+        "hint": "tổng cộng",
+        "explanation": "The total is the full amount."
+      },
+      {
+        "prompt": "We give a ten percent ___.",
+        "answer": "discount",
+        "hint": "giảm giá",
+        "explanation": "A discount is a lower price."
+      }
+    ],
+    "matching": [
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "price", "right": "giá" },
+          { "left": "invoice", "right": "hóa đơn" },
+          { "left": "cost", "right": "chi phí" },
+          { "left": "pay", "right": "thanh toán" }
+        ]
+      },
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "total", "right": "tổng cộng" },
+          { "left": "discount", "right": "giảm giá" },
+          { "left": "order", "right": "đơn hàng" },
+          { "left": "amount", "right": "số lượng, số tiền" }
+        ]
+      }
+    ]
+  },
+  "reviewFocus": ["price", "invoice", "pay", "total", "discount"]
+}

@@ -1,0 +1,160 @@
+{
+  "id": "travel-10",
+  "trackId": "travel",
+  "order": 10,
+  "title": "Making Friends & Small Talk",
+  "goal": "Meet new people and make simple small talk while traveling.",
+  "difficulty": "hard",
+  "estimatedMinutes": 14,
+  "prerequisite": "travel-09",
+  "completionCriteria": {
+    "type": "min_quiz_score",
+    "minQuizScore": 0.8,
+    "summary": "Finish the quiz with at least 80%."
+  },
+  "vocabulary": [
+    {
+      "word": "hello",
+      "ipa": "/heˈloʊ/",
+      "meaning": "xin chào",
+      "example": "Hello, nice to meet you."
+    },
+    {
+      "word": "name",
+      "ipa": "/neɪm/",
+      "meaning": "tên",
+      "example": "What is your name?"
+    },
+    {
+      "word": "country",
+      "ipa": "/ˈkʌn.tri/",
+      "meaning": "đất nước",
+      "example": "I am from a small country."
+    },
+    {
+      "word": "friend",
+      "ipa": "/frend/",
+      "meaning": "bạn bè",
+      "example": "This is my new friend."
+    },
+    {
+      "word": "hobby",
+      "ipa": "/ˈhɒb.i/",
+      "meaning": "sở thích",
+      "example": "My hobby is reading."
+    },
+    {
+      "word": "welcome",
+      "ipa": "/ˈwel.kəm/",
+      "meaning": "chào mừng",
+      "example": "Welcome to my city!"
+    },
+    {
+      "word": "goodbye",
+      "ipa": "/ˌɡʊdˈbaɪ/",
+      "meaning": "tạm biệt",
+      "example": "Goodbye, see you soon."
+    },
+    {
+      "word": "happy",
+      "ipa": "/ˈhæp.i/",
+      "meaning": "vui vẻ",
+      "example": "I am very happy today."
+    }
+  ],
+  "dialogue": [
+    { "speaker": "A", "line": "Hello! Nice to meet you." },
+    {
+      "speaker": "B",
+      "line": "Hello! Nice to meet you too. What is your name?"
+    },
+    { "speaker": "A", "line": "My name is Linh. Where are you from?" },
+    { "speaker": "B", "line": "I am from Canada. Which country are you from?" },
+    { "speaker": "A", "line": "I am from Vietnam." },
+    { "speaker": "B", "line": "That is great! What is your hobby?" },
+    { "speaker": "A", "line": "My hobby is taking photos. Can we be friends?" },
+    { "speaker": "B", "line": "Of course! I am happy to be your friend." },
+    { "speaker": "A", "line": "Welcome to my city! Enjoy your trip." },
+    { "speaker": "B", "line": "Thank you. Goodbye, see you soon!" }
+  ],
+  "exercises": {
+    "multipleChoice": [
+      {
+        "prompt": "What do you say when you meet someone?",
+        "options": ["Hello", "Goodbye", "Sorry", "Stop"],
+        "answerIndex": 0,
+        "explanation": "You say hello when you meet someone."
+      },
+      {
+        "prompt": "What do you ask to learn someone's name?",
+        "options": [
+          "What is your name?",
+          "Where is the gate?",
+          "How much is it?",
+          "What time is it?"
+        ],
+        "answerIndex": 0,
+        "explanation": "You ask 'What is your name?' to learn a name."
+      },
+      {
+        "prompt": "A thing you like to do in your free time is a...",
+        "options": ["Hobby", "Fare", "Coin", "Gate"],
+        "answerIndex": 0,
+        "explanation": "A hobby is something you like to do."
+      },
+      {
+        "prompt": "What do you say when you leave someone?",
+        "options": ["Goodbye", "Hello", "Please", "Menu"],
+        "answerIndex": 0,
+        "explanation": "You say goodbye when you leave."
+      },
+      {
+        "prompt": "A country where you come from is your...",
+        "options": ["Country", "Hobby", "Ticket", "View"],
+        "answerIndex": 0,
+        "explanation": "Your country is where you come from."
+      }
+    ],
+    "fillBlank": [
+      {
+        "prompt": "What is your ___?",
+        "answer": "name",
+        "hint": "tên",
+        "explanation": "You ask for someone's name."
+      },
+      {
+        "prompt": "This is my new ___.",
+        "answer": "friend",
+        "hint": "bạn bè",
+        "explanation": "A friend is a person you like."
+      },
+      {
+        "prompt": "___ to my city!",
+        "answer": "welcome",
+        "hint": "chào mừng",
+        "explanation": "You say welcome to a guest."
+      }
+    ],
+    "matching": [
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "hello", "right": "xin chào" },
+          { "left": "name", "right": "tên" },
+          { "left": "country", "right": "đất nước" },
+          { "left": "friend", "right": "bạn bè" }
+        ]
+      },
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "hobby", "right": "sở thích" },
+          { "left": "welcome", "right": "chào mừng" },
+          { "left": "goodbye", "right": "tạm biệt" },
+          { "left": "happy", "right": "vui vẻ" }
+        ]
+      }
+    ]
+  },
+  "reviewFocus": ["hello", "name", "friend", "hobby", "goodbye"]
+}

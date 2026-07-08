@@ -1,0 +1,150 @@
+{
+  "id": "general-01",
+  "trackId": "general",
+  "order": 1,
+  "title": "Greetings & Introductions",
+  "goal": "Greet people and introduce yourself.",
+  "difficulty": "easy",
+  "estimatedMinutes": 12,
+  "prerequisite": null,
+  "completionCriteria": {
+    "type": "min_quiz_score",
+    "minQuizScore": 0.8,
+    "summary": "Finish the quiz with at least 80%."
+  },
+  "vocabulary": [
+    {
+      "word": "hello",
+      "ipa": "/həˈloʊ/",
+      "meaning": "xin chào",
+      "example": "Hello, my name is Nam."
+    },
+    {
+      "word": "hi",
+      "ipa": "/haɪ/",
+      "meaning": "chào (thân mật)",
+      "example": "Hi! Nice to meet you."
+    },
+    {
+      "word": "name",
+      "ipa": "/neɪm/",
+      "meaning": "tên",
+      "example": "My name is Mai."
+    },
+    {
+      "word": "meet",
+      "ipa": "/miːt/",
+      "meaning": "gặp",
+      "example": "Nice to meet you."
+    },
+    {
+      "word": "goodbye",
+      "ipa": "/ˌɡʊdˈbaɪ/",
+      "meaning": "tạm biệt",
+      "example": "Goodbye, see you later."
+    },
+    {
+      "word": "friend",
+      "ipa": "/frend/",
+      "meaning": "bạn bè",
+      "example": "She is my friend."
+    },
+    {
+      "word": "please",
+      "ipa": "/pliːz/",
+      "meaning": "làm ơn",
+      "example": "Please sit down."
+    },
+    {
+      "word": "thanks",
+      "ipa": "/θæŋks/",
+      "meaning": "cảm ơn",
+      "example": "Thanks for your help."
+    }
+  ],
+  "dialogue": [
+    { "speaker": "A", "line": "Hello! What's your name?" },
+    { "speaker": "B", "line": "Hi! I'm Mai. What's your name?" },
+    { "speaker": "A", "line": "My name is Nam. Nice to meet you." },
+    { "speaker": "B", "line": "Nice to meet you too, Nam." },
+    { "speaker": "A", "line": "Are you a new friend here?" },
+    { "speaker": "B", "line": "Yes, I am. Thanks for saying hi." },
+    { "speaker": "A", "line": "You're welcome. See you soon!" },
+    { "speaker": "B", "line": "Goodbye, Nam!" }
+  ],
+  "exercises": {
+    "multipleChoice": [
+      {
+        "prompt": "How do you greet someone in the morning?",
+        "options": ["Hello", "Goodbye", "Thanks", "Please"],
+        "answerIndex": 0,
+        "explanation": "We say 'Hello' to greet someone."
+      },
+      {
+        "prompt": "What do you say when you leave?",
+        "options": ["Hi", "Goodbye", "Meet", "Name"],
+        "answerIndex": 1,
+        "explanation": "'Goodbye' is used when leaving."
+      },
+      {
+        "prompt": "Complete: 'Nice to ___ you.'",
+        "options": ["name", "meet", "friend", "please"],
+        "answerIndex": 1,
+        "explanation": "The phrase is 'Nice to meet you.'"
+      },
+      {
+        "prompt": "What word means 'cảm ơn'?",
+        "options": ["Please", "Hello", "Thanks", "Name"],
+        "answerIndex": 2,
+        "explanation": "'Thanks' means cảm ơn."
+      },
+      {
+        "prompt": "A person you know and like is a ___.",
+        "options": ["friend", "name", "hi", "meet"],
+        "answerIndex": 0,
+        "explanation": "A 'friend' is a person you know and like."
+      }
+    ],
+    "fillBlank": [
+      {
+        "prompt": "___ , my name is Nam.",
+        "answer": "Hello",
+        "hint": "lời chào",
+        "explanation": "'Hello' starts a greeting."
+      },
+      {
+        "prompt": "Nice to ___ you.",
+        "answer": "meet",
+        "hint": "gặp",
+        "explanation": "We say 'meet' in this phrase."
+      },
+      {
+        "prompt": "___ for your help.",
+        "answer": "Thanks",
+        "hint": "cảm ơn",
+        "explanation": "'Thanks' shows gratitude."
+      }
+    ],
+    "matching": [
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "hello", "right": "xin chào" },
+          { "left": "name", "right": "tên" },
+          { "left": "friend", "right": "bạn bè" },
+          { "left": "goodbye", "right": "tạm biệt" }
+        ]
+      },
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "hi", "right": "chào (thân mật)" },
+          { "left": "meet", "right": "gặp" },
+          { "left": "please", "right": "làm ơn" },
+          { "left": "thanks", "right": "cảm ơn" }
+        ]
+      }
+    ]
+  },
+  "reviewFocus": ["hello", "name", "meet", "goodbye", "thanks"]
+}

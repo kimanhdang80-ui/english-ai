@@ -1,0 +1,152 @@
+{
+  "id": "construction-10",
+  "trackId": "construction",
+  "order": 10,
+  "title": "Reporting & Handover",
+  "goal": "Report your work and hand over the job at the end of the day.",
+  "difficulty": "hard",
+  "estimatedMinutes": 15,
+  "prerequisite": "construction-09",
+  "completionCriteria": {
+    "type": "min_quiz_score",
+    "minQuizScore": 0.8,
+    "summary": "Finish the quiz with at least 80%."
+  },
+  "vocabulary": [
+    {
+      "word": "report",
+      "ipa": "/rɪˈpɔːt/",
+      "meaning": "báo cáo",
+      "example": "Please report to the foreman."
+    },
+    {
+      "word": "done",
+      "ipa": "/dʌn/",
+      "meaning": "đã xong",
+      "example": "The wall is done."
+    },
+    {
+      "word": "check",
+      "ipa": "/tʃek/",
+      "meaning": "kiểm tra",
+      "example": "Check the work before you go."
+    },
+    {
+      "word": "clean",
+      "ipa": "/kliːn/",
+      "meaning": "dọn dẹp, sạch",
+      "example": "Clean the site after work."
+    },
+    {
+      "word": "handover",
+      "ipa": "/ˈhænd.əʊ.vər/",
+      "meaning": "bàn giao",
+      "example": "The handover is at five."
+    },
+    {
+      "word": "sign",
+      "ipa": "/saɪn/",
+      "meaning": "ký tên",
+      "example": "Please sign the report."
+    },
+    {
+      "word": "complete",
+      "ipa": "/kəmˈpliːt/",
+      "meaning": "hoàn tất",
+      "example": "The job is complete."
+    },
+    {
+      "word": "next",
+      "ipa": "/nekst/",
+      "meaning": "tiếp theo",
+      "example": "What is the next task?"
+    }
+  ],
+  "dialogue": [
+    { "speaker": "A", "line": "Is the wall done today?" },
+    { "speaker": "B", "line": "Yes, the wall is complete." },
+    { "speaker": "A", "line": "Good. Please check the work again." },
+    { "speaker": "B", "line": "I checked it. Everything is safe." },
+    { "speaker": "A", "line": "Now clean the site before you go." },
+    { "speaker": "B", "line": "Okay. What is the next task?" },
+    { "speaker": "A", "line": "The next task is the floor tomorrow." },
+    { "speaker": "B", "line": "When is the handover?" },
+    { "speaker": "A", "line": "At five. Please sign the report." },
+    { "speaker": "B", "line": "I will report to the foreman and sign it." }
+  ],
+  "exercises": {
+    "multipleChoice": [
+      {
+        "prompt": "The wall is finished. It is ___.",
+        "options": ["broken", "done", "loose", "late"],
+        "answerIndex": 1,
+        "explanation": "Done means finished."
+      },
+      {
+        "prompt": "Before you leave, you should ___ the site.",
+        "options": ["clean", "break", "leak", "lift"],
+        "answerIndex": 0,
+        "explanation": "Clean the site after work."
+      },
+      {
+        "prompt": "You give your work to the next team. This is the ___.",
+        "options": ["deadline", "shift", "handover", "break"],
+        "answerIndex": 2,
+        "explanation": "Handover is giving work to others."
+      },
+      {
+        "prompt": "You look at the work to make sure it is correct. You ___ it.",
+        "options": ["clean", "sign", "lift", "check"],
+        "answerIndex": 3,
+        "explanation": "Check means to look and confirm."
+      },
+      {
+        "prompt": "The job is finished fully. It is ___.",
+        "options": ["complete", "loose", "broken", "late"],
+        "answerIndex": 0,
+        "explanation": "Complete means fully finished."
+      }
+    ],
+    "fillBlank": [
+      {
+        "prompt": "Please ___ to the foreman at the end of the day.",
+        "answer": "report",
+        "hint": "báo cáo",
+        "explanation": "Report means tell about your work."
+      },
+      {
+        "prompt": "Please ___ the site before you go home.",
+        "answer": "clean",
+        "hint": "dọn dẹp",
+        "explanation": "Clean the site after work."
+      },
+      {
+        "prompt": "Please ___ the report before the handover.",
+        "answer": "sign",
+        "hint": "ký tên",
+        "explanation": "Sign means write your name."
+      }
+    ],
+    "matching": [
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "report", "right": "báo cáo" },
+          { "left": "done", "right": "đã xong" },
+          { "left": "check", "right": "kiểm tra" },
+          { "left": "clean", "right": "dọn dẹp, sạch" }
+        ]
+      },
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "handover", "right": "bàn giao" },
+          { "left": "sign", "right": "ký tên" },
+          { "left": "complete", "right": "hoàn tất" },
+          { "left": "next", "right": "tiếp theo" }
+        ]
+      }
+    ]
+  },
+  "reviewFocus": ["report", "done", "check", "handover", "sign"]
+}

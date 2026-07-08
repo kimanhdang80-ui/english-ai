@@ -1,0 +1,152 @@
+{
+  "id": "travel-05",
+  "trackId": "travel",
+  "order": 5,
+  "title": "Eating Out",
+  "goal": "Order food and drinks in a restaurant and ask for the bill.",
+  "difficulty": "medium",
+  "estimatedMinutes": 13,
+  "prerequisite": "travel-04",
+  "completionCriteria": {
+    "type": "min_quiz_score",
+    "minQuizScore": 0.8,
+    "summary": "Finish the quiz with at least 80%."
+  },
+  "vocabulary": [
+    {
+      "word": "menu",
+      "ipa": "/ˈmen.juː/",
+      "meaning": "thực đơn",
+      "example": "Can I see the menu, please?"
+    },
+    {
+      "word": "order",
+      "ipa": "/ˈɔːr.dɚ/",
+      "meaning": "gọi món",
+      "example": "I want to order now."
+    },
+    {
+      "word": "water",
+      "ipa": "/ˈwɔː.tɚ/",
+      "meaning": "nước",
+      "example": "A glass of water, please."
+    },
+    {
+      "word": "waiter",
+      "ipa": "/ˈweɪ.tɚ/",
+      "meaning": "người phục vụ",
+      "example": "The waiter is very kind."
+    },
+    {
+      "word": "bill",
+      "ipa": "/bɪl/",
+      "meaning": "hóa đơn",
+      "example": "Can I have the bill, please?"
+    },
+    {
+      "word": "delicious",
+      "ipa": "/dɪˈlɪʃ.əs/",
+      "meaning": "ngon",
+      "example": "This food is delicious."
+    },
+    {
+      "word": "table",
+      "ipa": "/ˈteɪ.bəl/",
+      "meaning": "bàn ăn",
+      "example": "We have a table for two."
+    },
+    {
+      "word": "spicy",
+      "ipa": "/ˈspaɪ.si/",
+      "meaning": "cay",
+      "example": "This soup is very spicy."
+    }
+  ],
+  "dialogue": [
+    { "speaker": "A", "line": "Good evening. A table for two, please." },
+    { "speaker": "B", "line": "Of course. Here is your table." },
+    { "speaker": "A", "line": "Thank you. Can I see the menu, please?" },
+    { "speaker": "B", "line": "Here you are. Are you ready to order?" },
+    { "speaker": "A", "line": "Yes. I want the chicken and rice." },
+    { "speaker": "B", "line": "Would you like something to drink?" },
+    { "speaker": "A", "line": "A glass of water, please. Is the soup spicy?" },
+    { "speaker": "B", "line": "Yes, it is a little spicy." },
+    { "speaker": "A", "line": "The food is delicious! Can I have the bill?" },
+    { "speaker": "B", "line": "Sure, I will bring the bill now." }
+  ],
+  "exercises": {
+    "multipleChoice": [
+      {
+        "prompt": "What do you read to choose your food?",
+        "options": ["The menu", "The map", "The key", "The ticket"],
+        "answerIndex": 0,
+        "explanation": "The menu lists the food."
+      },
+      {
+        "prompt": "The person who serves your food is the...",
+        "options": ["Waiter", "Pilot", "Driver", "Doctor"],
+        "answerIndex": 0,
+        "explanation": "The waiter serves the food."
+      },
+      {
+        "prompt": "What do you ask for when you want to pay?",
+        "options": ["The bill", "The bed", "The gate", "The map"],
+        "answerIndex": 0,
+        "explanation": "The bill shows how much to pay."
+      },
+      {
+        "prompt": "The food tastes very good. It is...",
+        "options": ["Delicious", "Empty", "Broken", "Cold only"],
+        "answerIndex": 0,
+        "explanation": "Delicious means it tastes very good."
+      },
+      {
+        "prompt": "If food has a lot of chili, it is...",
+        "options": ["Spicy", "Quiet", "Tall", "Blue"],
+        "answerIndex": 0,
+        "explanation": "Spicy means it has a lot of chili."
+      }
+    ],
+    "fillBlank": [
+      {
+        "prompt": "Can I see the ___, please?",
+        "answer": "menu",
+        "hint": "thực đơn",
+        "explanation": "The menu lists the food you can order."
+      },
+      {
+        "prompt": "Can I have the ___, please?",
+        "answer": "bill",
+        "hint": "hóa đơn",
+        "explanation": "The bill shows how much you must pay."
+      },
+      {
+        "prompt": "A glass of ___, please.",
+        "answer": "water",
+        "hint": "nước",
+        "explanation": "Water is a common drink."
+      }
+    ],
+    "matching": [
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "menu", "right": "thực đơn" },
+          { "left": "order", "right": "gọi món" },
+          { "left": "water", "right": "nước" },
+          { "left": "waiter", "right": "người phục vụ" }
+        ]
+      },
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "bill", "right": "hóa đơn" },
+          { "left": "delicious", "right": "ngon" },
+          { "left": "table", "right": "bàn ăn" },
+          { "left": "spicy", "right": "cay" }
+        ]
+      }
+    ]
+  },
+  "reviewFocus": ["menu", "order", "waiter", "bill", "delicious"]
+}

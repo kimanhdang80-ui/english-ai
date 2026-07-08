@@ -1,0 +1,150 @@
+{
+  "id": "general-03",
+  "trackId": "general",
+  "order": 3,
+  "title": "Numbers & Time",
+  "goal": "Count numbers and tell the time.",
+  "difficulty": "easy",
+  "estimatedMinutes": 12,
+  "prerequisite": "general-02",
+  "completionCriteria": {
+    "type": "min_quiz_score",
+    "minQuizScore": 0.8,
+    "summary": "Finish the quiz with at least 80%."
+  },
+  "vocabulary": [
+    {
+      "word": "one",
+      "ipa": "/wʌn/",
+      "meaning": "số một",
+      "example": "I have one apple."
+    },
+    {
+      "word": "two",
+      "ipa": "/tuː/",
+      "meaning": "số hai",
+      "example": "She has two cats."
+    },
+    {
+      "word": "ten",
+      "ipa": "/ten/",
+      "meaning": "số mười",
+      "example": "There are ten students."
+    },
+    {
+      "word": "number",
+      "ipa": "/ˈnʌmbər/",
+      "meaning": "con số",
+      "example": "My phone number is new."
+    },
+    {
+      "word": "time",
+      "ipa": "/taɪm/",
+      "meaning": "thời gian",
+      "example": "What time is it?"
+    },
+    {
+      "word": "hour",
+      "ipa": "/ˈaʊər/",
+      "meaning": "giờ (60 phút)",
+      "example": "The class is one hour."
+    },
+    {
+      "word": "minute",
+      "ipa": "/ˈmɪnɪt/",
+      "meaning": "phút",
+      "example": "Wait one minute, please."
+    },
+    {
+      "word": "clock",
+      "ipa": "/klɑːk/",
+      "meaning": "đồng hồ",
+      "example": "The clock is on the wall."
+    }
+  ],
+  "dialogue": [
+    { "speaker": "A", "line": "Excuse me, what time is it?" },
+    { "speaker": "B", "line": "It is ten o'clock." },
+    { "speaker": "A", "line": "Thank you. Is the clock correct?" },
+    { "speaker": "B", "line": "Yes, it is. The number is clear." },
+    { "speaker": "A", "line": "How long is the class?" },
+    { "speaker": "B", "line": "It is one hour." },
+    { "speaker": "A", "line": "Only one hour? That is fast." },
+    { "speaker": "B", "line": "Yes, we start in two minutes." }
+  ],
+  "exercises": {
+    "multipleChoice": [
+      {
+        "prompt": "What number comes after one?",
+        "options": ["ten", "two", "hour", "clock"],
+        "answerIndex": 1,
+        "explanation": "Two comes after one."
+      },
+      {
+        "prompt": "Sixty minutes is one ___.",
+        "options": ["hour", "clock", "number", "time"],
+        "answerIndex": 0,
+        "explanation": "Sixty minutes make one hour."
+      },
+      {
+        "prompt": "We tell the time with a ___.",
+        "options": ["number", "clock", "baby", "family"],
+        "answerIndex": 1,
+        "explanation": "A clock shows the time."
+      },
+      {
+        "prompt": "What word means 'số mười'?",
+        "options": ["one", "two", "ten", "hour"],
+        "answerIndex": 2,
+        "explanation": "'Ten' means số mười."
+      },
+      {
+        "prompt": "A short part of an hour is a ___.",
+        "options": ["minute", "clock", "number", "time"],
+        "answerIndex": 0,
+        "explanation": "A minute is a short part of an hour."
+      }
+    ],
+    "fillBlank": [
+      {
+        "prompt": "What ___ is it now?",
+        "answer": "time",
+        "hint": "thời gian",
+        "explanation": "'Time' fits this question."
+      },
+      {
+        "prompt": "Wait one ___, please.",
+        "answer": "minute",
+        "hint": "phút",
+        "explanation": "A short wait is one minute."
+      },
+      {
+        "prompt": "The ___ is on the wall.",
+        "answer": "clock",
+        "hint": "đồng hồ",
+        "explanation": "A clock hangs on the wall."
+      }
+    ],
+    "matching": [
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "one", "right": "số một" },
+          { "left": "two", "right": "số hai" },
+          { "left": "ten", "right": "số mười" },
+          { "left": "number", "right": "con số" }
+        ]
+      },
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "time", "right": "thời gian" },
+          { "left": "hour", "right": "giờ (60 phút)" },
+          { "left": "minute", "right": "phút" },
+          { "left": "clock", "right": "đồng hồ" }
+        ]
+      }
+    ]
+  },
+  "reviewFocus": ["number", "time", "hour", "minute", "clock"]
+}

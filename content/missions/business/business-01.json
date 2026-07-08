@@ -1,0 +1,152 @@
+{
+  "id": "business-01",
+  "trackId": "business",
+  "order": 1,
+  "title": "Office Introductions",
+  "goal": "Introduce yourself and greet colleagues at work.",
+  "difficulty": "easy",
+  "estimatedMinutes": 12,
+  "prerequisite": null,
+  "completionCriteria": {
+    "type": "min_quiz_score",
+    "minQuizScore": 0.8,
+    "summary": "Finish the quiz with at least 80%."
+  },
+  "vocabulary": [
+    {
+      "word": "colleague",
+      "ipa": "/ˈkɒl.iːɡ/",
+      "meaning": "đồng nghiệp",
+      "example": "She is my colleague."
+    },
+    {
+      "word": "welcome",
+      "ipa": "/ˈwel.kəm/",
+      "meaning": "chào mừng",
+      "example": "Welcome to our office."
+    },
+    {
+      "word": "new",
+      "ipa": "/njuː/",
+      "meaning": "mới",
+      "example": "I am the new staff."
+    },
+    {
+      "word": "team",
+      "ipa": "/tiːm/",
+      "meaning": "nhóm, đội",
+      "example": "This is my team."
+    },
+    {
+      "word": "nice",
+      "ipa": "/naɪs/",
+      "meaning": "vui, tốt đẹp",
+      "example": "Nice to meet you."
+    },
+    {
+      "word": "name",
+      "ipa": "/neɪm/",
+      "meaning": "tên",
+      "example": "My name is Lan."
+    },
+    {
+      "word": "hello",
+      "ipa": "/həˈləʊ/",
+      "meaning": "xin chào",
+      "example": "Hello, everyone."
+    },
+    {
+      "word": "meet",
+      "ipa": "/miːt/",
+      "meaning": "gặp gỡ",
+      "example": "I meet my boss today."
+    }
+  ],
+  "dialogue": [
+    { "speaker": "A", "line": "Hello, I'm the new sales manager." },
+    { "speaker": "B", "line": "Hello! Welcome to our office." },
+    { "speaker": "A", "line": "Thank you. My name is Nam." },
+    { "speaker": "B", "line": "Nice to meet you, Nam. I'm Mai." },
+    { "speaker": "A", "line": "Nice to meet you too, Mai." },
+    { "speaker": "B", "line": "Are you new here?" },
+    { "speaker": "A", "line": "Yes, this is my first day." },
+    { "speaker": "B", "line": "This is my team. Let me show you." },
+    { "speaker": "A", "line": "Great. I am happy to meet everyone." },
+    { "speaker": "B", "line": "We are happy to have you." }
+  ],
+  "exercises": {
+    "multipleChoice": [
+      {
+        "prompt": "How do you greet a colleague?",
+        "options": ["Hello", "Goodbye", "Sorry", "No"],
+        "answerIndex": 0,
+        "explanation": "\"Hello\" is a common greeting."
+      },
+      {
+        "prompt": "\"Nice to meet ___.\"",
+        "options": ["you", "he", "it", "we"],
+        "answerIndex": 0,
+        "explanation": "We say \"Nice to meet you.\""
+      },
+      {
+        "prompt": "A person you work with is your ___.",
+        "options": ["colleague", "car", "coffee", "chair"],
+        "answerIndex": 0,
+        "explanation": "A colleague is a person you work with."
+      },
+      {
+        "prompt": "\"My ___ is Lan.\"",
+        "options": ["name", "team", "office", "week"],
+        "answerIndex": 0,
+        "explanation": "We introduce our name: \"My name is...\""
+      },
+      {
+        "prompt": "Your group of workers is your ___.",
+        "options": ["team", "phone", "door", "bag"],
+        "answerIndex": 0,
+        "explanation": "A team is a group of people who work together."
+      }
+    ],
+    "fillBlank": [
+      {
+        "prompt": "___ to our office.",
+        "answer": "Welcome",
+        "hint": "chào mừng",
+        "explanation": "\"Welcome\" greets a new person."
+      },
+      {
+        "prompt": "I am the ___ staff.",
+        "answer": "new",
+        "hint": "mới",
+        "explanation": "\"New\" means not old, just started."
+      },
+      {
+        "prompt": "My ___ is Nam.",
+        "answer": "name",
+        "hint": "tên",
+        "explanation": "We say \"My name is...\" to introduce ourselves."
+      }
+    ],
+    "matching": [
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "colleague", "right": "đồng nghiệp" },
+          { "left": "welcome", "right": "chào mừng" },
+          { "left": "team", "right": "nhóm, đội" },
+          { "left": "name", "right": "tên" }
+        ]
+      },
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "hello", "right": "xin chào" },
+          { "left": "meet", "right": "gặp gỡ" },
+          { "left": "new", "right": "mới" },
+          { "left": "nice", "right": "vui, tốt đẹp" }
+        ]
+      }
+    ]
+  },
+  "reviewFocus": ["colleague", "welcome", "team", "name", "meet"]
+}

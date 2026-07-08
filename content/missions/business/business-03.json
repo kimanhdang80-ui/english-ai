@@ -1,0 +1,152 @@
+{
+  "id": "business-03",
+  "trackId": "business",
+  "order": 3,
+  "title": "Telephone Basics",
+  "goal": "Answer the phone and take a simple message at work.",
+  "difficulty": "easy",
+  "estimatedMinutes": 13,
+  "prerequisite": "business-02",
+  "completionCriteria": {
+    "type": "min_quiz_score",
+    "minQuizScore": 0.8,
+    "summary": "Finish the quiz with at least 80%."
+  },
+  "vocabulary": [
+    {
+      "word": "call",
+      "ipa": "/kɔːl/",
+      "meaning": "cuộc gọi, gọi điện",
+      "example": "I will call you later."
+    },
+    {
+      "word": "phone",
+      "ipa": "/fəʊn/",
+      "meaning": "điện thoại",
+      "example": "Please answer the phone."
+    },
+    {
+      "word": "speak",
+      "ipa": "/spiːk/",
+      "meaning": "nói chuyện",
+      "example": "Can I speak to Mr. Nam?"
+    },
+    {
+      "word": "message",
+      "ipa": "/ˈmes.ɪdʒ/",
+      "meaning": "lời nhắn",
+      "example": "Can I take a message?"
+    },
+    {
+      "word": "hold",
+      "ipa": "/həʊld/",
+      "meaning": "giữ máy",
+      "example": "Please hold."
+    },
+    {
+      "word": "number",
+      "ipa": "/ˈnʌm.bər/",
+      "meaning": "số",
+      "example": "What is your number?"
+    },
+    {
+      "word": "line",
+      "ipa": "/laɪn/",
+      "meaning": "đường dây",
+      "example": "The line is busy."
+    },
+    {
+      "word": "back",
+      "ipa": "/bæk/",
+      "meaning": "lại, trở lại",
+      "example": "I will call you back."
+    }
+  ],
+  "dialogue": [
+    { "speaker": "A", "line": "Hello, this is ABC Company." },
+    { "speaker": "B", "line": "Hello, can I speak to Mr. Nam?" },
+    { "speaker": "A", "line": "One moment, please hold." },
+    { "speaker": "A", "line": "Sorry, he is not here now." },
+    { "speaker": "B", "line": "Okay. Can I leave a message?" },
+    { "speaker": "A", "line": "Yes. What is your name?" },
+    { "speaker": "B", "line": "My name is Hoa. Please call me back." },
+    { "speaker": "A", "line": "What is your phone number?" },
+    { "speaker": "B", "line": "It is 0912 345 678." },
+    { "speaker": "A", "line": "Thank you. He will call you back." }
+  ],
+  "exercises": {
+    "multipleChoice": [
+      {
+        "prompt": "\"Can I ___ to Mr. Nam?\"",
+        "options": ["speak", "eat", "walk", "sleep"],
+        "answerIndex": 0,
+        "explanation": "We say \"speak to\" someone on the phone."
+      },
+      {
+        "prompt": "Wait on the phone means please ___.",
+        "options": ["hold", "run", "jump", "sing"],
+        "answerIndex": 0,
+        "explanation": "\"Hold\" means wait on the line."
+      },
+      {
+        "prompt": "A note from a caller is a ___.",
+        "options": ["message", "window", "floor", "cloud"],
+        "answerIndex": 0,
+        "explanation": "A message is a note from a caller."
+      },
+      {
+        "prompt": "\"I will call you ___.\"",
+        "options": ["back", "green", "slow", "tall"],
+        "answerIndex": 0,
+        "explanation": "\"Call back\" means return the call."
+      },
+      {
+        "prompt": "The phone connection is the ___.",
+        "options": ["line", "book", "tree", "hat"],
+        "answerIndex": 0,
+        "explanation": "The line is the phone connection."
+      }
+    ],
+    "fillBlank": [
+      {
+        "prompt": "Can I take a ___?",
+        "answer": "message",
+        "hint": "lời nhắn",
+        "explanation": "A message is a note from a caller."
+      },
+      {
+        "prompt": "Please ___ for a moment.",
+        "answer": "hold",
+        "hint": "giữ máy",
+        "explanation": "\"Hold\" means wait on the line."
+      },
+      {
+        "prompt": "What is your phone ___?",
+        "answer": "number",
+        "hint": "số",
+        "explanation": "A phone number is the digits to call."
+      }
+    ],
+    "matching": [
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "call", "right": "cuộc gọi, gọi điện" },
+          { "left": "phone", "right": "điện thoại" },
+          { "left": "speak", "right": "nói chuyện" },
+          { "left": "message", "right": "lời nhắn" }
+        ]
+      },
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "hold", "right": "giữ máy" },
+          { "left": "number", "right": "số" },
+          { "left": "line", "right": "đường dây" },
+          { "left": "back", "right": "lại, trở lại" }
+        ]
+      }
+    ]
+  },
+  "reviewFocus": ["call", "speak", "message", "hold", "number"]
+}

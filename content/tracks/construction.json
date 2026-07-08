@@ -1,0 +1,20 @@
+{
+  "id": "construction",
+  "key": "construction",
+  "title": "Construction English",
+  "goal": "construction",
+  "cefr": "A1",
+  "description": "Practical A1 English for Vietnamese construction and site workers. Learn high-frequency words for tools, materials, safety, machines, and daily site communication.",
+  "missionIds": [
+    "construction-01",
+    "construction-02",
+    "construction-03",
+    "construction-04",
+    "construction-05",
+    "construction-06",
+    "construction-07",
+    "construction-08",
+    "construction-09",
+    "construction-10"
+  ]
+}

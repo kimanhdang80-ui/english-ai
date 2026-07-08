@@ -1,0 +1,152 @@
+{
+  "id": "construction-01",
+  "trackId": "construction",
+  "order": 1,
+  "title": "Tools & Equipment",
+  "goal": "Name common hand tools and ask for them on site.",
+  "difficulty": "easy",
+  "estimatedMinutes": 12,
+  "prerequisite": null,
+  "completionCriteria": {
+    "type": "min_quiz_score",
+    "minQuizScore": 0.8,
+    "summary": "Finish the quiz with at least 80%."
+  },
+  "vocabulary": [
+    {
+      "word": "hammer",
+      "ipa": "/ˈhæm.ər/",
+      "meaning": "cái búa",
+      "example": "Pass me the hammer, please."
+    },
+    {
+      "word": "screwdriver",
+      "ipa": "/ˈskruːˌdraɪ.vər/",
+      "meaning": "cái tua vít",
+      "example": "I need a screwdriver for this."
+    },
+    {
+      "word": "drill",
+      "ipa": "/drɪl/",
+      "meaning": "máy khoan",
+      "example": "The drill is not working."
+    },
+    {
+      "word": "wrench",
+      "ipa": "/rentʃ/",
+      "meaning": "cờ lê",
+      "example": "Use the wrench on this bolt."
+    },
+    {
+      "word": "saw",
+      "ipa": "/sɔː/",
+      "meaning": "cái cưa",
+      "example": "Cut the wood with the saw."
+    },
+    {
+      "word": "pliers",
+      "ipa": "/ˈplaɪ.ərz/",
+      "meaning": "cái kìm",
+      "example": "Where are the pliers?"
+    },
+    {
+      "word": "tape measure",
+      "ipa": "/teɪp ˈmeʒ.ər/",
+      "meaning": "thước dây",
+      "example": "Get the tape measure, please."
+    },
+    {
+      "word": "toolbox",
+      "ipa": "/ˈtuːl.bɒks/",
+      "meaning": "hộp đồ nghề",
+      "example": "The tools are in the toolbox."
+    }
+  ],
+  "dialogue": [
+    { "speaker": "A", "line": "Good morning. Are you ready to work?" },
+    { "speaker": "B", "line": "Yes. Where is the hammer?" },
+    { "speaker": "A", "line": "It is in the toolbox." },
+    { "speaker": "B", "line": "Thank you. I also need a screwdriver." },
+    { "speaker": "A", "line": "Here you are. Do you have the drill?" },
+    { "speaker": "B", "line": "No. Can you pass me the drill, please?" },
+    { "speaker": "A", "line": "Sure. Please use the wrench for the big bolt." },
+    { "speaker": "B", "line": "Okay. Where is the tape measure?" },
+    { "speaker": "A", "line": "It is on the table. Be careful with the saw." },
+    { "speaker": "B", "line": "I will. Thank you for your help." }
+  ],
+  "exercises": {
+    "multipleChoice": [
+      {
+        "prompt": "You want to hit a nail. Which tool do you use?",
+        "options": ["hammer", "saw", "pliers", "tape measure"],
+        "answerIndex": 0,
+        "explanation": "A hammer is used to hit nails."
+      },
+      {
+        "prompt": "Which tool cuts wood?",
+        "options": ["drill", "saw", "wrench", "screwdriver"],
+        "answerIndex": 1,
+        "explanation": "A saw cuts wood."
+      },
+      {
+        "prompt": "You want to make a hole. Which tool do you use?",
+        "options": ["pliers", "hammer", "drill", "tape measure"],
+        "answerIndex": 2,
+        "explanation": "A drill makes holes."
+      },
+      {
+        "prompt": "Where do you keep your tools?",
+        "options": ["saw", "toolbox", "wrench", "drill"],
+        "answerIndex": 1,
+        "explanation": "A toolbox holds your tools."
+      },
+      {
+        "prompt": "Which tool do you use to measure length?",
+        "options": ["hammer", "screwdriver", "tape measure", "pliers"],
+        "answerIndex": 2,
+        "explanation": "A tape measure measures length."
+      }
+    ],
+    "fillBlank": [
+      {
+        "prompt": "Please pass me the ___ to hit the nail.",
+        "answer": "hammer",
+        "hint": "cái búa",
+        "explanation": "A hammer is used to hit a nail."
+      },
+      {
+        "prompt": "Use the ___ to tighten the bolt.",
+        "answer": "wrench",
+        "hint": "cờ lê",
+        "explanation": "A wrench tightens bolts."
+      },
+      {
+        "prompt": "The tools are in the ___.",
+        "answer": "toolbox",
+        "hint": "hộp đồ nghề",
+        "explanation": "Tools are kept in the toolbox."
+      }
+    ],
+    "matching": [
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "hammer", "right": "cái búa" },
+          { "left": "screwdriver", "right": "cái tua vít" },
+          { "left": "drill", "right": "máy khoan" },
+          { "left": "saw", "right": "cái cưa" }
+        ]
+      },
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "wrench", "right": "cờ lê" },
+          { "left": "pliers", "right": "cái kìm" },
+          { "left": "tape measure", "right": "thước dây" },
+          { "left": "toolbox", "right": "hộp đồ nghề" }
+        ]
+      }
+    ]
+  },
+  "reviewFocus": ["hammer", "drill", "wrench", "saw", "toolbox"]
+}

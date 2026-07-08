@@ -1,0 +1,152 @@
+{
+  "id": "business-08",
+  "trackId": "business",
+  "order": 8,
+  "title": "Making Requests",
+  "goal": "Ask for help and make polite requests at work.",
+  "difficulty": "medium",
+  "estimatedMinutes": 14,
+  "prerequisite": "business-07",
+  "completionCriteria": {
+    "type": "min_quiz_score",
+    "minQuizScore": 0.8,
+    "summary": "Finish the quiz with at least 80%."
+  },
+  "vocabulary": [
+    {
+      "word": "please",
+      "ipa": "/pliːz/",
+      "meaning": "làm ơn",
+      "example": "Please help me."
+    },
+    {
+      "word": "help",
+      "ipa": "/help/",
+      "meaning": "giúp đỡ",
+      "example": "Can you help me?"
+    },
+    {
+      "word": "could",
+      "ipa": "/kʊd/",
+      "meaning": "có thể (lịch sự)",
+      "example": "Could you send it?"
+    },
+    {
+      "word": "need",
+      "ipa": "/niːd/",
+      "meaning": "cần",
+      "example": "I need a copy."
+    },
+    {
+      "word": "favor",
+      "ipa": "/ˈfeɪ.vər/",
+      "meaning": "sự giúp đỡ",
+      "example": "Can I ask a favor?"
+    },
+    {
+      "word": "sure",
+      "ipa": "/ʃʊər/",
+      "meaning": "chắc chắn, được",
+      "example": "Sure, no problem."
+    },
+    {
+      "word": "sorry",
+      "ipa": "/ˈsɒr.i/",
+      "meaning": "xin lỗi",
+      "example": "Sorry, I am busy now."
+    },
+    {
+      "word": "problem",
+      "ipa": "/ˈprɒb.ləm/",
+      "meaning": "vấn đề",
+      "example": "No problem at all."
+    }
+  ],
+  "dialogue": [
+    { "speaker": "A", "line": "Excuse me, can I ask a favor?" },
+    { "speaker": "B", "line": "Sure, how can I help you?" },
+    { "speaker": "A", "line": "Could you send me the report?" },
+    { "speaker": "B", "line": "Of course. When do you need it?" },
+    { "speaker": "A", "line": "I need it before lunch, please." },
+    { "speaker": "B", "line": "No problem. I will send it now." },
+    { "speaker": "A", "line": "Thank you very much." },
+    { "speaker": "B", "line": "You are welcome." },
+    { "speaker": "A", "line": "Sorry to trouble you." },
+    { "speaker": "B", "line": "It is okay. Any time." }
+  ],
+  "exercises": {
+    "multipleChoice": [
+      {
+        "prompt": "A polite way to ask is \"___ you help me?\"",
+        "options": ["Could", "Cloud", "Cold", "Coat"],
+        "answerIndex": 0,
+        "explanation": "\"Could you...\" is a polite request."
+      },
+      {
+        "prompt": "We add ___ to be polite.",
+        "options": ["please", "faster", "louder", "later"],
+        "answerIndex": 0,
+        "explanation": "\"Please\" makes a request polite."
+      },
+      {
+        "prompt": "\"Can I ask a ___?\" means ask for help.",
+        "options": ["favor", "chair", "shoe", "river"],
+        "answerIndex": 0,
+        "explanation": "A favor is a small act of help."
+      },
+      {
+        "prompt": "A kind answer to a request is \"___, no problem.\"",
+        "options": ["Sure", "Stop", "Never", "Away"],
+        "answerIndex": 0,
+        "explanation": "\"Sure\" means yes, happily."
+      },
+      {
+        "prompt": "To say you feel bad, you say ___.",
+        "options": ["sorry", "green", "tall", "wide"],
+        "answerIndex": 0,
+        "explanation": "\"Sorry\" is an apology."
+      }
+    ],
+    "fillBlank": [
+      {
+        "prompt": "___ you send me the report?",
+        "answer": "Could",
+        "hint": "có thể (lịch sự)",
+        "explanation": "\"Could you...\" is a polite request."
+      },
+      {
+        "prompt": "I ___ it before lunch.",
+        "answer": "need",
+        "hint": "cần",
+        "explanation": "\"Need\" means must have."
+      },
+      {
+        "prompt": "No ___ at all.",
+        "answer": "problem",
+        "hint": "vấn đề",
+        "explanation": "\"No problem\" means it is okay."
+      }
+    ],
+    "matching": [
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "please", "right": "làm ơn" },
+          { "left": "help", "right": "giúp đỡ" },
+          { "left": "could", "right": "có thể (lịch sự)" },
+          { "left": "need", "right": "cần" }
+        ]
+      },
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "favor", "right": "sự giúp đỡ" },
+          { "left": "sure", "right": "chắc chắn, được" },
+          { "left": "sorry", "right": "xin lỗi" },
+          { "left": "problem", "right": "vấn đề" }
+        ]
+      }
+    ]
+  },
+  "reviewFocus": ["please", "could", "need", "favor", "problem"]
+}

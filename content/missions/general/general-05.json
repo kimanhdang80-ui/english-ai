@@ -1,0 +1,150 @@
+{
+  "id": "general-05",
+  "trackId": "general",
+  "order": 5,
+  "title": "Home & Rooms",
+  "goal": "Describe your home and the rooms in it.",
+  "difficulty": "medium",
+  "estimatedMinutes": 13,
+  "prerequisite": "general-04",
+  "completionCriteria": {
+    "type": "min_quiz_score",
+    "minQuizScore": 0.8,
+    "summary": "Finish the quiz with at least 80%."
+  },
+  "vocabulary": [
+    {
+      "word": "house",
+      "ipa": "/haʊs/",
+      "meaning": "ngôi nhà",
+      "example": "My house is near the school."
+    },
+    {
+      "word": "room",
+      "ipa": "/ruːm/",
+      "meaning": "phòng",
+      "example": "This room is very big."
+    },
+    {
+      "word": "kitchen",
+      "ipa": "/ˈkɪtʃən/",
+      "meaning": "nhà bếp",
+      "example": "We cook in the kitchen."
+    },
+    {
+      "word": "bedroom",
+      "ipa": "/ˈbedruːm/",
+      "meaning": "phòng ngủ",
+      "example": "I sleep in my bedroom."
+    },
+    {
+      "word": "door",
+      "ipa": "/dɔːr/",
+      "meaning": "cửa ra vào",
+      "example": "Please close the door."
+    },
+    {
+      "word": "window",
+      "ipa": "/ˈwɪndoʊ/",
+      "meaning": "cửa sổ",
+      "example": "Open the window for fresh air."
+    },
+    {
+      "word": "table",
+      "ipa": "/ˈteɪbəl/",
+      "meaning": "cái bàn",
+      "example": "The food is on the table."
+    },
+    {
+      "word": "chair",
+      "ipa": "/tʃer/",
+      "meaning": "cái ghế",
+      "example": "Sit on the chair, please."
+    }
+  ],
+  "dialogue": [
+    { "speaker": "A", "line": "Is this your house?" },
+    { "speaker": "B", "line": "Yes, it has four rooms." },
+    { "speaker": "A", "line": "Where is the kitchen?" },
+    { "speaker": "B", "line": "It is next to the bedroom." },
+    { "speaker": "A", "line": "This room has a big window." },
+    { "speaker": "B", "line": "Yes, and a table and two chairs." },
+    { "speaker": "A", "line": "Can you close the door?" },
+    { "speaker": "B", "line": "Sure. Please sit on this chair." }
+  ],
+  "exercises": {
+    "multipleChoice": [
+      {
+        "prompt": "Where do you cook food?",
+        "options": ["bedroom", "kitchen", "window", "door"],
+        "answerIndex": 1,
+        "explanation": "You cook in the kitchen."
+      },
+      {
+        "prompt": "You sleep in the ___.",
+        "options": ["kitchen", "table", "bedroom", "chair"],
+        "answerIndex": 2,
+        "explanation": "You sleep in the bedroom."
+      },
+      {
+        "prompt": "You open a ___ for fresh air.",
+        "options": ["window", "chair", "table", "room"],
+        "answerIndex": 0,
+        "explanation": "A window lets in fresh air."
+      },
+      {
+        "prompt": "What do you sit on?",
+        "options": ["door", "window", "chair", "house"],
+        "answerIndex": 2,
+        "explanation": "You sit on a chair."
+      },
+      {
+        "prompt": "What word means 'ngôi nhà'?",
+        "options": ["house", "room", "table", "door"],
+        "answerIndex": 0,
+        "explanation": "'House' means ngôi nhà."
+      }
+    ],
+    "fillBlank": [
+      {
+        "prompt": "Please close the ___.",
+        "answer": "door",
+        "hint": "cửa ra vào",
+        "explanation": "A door opens and closes."
+      },
+      {
+        "prompt": "The food is on the ___.",
+        "answer": "table",
+        "hint": "cái bàn",
+        "explanation": "Food sits on a table."
+      },
+      {
+        "prompt": "We cook in the ___.",
+        "answer": "kitchen",
+        "hint": "nhà bếp",
+        "explanation": "Cooking is done in the kitchen."
+      }
+    ],
+    "matching": [
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "house", "right": "ngôi nhà" },
+          { "left": "room", "right": "phòng" },
+          { "left": "kitchen", "right": "nhà bếp" },
+          { "left": "bedroom", "right": "phòng ngủ" }
+        ]
+      },
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "door", "right": "cửa ra vào" },
+          { "left": "window", "right": "cửa sổ" },
+          { "left": "table", "right": "cái bàn" },
+          { "left": "chair", "right": "cái ghế" }
+        ]
+      }
+    ]
+  },
+  "reviewFocus": ["house", "kitchen", "bedroom", "door", "table"]
+}

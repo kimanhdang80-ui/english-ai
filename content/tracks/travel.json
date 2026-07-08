@@ -1,0 +1,20 @@
+{
+  "id": "travel",
+  "key": "travel",
+  "title": "Travel English",
+  "goal": "travel",
+  "cefr": "A1",
+  "description": "Learn practical, high-frequency English for traveling abroad. From airports and hotels to restaurants, shopping, and making friends, this track gives Vietnamese travelers the essential words and phrases for a smooth trip.",
+  "missionIds": [
+    "travel-01",
+    "travel-02",
+    "travel-03",
+    "travel-04",
+    "travel-05",
+    "travel-06",
+    "travel-07",
+    "travel-08",
+    "travel-09",
+    "travel-10"
+  ]
+}

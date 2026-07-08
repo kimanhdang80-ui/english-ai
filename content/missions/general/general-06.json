@@ -1,0 +1,150 @@
+{
+  "id": "general-06",
+  "trackId": "general",
+  "order": 6,
+  "title": "Daily Routine",
+  "goal": "Describe your everyday activities.",
+  "difficulty": "medium",
+  "estimatedMinutes": 13,
+  "prerequisite": "general-05",
+  "completionCriteria": {
+    "type": "min_quiz_score",
+    "minQuizScore": 0.8,
+    "summary": "Finish the quiz with at least 80%."
+  },
+  "vocabulary": [
+    {
+      "word": "wake",
+      "ipa": "/weɪk/",
+      "meaning": "thức dậy",
+      "example": "I wake up at six."
+    },
+    {
+      "word": "sleep",
+      "ipa": "/sliːp/",
+      "meaning": "ngủ",
+      "example": "I sleep at ten at night."
+    },
+    {
+      "word": "work",
+      "ipa": "/wɜːrk/",
+      "meaning": "làm việc",
+      "example": "My father goes to work."
+    },
+    {
+      "word": "school",
+      "ipa": "/skuːl/",
+      "meaning": "trường học",
+      "example": "I go to school by bus."
+    },
+    {
+      "word": "morning",
+      "ipa": "/ˈmɔːrnɪŋ/",
+      "meaning": "buổi sáng",
+      "example": "I run in the morning."
+    },
+    {
+      "word": "night",
+      "ipa": "/naɪt/",
+      "meaning": "buổi tối, ban đêm",
+      "example": "The stars are out at night."
+    },
+    {
+      "word": "study",
+      "ipa": "/ˈstʌdi/",
+      "meaning": "học",
+      "example": "I study English every day."
+    },
+    {
+      "word": "wash",
+      "ipa": "/wɑːʃ/",
+      "meaning": "rửa, giặt",
+      "example": "I wash my face in the morning."
+    }
+  ],
+  "dialogue": [
+    { "speaker": "A", "line": "What time do you wake up?" },
+    { "speaker": "B", "line": "I wake up at six in the morning." },
+    { "speaker": "A", "line": "Do you go to school or work?" },
+    { "speaker": "B", "line": "I go to school. I study English." },
+    { "speaker": "A", "line": "What do you do at night?" },
+    { "speaker": "B", "line": "I wash the dishes and read." },
+    { "speaker": "A", "line": "When do you sleep?" },
+    { "speaker": "B", "line": "I sleep at ten every night." }
+  ],
+  "exercises": {
+    "multipleChoice": [
+      {
+        "prompt": "What do you do in the morning?",
+        "options": ["wake up", "sleep", "night", "school"],
+        "answerIndex": 0,
+        "explanation": "You wake up in the morning."
+      },
+      {
+        "prompt": "Children go to ___ to learn.",
+        "options": ["work", "school", "night", "wash"],
+        "answerIndex": 1,
+        "explanation": "Children learn at school."
+      },
+      {
+        "prompt": "The opposite of 'wake' is ___.",
+        "options": ["study", "work", "sleep", "wash"],
+        "answerIndex": 2,
+        "explanation": "You sleep, then you wake."
+      },
+      {
+        "prompt": "What word means 'học'?",
+        "options": ["study", "wash", "work", "night"],
+        "answerIndex": 0,
+        "explanation": "'Study' means học."
+      },
+      {
+        "prompt": "You ___ your hands before you eat.",
+        "options": ["sleep", "wash", "work", "study"],
+        "answerIndex": 1,
+        "explanation": "You wash your hands."
+      }
+    ],
+    "fillBlank": [
+      {
+        "prompt": "I ___ up at six in the morning.",
+        "answer": "wake",
+        "hint": "thức dậy",
+        "explanation": "'Wake up' means thức dậy."
+      },
+      {
+        "prompt": "I ___ English every day.",
+        "answer": "study",
+        "hint": "học",
+        "explanation": "You study a subject."
+      },
+      {
+        "prompt": "I ___ at ten every night.",
+        "answer": "sleep",
+        "hint": "ngủ",
+        "explanation": "'Sleep' happens at night."
+      }
+    ],
+    "matching": [
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "wake", "right": "thức dậy" },
+          { "left": "sleep", "right": "ngủ" },
+          { "left": "work", "right": "làm việc" },
+          { "left": "school", "right": "trường học" }
+        ]
+      },
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "morning", "right": "buổi sáng" },
+          { "left": "night", "right": "buổi tối, ban đêm" },
+          { "left": "study", "right": "học" },
+          { "left": "wash", "right": "rửa, giặt" }
+        ]
+      }
+    ]
+  },
+  "reviewFocus": ["wake", "sleep", "school", "study", "morning"]
+}

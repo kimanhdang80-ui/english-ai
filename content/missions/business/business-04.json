@@ -1,0 +1,152 @@
+{
+  "id": "business-04",
+  "trackId": "business",
+  "order": 4,
+  "title": "Emails & Messages",
+  "goal": "Write and understand short, polite work emails and messages.",
+  "difficulty": "easy",
+  "estimatedMinutes": 13,
+  "prerequisite": "business-03",
+  "completionCriteria": {
+    "type": "min_quiz_score",
+    "minQuizScore": 0.8,
+    "summary": "Finish the quiz with at least 80%."
+  },
+  "vocabulary": [
+    {
+      "word": "email",
+      "ipa": "/ˈiː.meɪl/",
+      "meaning": "thư điện tử",
+      "example": "I will send an email."
+    },
+    {
+      "word": "send",
+      "ipa": "/send/",
+      "meaning": "gửi",
+      "example": "Please send the file."
+    },
+    {
+      "word": "reply",
+      "ipa": "/rɪˈplaɪ/",
+      "meaning": "trả lời",
+      "example": "I will reply soon."
+    },
+    {
+      "word": "subject",
+      "ipa": "/ˈsʌb.dʒekt/",
+      "meaning": "tiêu đề",
+      "example": "The subject is 'Meeting'."
+    },
+    {
+      "word": "attach",
+      "ipa": "/əˈtætʃ/",
+      "meaning": "đính kèm",
+      "example": "I attach the report."
+    },
+    {
+      "word": "file",
+      "ipa": "/faɪl/",
+      "meaning": "tập tin",
+      "example": "Open the file, please."
+    },
+    {
+      "word": "dear",
+      "ipa": "/dɪər/",
+      "meaning": "kính gửi",
+      "example": "Dear Mr. Nam,"
+    },
+    {
+      "word": "regards",
+      "ipa": "/rɪˈɡɑːdz/",
+      "meaning": "trân trọng",
+      "example": "Best regards, Lan."
+    }
+  ],
+  "dialogue": [
+    { "speaker": "A", "line": "Did you send the email?" },
+    { "speaker": "B", "line": "Yes, I sent it this morning." },
+    { "speaker": "A", "line": "What is the subject?" },
+    { "speaker": "B", "line": "The subject is 'Monday Meeting'." },
+    { "speaker": "A", "line": "Did you attach the file?" },
+    { "speaker": "B", "line": "Yes, the report is attached." },
+    { "speaker": "A", "line": "Good. Did the client reply?" },
+    { "speaker": "B", "line": "Not yet. I will wait for the reply." },
+    { "speaker": "A", "line": "Please start with 'Dear Mr. Nam'." },
+    { "speaker": "B", "line": "Okay, and I will end with 'Best regards'." }
+  ],
+  "exercises": {
+    "multipleChoice": [
+      {
+        "prompt": "\"Please ___ the file to me.\"",
+        "options": ["send", "cook", "drive", "swim"],
+        "answerIndex": 0,
+        "explanation": "We \"send\" a file by email."
+      },
+      {
+        "prompt": "To answer an email is to ___.",
+        "options": ["reply", "run", "paint", "climb"],
+        "answerIndex": 0,
+        "explanation": "\"Reply\" means answer a message."
+      },
+      {
+        "prompt": "The topic line of an email is the ___.",
+        "options": ["subject", "chair", "shoe", "cloud"],
+        "answerIndex": 0,
+        "explanation": "The subject is the topic line."
+      },
+      {
+        "prompt": "To add a file to an email is to ___ it.",
+        "options": ["attach", "wash", "sing", "throw"],
+        "answerIndex": 0,
+        "explanation": "\"Attach\" means add a file."
+      },
+      {
+        "prompt": "A polite email ends with ___.",
+        "options": ["Best regards", "Go away", "Be quiet", "Stop now"],
+        "answerIndex": 0,
+        "explanation": "\"Best regards\" is a polite closing."
+      }
+    ],
+    "fillBlank": [
+      {
+        "prompt": "I will ___ an email now.",
+        "answer": "send",
+        "hint": "gửi",
+        "explanation": "\"Send\" means deliver the email."
+      },
+      {
+        "prompt": "The ___ is 'Monday Meeting'.",
+        "answer": "subject",
+        "hint": "tiêu đề",
+        "explanation": "The subject is the topic line."
+      },
+      {
+        "prompt": "I ___ the report to the email.",
+        "answer": "attach",
+        "hint": "đính kèm",
+        "explanation": "\"Attach\" means add a file."
+      }
+    ],
+    "matching": [
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "email", "right": "thư điện tử" },
+          { "left": "send", "right": "gửi" },
+          { "left": "reply", "right": "trả lời" },
+          { "left": "subject", "right": "tiêu đề" }
+        ]
+      },
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "attach", "right": "đính kèm" },
+          { "left": "file", "right": "tập tin" },
+          { "left": "dear", "right": "kính gửi" },
+          { "left": "regards", "right": "trân trọng" }
+        ]
+      }
+    ]
+  },
+  "reviewFocus": ["email", "send", "reply", "subject", "attach"]
+}

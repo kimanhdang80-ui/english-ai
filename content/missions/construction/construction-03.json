@@ -1,0 +1,152 @@
+{
+  "id": "construction-03",
+  "trackId": "construction",
+  "order": 3,
+  "title": "Safety & PPE",
+  "goal": "Talk about safety gear and stay safe on site.",
+  "difficulty": "easy",
+  "estimatedMinutes": 13,
+  "prerequisite": "construction-02",
+  "completionCriteria": {
+    "type": "min_quiz_score",
+    "minQuizScore": 0.8,
+    "summary": "Finish the quiz with at least 80%."
+  },
+  "vocabulary": [
+    {
+      "word": "helmet",
+      "ipa": "/ˈhel.mət/",
+      "meaning": "mũ bảo hộ",
+      "example": "Wear your helmet on site."
+    },
+    {
+      "word": "gloves",
+      "ipa": "/ɡlʌvz/",
+      "meaning": "găng tay",
+      "example": "Put on your gloves first."
+    },
+    {
+      "word": "boots",
+      "ipa": "/buːts/",
+      "meaning": "giày bảo hộ",
+      "example": "Wear safety boots every day."
+    },
+    {
+      "word": "goggles",
+      "ipa": "/ˈɡɒɡ.əlz/",
+      "meaning": "kính bảo hộ",
+      "example": "Use goggles when you cut."
+    },
+    {
+      "word": "mask",
+      "ipa": "/mɑːsk/",
+      "meaning": "khẩu trang",
+      "example": "Wear a mask for the dust."
+    },
+    {
+      "word": "harness",
+      "ipa": "/ˈhɑː.nəs/",
+      "meaning": "dây an toàn",
+      "example": "Clip your harness up high."
+    },
+    {
+      "word": "danger",
+      "ipa": "/ˈdeɪn.dʒər/",
+      "meaning": "nguy hiểm",
+      "example": "Danger! Do not enter."
+    },
+    {
+      "word": "careful",
+      "ipa": "/ˈkeə.fəl/",
+      "meaning": "cẩn thận",
+      "example": "Be careful near the edge."
+    }
+  ],
+  "dialogue": [
+    { "speaker": "A", "line": "Stop! Where is your helmet?" },
+    { "speaker": "B", "line": "Sorry. I forgot it. Here it is." },
+    { "speaker": "A", "line": "Good. Put on your gloves too." },
+    { "speaker": "B", "line": "Okay. Do I need goggles?" },
+    { "speaker": "A", "line": "Yes. Use goggles when you cut." },
+    { "speaker": "B", "line": "And a mask for the dust?" },
+    { "speaker": "A", "line": "Yes, wear a mask. Where are your boots?" },
+    { "speaker": "B", "line": "I have my safety boots on." },
+    { "speaker": "A", "line": "Good. Clip your harness. This area is danger." },
+    { "speaker": "B", "line": "I understand. I will be careful." }
+  ],
+  "exercises": {
+    "multipleChoice": [
+      {
+        "prompt": "What do you wear to protect your head?",
+        "options": ["gloves", "helmet", "boots", "mask"],
+        "answerIndex": 1,
+        "explanation": "A helmet protects your head."
+      },
+      {
+        "prompt": "What protects your eyes when you cut?",
+        "options": ["goggles", "gloves", "boots", "harness"],
+        "answerIndex": 0,
+        "explanation": "Goggles protect your eyes."
+      },
+      {
+        "prompt": "What do you wear for dust?",
+        "options": ["helmet", "boots", "mask", "gloves"],
+        "answerIndex": 2,
+        "explanation": "A mask protects you from dust."
+      },
+      {
+        "prompt": "What keeps you safe when you work high up?",
+        "options": ["mask", "goggles", "gloves", "harness"],
+        "answerIndex": 3,
+        "explanation": "A harness keeps you safe at height."
+      },
+      {
+        "prompt": "You see a sign that says 'Danger'. What should you do?",
+        "options": ["Be careful", "Run fast", "Sleep", "Eat"],
+        "answerIndex": 0,
+        "explanation": "A danger sign means be careful."
+      }
+    ],
+    "fillBlank": [
+      {
+        "prompt": "Wear your ___ on site to protect your head.",
+        "answer": "helmet",
+        "hint": "mũ bảo hộ",
+        "explanation": "A helmet protects the head."
+      },
+      {
+        "prompt": "Put on your ___ before you touch the steel.",
+        "answer": "gloves",
+        "hint": "găng tay",
+        "explanation": "Gloves protect your hands."
+      },
+      {
+        "prompt": "Be ___ near the edge of the roof.",
+        "answer": "careful",
+        "hint": "cẩn thận",
+        "explanation": "Be careful means stay safe."
+      }
+    ],
+    "matching": [
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "helmet", "right": "mũ bảo hộ" },
+          { "left": "gloves", "right": "găng tay" },
+          { "left": "boots", "right": "giày bảo hộ" },
+          { "left": "goggles", "right": "kính bảo hộ" }
+        ]
+      },
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "mask", "right": "khẩu trang" },
+          { "left": "harness", "right": "dây an toàn" },
+          { "left": "danger", "right": "nguy hiểm" },
+          { "left": "careful", "right": "cẩn thận" }
+        ]
+      }
+    ]
+  },
+  "reviewFocus": ["helmet", "gloves", "goggles", "harness", "danger"]
+}

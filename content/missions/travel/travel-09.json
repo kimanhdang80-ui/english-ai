@@ -1,0 +1,152 @@
+{
+  "id": "travel-09",
+  "trackId": "travel",
+  "order": 9,
+  "title": "Sightseeing",
+  "goal": "Talk about places to visit and ask about tickets and opening times.",
+  "difficulty": "hard",
+  "estimatedMinutes": 14,
+  "prerequisite": "travel-08",
+  "completionCriteria": {
+    "type": "min_quiz_score",
+    "minQuizScore": 0.8,
+    "summary": "Finish the quiz with at least 80%."
+  },
+  "vocabulary": [
+    {
+      "word": "museum",
+      "ipa": "/mjuˈziː.əm/",
+      "meaning": "bảo tàng",
+      "example": "The museum is very old."
+    },
+    {
+      "word": "beach",
+      "ipa": "/biːtʃ/",
+      "meaning": "bãi biển",
+      "example": "The beach is beautiful."
+    },
+    {
+      "word": "photo",
+      "ipa": "/ˈfoʊ.toʊ/",
+      "meaning": "bức ảnh",
+      "example": "Can you take a photo of me?"
+    },
+    {
+      "word": "tour",
+      "ipa": "/tʊr/",
+      "meaning": "chuyến tham quan",
+      "example": "We join a city tour."
+    },
+    {
+      "word": "guide",
+      "ipa": "/ɡaɪd/",
+      "meaning": "hướng dẫn viên",
+      "example": "The guide speaks English."
+    },
+    {
+      "word": "castle",
+      "ipa": "/ˈkæs.əl/",
+      "meaning": "lâu đài",
+      "example": "The castle is on the hill."
+    },
+    {
+      "word": "view",
+      "ipa": "/vjuː/",
+      "meaning": "cảnh đẹp",
+      "example": "The view is amazing."
+    },
+    {
+      "word": "entrance",
+      "ipa": "/ˈen.trəns/",
+      "meaning": "lối vào",
+      "example": "The entrance is on the left."
+    }
+  ],
+  "dialogue": [
+    { "speaker": "A", "line": "Excuse me, what can I visit here?" },
+    { "speaker": "B", "line": "You can visit the museum and the old castle." },
+    { "speaker": "A", "line": "Is there a tour?" },
+    { "speaker": "B", "line": "Yes, a guide starts a tour at ten o'clock." },
+    { "speaker": "A", "line": "How much is the entrance?" },
+    { "speaker": "B", "line": "The entrance is eight dollars." },
+    { "speaker": "A", "line": "The view from the castle is amazing!" },
+    { "speaker": "B", "line": "Yes, it is a great place for a photo." },
+    { "speaker": "A", "line": "Can you take a photo of me, please?" },
+    { "speaker": "B", "line": "Of course! Say cheese!" }
+  ],
+  "exercises": {
+    "multipleChoice": [
+      {
+        "prompt": "Where can you see old and famous things?",
+        "options": ["A museum", "A pharmacy", "A platform", "A bank"],
+        "answerIndex": 0,
+        "explanation": "A museum shows old and famous things."
+      },
+      {
+        "prompt": "A person who shows tourists around is a...",
+        "options": ["Guide", "Waiter", "Doctor", "Pilot"],
+        "answerIndex": 0,
+        "explanation": "A guide shows tourists around."
+      },
+      {
+        "prompt": "What do you take to remember a beautiful place?",
+        "options": ["A photo", "A fare", "A coin", "A key"],
+        "answerIndex": 0,
+        "explanation": "You take a photo to remember a place."
+      },
+      {
+        "prompt": "The beautiful thing you see from a high place is the...",
+        "options": ["View", "Bill", "Menu", "Size"],
+        "answerIndex": 0,
+        "explanation": "The view is what you see from a place."
+      },
+      {
+        "prompt": "Where do you go in to a place?",
+        "options": ["The entrance", "The corner", "The floor", "The stop"],
+        "answerIndex": 0,
+        "explanation": "The entrance is where you go in."
+      }
+    ],
+    "fillBlank": [
+      {
+        "prompt": "Can you take a ___ of me?",
+        "answer": "photo",
+        "hint": "bức ảnh",
+        "explanation": "A photo is a picture from a camera."
+      },
+      {
+        "prompt": "We join a city ___.",
+        "answer": "tour",
+        "hint": "chuyến tham quan",
+        "explanation": "A tour is a trip to see places."
+      },
+      {
+        "prompt": "The ___ from the castle is amazing.",
+        "answer": "view",
+        "hint": "cảnh đẹp",
+        "explanation": "The view is what you see from a place."
+      }
+    ],
+    "matching": [
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "museum", "right": "bảo tàng" },
+          { "left": "beach", "right": "bãi biển" },
+          { "left": "photo", "right": "bức ảnh" },
+          { "left": "tour", "right": "chuyến tham quan" }
+        ]
+      },
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "guide", "right": "hướng dẫn viên" },
+          { "left": "castle", "right": "lâu đài" },
+          { "left": "view", "right": "cảnh đẹp" },
+          { "left": "entrance", "right": "lối vào" }
+        ]
+      }
+    ]
+  },
+  "reviewFocus": ["museum", "photo", "tour", "guide", "view"]
+}

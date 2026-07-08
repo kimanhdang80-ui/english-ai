@@ -1,0 +1,152 @@
+{
+  "id": "business-05",
+  "trackId": "business",
+  "order": 5,
+  "title": "Meetings & Scheduling",
+  "goal": "Arrange, join, and talk about meeting times.",
+  "difficulty": "medium",
+  "estimatedMinutes": 14,
+  "prerequisite": "business-04",
+  "completionCriteria": {
+    "type": "min_quiz_score",
+    "minQuizScore": 0.8,
+    "summary": "Finish the quiz with at least 80%."
+  },
+  "vocabulary": [
+    {
+      "word": "meeting",
+      "ipa": "/ˈmiː.tɪŋ/",
+      "meaning": "cuộc họp",
+      "example": "We have a meeting at ten."
+    },
+    {
+      "word": "schedule",
+      "ipa": "/ˈʃed.juːl/",
+      "meaning": "lịch trình",
+      "example": "Check the schedule, please."
+    },
+    {
+      "word": "agenda",
+      "ipa": "/əˈdʒen.də/",
+      "meaning": "chương trình họp",
+      "example": "The agenda has three items."
+    },
+    {
+      "word": "available",
+      "ipa": "/əˈveɪ.lə.bəl/",
+      "meaning": "có mặt, rảnh",
+      "example": "Are you available at two?"
+    },
+    {
+      "word": "postpone",
+      "ipa": "/pəˈspəʊn/",
+      "meaning": "hoãn lại",
+      "example": "Let's postpone the meeting."
+    },
+    {
+      "word": "room",
+      "ipa": "/ruːm/",
+      "meaning": "phòng",
+      "example": "The meeting room is here."
+    },
+    {
+      "word": "book",
+      "ipa": "/bʊk/",
+      "meaning": "đặt trước",
+      "example": "I will book the room."
+    },
+    {
+      "word": "time",
+      "ipa": "/taɪm/",
+      "meaning": "thời gian",
+      "example": "What time is the meeting?"
+    }
+  ],
+  "dialogue": [
+    { "speaker": "A", "line": "We have a meeting tomorrow." },
+    { "speaker": "B", "line": "What time is the meeting?" },
+    { "speaker": "A", "line": "At ten in the morning." },
+    { "speaker": "B", "line": "Are you available then?" },
+    { "speaker": "A", "line": "Yes, I am free at ten." },
+    { "speaker": "B", "line": "Good. Can you book the room?" },
+    { "speaker": "A", "line": "Sure. I will book meeting room two." },
+    { "speaker": "B", "line": "What is on the agenda?" },
+    { "speaker": "A", "line": "We will talk about the new plan." },
+    { "speaker": "B", "line": "If we are busy, we can postpone it." }
+  ],
+  "exercises": {
+    "multipleChoice": [
+      {
+        "prompt": "A time when people talk about work is a ___.",
+        "options": ["meeting", "garden", "beach", "song"],
+        "answerIndex": 0,
+        "explanation": "A meeting is when people talk about work."
+      },
+      {
+        "prompt": "\"Are you ___ at two?\" means are you free?",
+        "options": ["available", "yellow", "heavy", "loud"],
+        "answerIndex": 0,
+        "explanation": "\"Available\" means free to meet."
+      },
+      {
+        "prompt": "To move a meeting to a later day is to ___.",
+        "options": ["postpone", "eat", "run", "sing"],
+        "answerIndex": 0,
+        "explanation": "\"Postpone\" means move to a later time."
+      },
+      {
+        "prompt": "The list of meeting topics is the ___.",
+        "options": ["agenda", "shoe", "river", "cup"],
+        "answerIndex": 0,
+        "explanation": "The agenda lists the meeting topics."
+      },
+      {
+        "prompt": "To reserve a room is to ___ it.",
+        "options": ["book", "wash", "throw", "cut"],
+        "answerIndex": 0,
+        "explanation": "\"Book\" means reserve in advance."
+      }
+    ],
+    "fillBlank": [
+      {
+        "prompt": "We have a ___ at ten.",
+        "answer": "meeting",
+        "hint": "cuộc họp",
+        "explanation": "A meeting is when people talk about work."
+      },
+      {
+        "prompt": "Are you ___ at two?",
+        "answer": "available",
+        "hint": "có mặt, rảnh",
+        "explanation": "\"Available\" means free to meet."
+      },
+      {
+        "prompt": "I will ___ the room.",
+        "answer": "book",
+        "hint": "đặt trước",
+        "explanation": "\"Book\" means reserve in advance."
+      }
+    ],
+    "matching": [
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "meeting", "right": "cuộc họp" },
+          { "left": "schedule", "right": "lịch trình" },
+          { "left": "agenda", "right": "chương trình họp" },
+          { "left": "available", "right": "có mặt, rảnh" }
+        ]
+      },
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "postpone", "right": "hoãn lại" },
+          { "left": "room", "right": "phòng" },
+          { "left": "book", "right": "đặt trước" },
+          { "left": "time", "right": "thời gian" }
+        ]
+      }
+    ]
+  },
+  "reviewFocus": ["meeting", "agenda", "available", "postpone", "book"]
+}

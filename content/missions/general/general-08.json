@@ -1,0 +1,150 @@
+{
+  "id": "general-08",
+  "trackId": "general",
+  "order": 8,
+  "title": "Weather & Seasons",
+  "goal": "Talk about the weather and the seasons.",
+  "difficulty": "medium",
+  "estimatedMinutes": 14,
+  "prerequisite": "general-07",
+  "completionCriteria": {
+    "type": "min_quiz_score",
+    "minQuizScore": 0.8,
+    "summary": "Finish the quiz with at least 80%."
+  },
+  "vocabulary": [
+    {
+      "word": "weather",
+      "ipa": "/ˈweðər/",
+      "meaning": "thời tiết",
+      "example": "The weather is nice today."
+    },
+    {
+      "word": "sunny",
+      "ipa": "/ˈsʌni/",
+      "meaning": "nắng",
+      "example": "It is sunny this morning."
+    },
+    {
+      "word": "rainy",
+      "ipa": "/ˈreɪni/",
+      "meaning": "mưa",
+      "example": "It is rainy and cold."
+    },
+    {
+      "word": "hot",
+      "ipa": "/hɑːt/",
+      "meaning": "nóng",
+      "example": "Summer is very hot."
+    },
+    {
+      "word": "cold",
+      "ipa": "/koʊld/",
+      "meaning": "lạnh",
+      "example": "Winter is cold here."
+    },
+    {
+      "word": "wind",
+      "ipa": "/wɪnd/",
+      "meaning": "gió",
+      "example": "The wind is strong today."
+    },
+    {
+      "word": "summer",
+      "ipa": "/ˈsʌmər/",
+      "meaning": "mùa hè",
+      "example": "We swim in summer."
+    },
+    {
+      "word": "winter",
+      "ipa": "/ˈwɪntər/",
+      "meaning": "mùa đông",
+      "example": "It snows in winter."
+    }
+  ],
+  "dialogue": [
+    { "speaker": "A", "line": "How is the weather today?" },
+    { "speaker": "B", "line": "It is sunny and warm." },
+    { "speaker": "A", "line": "Is it hot in summer here?" },
+    { "speaker": "B", "line": "Yes, summer is very hot." },
+    { "speaker": "A", "line": "What about winter?" },
+    { "speaker": "B", "line": "Winter is cold and rainy." },
+    { "speaker": "A", "line": "Is there a lot of wind?" },
+    { "speaker": "B", "line": "Yes, the wind is strong in winter." }
+  ],
+  "exercises": {
+    "multipleChoice": [
+      {
+        "prompt": "The sun is out. It is ___.",
+        "options": ["rainy", "sunny", "cold", "wind"],
+        "answerIndex": 1,
+        "explanation": "When the sun is out, it is sunny."
+      },
+      {
+        "prompt": "The opposite of 'hot' is ___.",
+        "options": ["cold", "summer", "sunny", "weather"],
+        "answerIndex": 0,
+        "explanation": "Cold is the opposite of hot."
+      },
+      {
+        "prompt": "Which season is very hot?",
+        "options": ["winter", "summer", "wind", "rainy"],
+        "answerIndex": 1,
+        "explanation": "Summer is the hot season."
+      },
+      {
+        "prompt": "What word means 'gió'?",
+        "options": ["weather", "wind", "cold", "hot"],
+        "answerIndex": 1,
+        "explanation": "'Wind' means gió."
+      },
+      {
+        "prompt": "It rains. The weather is ___.",
+        "options": ["sunny", "hot", "rainy", "summer"],
+        "answerIndex": 2,
+        "explanation": "When it rains, it is rainy."
+      }
+    ],
+    "fillBlank": [
+      {
+        "prompt": "The ___ is nice today.",
+        "answer": "weather",
+        "hint": "thời tiết",
+        "explanation": "'Weather' is what it is like outside."
+      },
+      {
+        "prompt": "It snows in ___.",
+        "answer": "winter",
+        "hint": "mùa đông",
+        "explanation": "Winter is the cold season."
+      },
+      {
+        "prompt": "Summer is very ___.",
+        "answer": "hot",
+        "hint": "nóng",
+        "explanation": "'Hot' describes summer."
+      }
+    ],
+    "matching": [
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "weather", "right": "thời tiết" },
+          { "left": "sunny", "right": "nắng" },
+          { "left": "rainy", "right": "mưa" },
+          { "left": "wind", "right": "gió" }
+        ]
+      },
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "hot", "right": "nóng" },
+          { "left": "cold", "right": "lạnh" },
+          { "left": "summer", "right": "mùa hè" },
+          { "left": "winter", "right": "mùa đông" }
+        ]
+      }
+    ]
+  },
+  "reviewFocus": ["weather", "sunny", "hot", "cold", "winter"]
+}

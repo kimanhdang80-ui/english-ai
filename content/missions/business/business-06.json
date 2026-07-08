@@ -1,0 +1,152 @@
+{
+  "id": "business-06",
+  "trackId": "business",
+  "order": 6,
+  "title": "Describing Your Work",
+  "goal": "Explain your daily tasks and responsibilities at work.",
+  "difficulty": "medium",
+  "estimatedMinutes": 14,
+  "prerequisite": "business-05",
+  "completionCriteria": {
+    "type": "min_quiz_score",
+    "minQuizScore": 0.8,
+    "summary": "Finish the quiz with at least 80%."
+  },
+  "vocabulary": [
+    {
+      "word": "task",
+      "ipa": "/tɑːsk/",
+      "meaning": "nhiệm vụ",
+      "example": "I have a new task today."
+    },
+    {
+      "word": "project",
+      "ipa": "/ˈprɒdʒ.ekt/",
+      "meaning": "dự án",
+      "example": "We start a big project."
+    },
+    {
+      "word": "report",
+      "ipa": "/rɪˈpɔːt/",
+      "meaning": "báo cáo",
+      "example": "I write a report each week."
+    },
+    {
+      "word": "deadline",
+      "ipa": "/ˈded.laɪn/",
+      "meaning": "hạn chót",
+      "example": "The deadline is Friday."
+    },
+    {
+      "word": "responsible",
+      "ipa": "/rɪˈspɒn.sə.bəl/",
+      "meaning": "chịu trách nhiệm",
+      "example": "I am responsible for sales."
+    },
+    {
+      "word": "customer",
+      "ipa": "/ˈkʌs.tə.mər/",
+      "meaning": "khách hàng",
+      "example": "I help each customer."
+    },
+    {
+      "word": "plan",
+      "ipa": "/plæn/",
+      "meaning": "kế hoạch",
+      "example": "We make a plan."
+    },
+    {
+      "word": "finish",
+      "ipa": "/ˈfɪn.ɪʃ/",
+      "meaning": "hoàn thành",
+      "example": "I finish my work at five."
+    }
+  ],
+  "dialogue": [
+    { "speaker": "A", "line": "What do you do at work?" },
+    { "speaker": "B", "line": "I am responsible for sales." },
+    { "speaker": "A", "line": "What are your daily tasks?" },
+    { "speaker": "B", "line": "I call customers and write reports." },
+    { "speaker": "A", "line": "Are you busy this week?" },
+    { "speaker": "B", "line": "Yes, we have a big project." },
+    { "speaker": "A", "line": "When is the deadline?" },
+    { "speaker": "B", "line": "The deadline is Friday." },
+    { "speaker": "A", "line": "Do you have a plan?" },
+    { "speaker": "B", "line": "Yes, and I will finish on time." }
+  ],
+  "exercises": {
+    "multipleChoice": [
+      {
+        "prompt": "A small job to do is a ___.",
+        "options": ["task", "cloud", "shoe", "tree"],
+        "answerIndex": 0,
+        "explanation": "A task is a small job to do."
+      },
+      {
+        "prompt": "The last day to finish work is the ___.",
+        "options": ["deadline", "window", "cup", "hat"],
+        "answerIndex": 0,
+        "explanation": "The deadline is the last day to finish."
+      },
+      {
+        "prompt": "A person who buys from you is a ___.",
+        "options": ["customer", "river", "chair", "door"],
+        "answerIndex": 0,
+        "explanation": "A customer buys your product or service."
+      },
+      {
+        "prompt": "\"I am ___ for sales.\" means it is my job.",
+        "options": ["responsible", "yellow", "cold", "loud"],
+        "answerIndex": 0,
+        "explanation": "\"Responsible for\" means it is your job."
+      },
+      {
+        "prompt": "To complete your work is to ___ it.",
+        "options": ["finish", "throw", "wash", "sing"],
+        "answerIndex": 0,
+        "explanation": "\"Finish\" means complete."
+      }
+    ],
+    "fillBlank": [
+      {
+        "prompt": "We start a big ___ this week.",
+        "answer": "project",
+        "hint": "dự án",
+        "explanation": "A project is a big piece of work."
+      },
+      {
+        "prompt": "The ___ is Friday.",
+        "answer": "deadline",
+        "hint": "hạn chót",
+        "explanation": "The deadline is the last day to finish."
+      },
+      {
+        "prompt": "I write a ___ each week.",
+        "answer": "report",
+        "hint": "báo cáo",
+        "explanation": "A report tells about your work."
+      }
+    ],
+    "matching": [
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "task", "right": "nhiệm vụ" },
+          { "left": "project", "right": "dự án" },
+          { "left": "report", "right": "báo cáo" },
+          { "left": "deadline", "right": "hạn chót" }
+        ]
+      },
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "responsible", "right": "chịu trách nhiệm" },
+          { "left": "customer", "right": "khách hàng" },
+          { "left": "plan", "right": "kế hoạch" },
+          { "left": "finish", "right": "hoàn thành" }
+        ]
+      }
+    ]
+  },
+  "reviewFocus": ["task", "project", "deadline", "responsible", "customer"]
+}

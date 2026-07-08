@@ -1,0 +1,163 @@
+{
+  "id": "travel-02",
+  "trackId": "travel",
+  "order": 2,
+  "title": "Check-in & Hotel",
+  "goal": "Check into a hotel and ask about your room using simple phrases.",
+  "difficulty": "easy",
+  "estimatedMinutes": 12,
+  "prerequisite": "travel-01",
+  "completionCriteria": {
+    "type": "min_quiz_score",
+    "minQuizScore": 0.8,
+    "summary": "Finish the quiz with at least 80%."
+  },
+  "vocabulary": [
+    {
+      "word": "reservation",
+      "ipa": "/ˌrez.ɚˈveɪ.ʃən/",
+      "meaning": "đặt phòng",
+      "example": "I have a reservation for tonight."
+    },
+    {
+      "word": "room",
+      "ipa": "/ruːm/",
+      "meaning": "phòng",
+      "example": "My room is very clean."
+    },
+    {
+      "word": "key",
+      "ipa": "/kiː/",
+      "meaning": "chìa khóa",
+      "example": "Here is your room key."
+    },
+    {
+      "word": "reception",
+      "ipa": "/rɪˈsep.ʃən/",
+      "meaning": "quầy lễ tân",
+      "example": "The reception is near the door."
+    },
+    {
+      "word": "night",
+      "ipa": "/naɪt/",
+      "meaning": "đêm",
+      "example": "I will stay for two nights."
+    },
+    {
+      "word": "breakfast",
+      "ipa": "/ˈbrek.fəst/",
+      "meaning": "bữa sáng",
+      "example": "Breakfast is at seven o'clock."
+    },
+    {
+      "word": "floor",
+      "ipa": "/flɔːr/",
+      "meaning": "tầng",
+      "example": "My room is on the third floor."
+    },
+    {
+      "word": "checkout",
+      "ipa": "/ˈtʃek.aʊt/",
+      "meaning": "trả phòng",
+      "example": "Checkout is at eleven o'clock."
+    }
+  ],
+  "dialogue": [
+    { "speaker": "A", "line": "Hello! Welcome to our hotel." },
+    { "speaker": "B", "line": "Hello. I have a reservation." },
+    { "speaker": "A", "line": "What is your name, please?" },
+    { "speaker": "B", "line": "My name is Nam. I booked one room." },
+    {
+      "speaker": "A",
+      "line": "Yes, one room for two nights. Here is your key."
+    },
+    { "speaker": "B", "line": "Thank you. What floor is my room on?" },
+    { "speaker": "A", "line": "Your room is on the third floor." },
+    { "speaker": "B", "line": "What time is breakfast?" },
+    {
+      "speaker": "A",
+      "line": "Breakfast is at seven o'clock. Checkout is at eleven."
+    },
+    { "speaker": "B", "line": "Great, thank you very much!" }
+  ],
+  "exercises": {
+    "multipleChoice": [
+      {
+        "prompt": "What do you say when you booked a room before?",
+        "options": [
+          "I have a reservation.",
+          "I have a plane.",
+          "I have a river.",
+          "I have a spoon."
+        ],
+        "answerIndex": 0,
+        "explanation": "A reservation means you booked the room before."
+      },
+      {
+        "prompt": "What do you use to open your room?",
+        "options": ["A key", "A cup", "A pen", "A hat"],
+        "answerIndex": 0,
+        "explanation": "You use a key to open your room."
+      },
+      {
+        "prompt": "Where do you check in at a hotel?",
+        "options": ["At reception", "In the pool", "On the bus", "At the gate"],
+        "answerIndex": 0,
+        "explanation": "You check in at reception."
+      },
+      {
+        "prompt": "What meal do many hotels serve in the morning?",
+        "options": ["Breakfast", "Dinner", "A snack", "A drink"],
+        "answerIndex": 0,
+        "explanation": "Breakfast is the morning meal."
+      },
+      {
+        "prompt": "When must you leave the room on the last day?",
+        "options": ["At checkout", "At midnight only", "At breakfast", "Never"],
+        "answerIndex": 0,
+        "explanation": "Checkout is when you leave the room."
+      }
+    ],
+    "fillBlank": [
+      {
+        "prompt": "I have a ___ for tonight.",
+        "answer": "reservation",
+        "hint": "đặt phòng",
+        "explanation": "A reservation is a booked room."
+      },
+      {
+        "prompt": "Here is your room ___.",
+        "answer": "key",
+        "hint": "chìa khóa",
+        "explanation": "A key opens your room."
+      },
+      {
+        "prompt": "My room is on the third ___.",
+        "answer": "floor",
+        "hint": "tầng",
+        "explanation": "A floor is a level in the hotel."
+      }
+    ],
+    "matching": [
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "reservation", "right": "đặt phòng" },
+          { "left": "room", "right": "phòng" },
+          { "left": "key", "right": "chìa khóa" },
+          { "left": "reception", "right": "quầy lễ tân" }
+        ]
+      },
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "night", "right": "đêm" },
+          { "left": "breakfast", "right": "bữa sáng" },
+          { "left": "floor", "right": "tầng" },
+          { "left": "checkout", "right": "trả phòng" }
+        ]
+      }
+    ]
+  },
+  "reviewFocus": ["reservation", "room", "key", "reception", "breakfast"]
+}

@@ -1,0 +1,155 @@
+{
+  "id": "construction-02",
+  "trackId": "construction",
+  "order": 2,
+  "title": "Materials",
+  "goal": "Name common building materials and talk about what you need.",
+  "difficulty": "easy",
+  "estimatedMinutes": 12,
+  "prerequisite": "construction-01",
+  "completionCriteria": {
+    "type": "min_quiz_score",
+    "minQuizScore": 0.8,
+    "summary": "Finish the quiz with at least 80%."
+  },
+  "vocabulary": [
+    {
+      "word": "cement",
+      "ipa": "/sɪˈment/",
+      "meaning": "xi măng",
+      "example": "We need more cement today."
+    },
+    {
+      "word": "sand",
+      "ipa": "/sænd/",
+      "meaning": "cát",
+      "example": "Mix the sand with cement."
+    },
+    {
+      "word": "brick",
+      "ipa": "/brɪk/",
+      "meaning": "viên gạch",
+      "example": "Put the brick on the wall."
+    },
+    {
+      "word": "concrete",
+      "ipa": "/ˈkɒŋ.kriːt/",
+      "meaning": "bê tông",
+      "example": "The concrete is still wet."
+    },
+    {
+      "word": "steel",
+      "ipa": "/stiːl/",
+      "meaning": "thép",
+      "example": "The steel bars are very strong."
+    },
+    {
+      "word": "wood",
+      "ipa": "/wʊd/",
+      "meaning": "gỗ",
+      "example": "Cut the wood to size."
+    },
+    {
+      "word": "pipe",
+      "ipa": "/paɪp/",
+      "meaning": "ống",
+      "example": "Connect the water pipe here."
+    },
+    {
+      "word": "wire",
+      "ipa": "/waɪər/",
+      "meaning": "dây điện",
+      "example": "Do not touch the wire."
+    }
+  ],
+  "dialogue": [
+    { "speaker": "A", "line": "We need to build the wall today." },
+    { "speaker": "B", "line": "Okay. Do we have enough bricks?" },
+    { "speaker": "A", "line": "Yes, but we need more cement." },
+    { "speaker": "B", "line": "I will bring the cement and the sand." },
+    { "speaker": "A", "line": "Good. Mix the sand with the cement." },
+    { "speaker": "B", "line": "Is the concrete ready?" },
+    { "speaker": "A", "line": "No, the concrete is still wet." },
+    { "speaker": "B", "line": "Where are the steel bars?" },
+    {
+      "speaker": "A",
+      "line": "They are near the wood. Do not touch the wire."
+    },
+    { "speaker": "B", "line": "Okay, I will be careful." }
+  ],
+  "exercises": {
+    "multipleChoice": [
+      {
+        "prompt": "What do you mix with sand to make mortar?",
+        "options": ["steel", "cement", "wood", "wire"],
+        "answerIndex": 1,
+        "explanation": "Cement is mixed with sand."
+      },
+      {
+        "prompt": "Which material is used to build a wall in small blocks?",
+        "options": ["brick", "pipe", "wire", "sand"],
+        "answerIndex": 0,
+        "explanation": "Bricks are small blocks for walls."
+      },
+      {
+        "prompt": "Water flows through a ___.",
+        "options": ["brick", "pipe", "steel", "wood"],
+        "answerIndex": 1,
+        "explanation": "Water flows through a pipe."
+      },
+      {
+        "prompt": "Which material carries electricity?",
+        "options": ["sand", "wood", "wire", "cement"],
+        "answerIndex": 2,
+        "explanation": "A wire carries electricity."
+      },
+      {
+        "prompt": "The floor is made of wet ___.",
+        "options": ["concrete", "wire", "brick", "pipe"],
+        "answerIndex": 0,
+        "explanation": "Floors are often made of concrete."
+      }
+    ],
+    "fillBlank": [
+      {
+        "prompt": "Mix the sand with the ___ to make mortar.",
+        "answer": "cement",
+        "hint": "xi măng",
+        "explanation": "Cement mixes with sand."
+      },
+      {
+        "prompt": "The ___ bars make the building strong.",
+        "answer": "steel",
+        "hint": "thép",
+        "explanation": "Steel bars add strength."
+      },
+      {
+        "prompt": "Do not touch the ___, it can be dangerous.",
+        "answer": "wire",
+        "hint": "dây điện",
+        "explanation": "Electric wire is dangerous."
+      }
+    ],
+    "matching": [
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "cement", "right": "xi măng" },
+          { "left": "sand", "right": "cát" },
+          { "left": "brick", "right": "viên gạch" },
+          { "left": "concrete", "right": "bê tông" }
+        ]
+      },
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "steel", "right": "thép" },
+          { "left": "wood", "right": "gỗ" },
+          { "left": "pipe", "right": "ống" },
+          { "left": "wire", "right": "dây điện" }
+        ]
+      }
+    ]
+  },
+  "reviewFocus": ["cement", "brick", "concrete", "steel", "wire"]
+}

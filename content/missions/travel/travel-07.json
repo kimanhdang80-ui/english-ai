@@ -1,0 +1,157 @@
+{
+  "id": "travel-07",
+  "trackId": "travel",
+  "order": 7,
+  "title": "Money & Exchange",
+  "goal": "Change money and pay using simple English at a bank or exchange.",
+  "difficulty": "medium",
+  "estimatedMinutes": 13,
+  "prerequisite": "travel-06",
+  "completionCriteria": {
+    "type": "min_quiz_score",
+    "minQuizScore": 0.8,
+    "summary": "Finish the quiz with at least 80%."
+  },
+  "vocabulary": [
+    {
+      "word": "money",
+      "ipa": "/ˈmʌn.i/",
+      "meaning": "tiền",
+      "example": "I need some money."
+    },
+    {
+      "word": "cash",
+      "ipa": "/kæʃ/",
+      "meaning": "tiền mặt",
+      "example": "I want to pay in cash."
+    },
+    {
+      "word": "card",
+      "ipa": "/kɑːrd/",
+      "meaning": "thẻ",
+      "example": "Can I pay by card?"
+    },
+    {
+      "word": "exchange",
+      "ipa": "/ɪksˈtʃeɪndʒ/",
+      "meaning": "đổi tiền",
+      "example": "I want to exchange money."
+    },
+    {
+      "word": "coin",
+      "ipa": "/kɔɪn/",
+      "meaning": "tiền xu",
+      "example": "I have one small coin."
+    },
+    {
+      "word": "bank",
+      "ipa": "/bæŋk/",
+      "meaning": "ngân hàng",
+      "example": "The bank is open at nine."
+    },
+    {
+      "word": "change",
+      "ipa": "/tʃeɪndʒ/",
+      "meaning": "tiền thối",
+      "example": "Here is your change."
+    },
+    {
+      "word": "dollar",
+      "ipa": "/ˈdɒl.ɚ/",
+      "meaning": "đô la",
+      "example": "This costs ten dollars."
+    }
+  ],
+  "dialogue": [
+    { "speaker": "A", "line": "Hello, I want to exchange money." },
+    { "speaker": "B", "line": "Okay. How much do you want to change?" },
+    { "speaker": "A", "line": "I have one hundred dollars." },
+    { "speaker": "B", "line": "Do you want cash or a card?" },
+    { "speaker": "A", "line": "Cash, please." },
+    { "speaker": "B", "line": "Here is your money and some coins." },
+    { "speaker": "A", "line": "Thank you. Where is the bank?" },
+    { "speaker": "B", "line": "The bank is next to the shop." },
+    { "speaker": "A", "line": "Can I pay by card there?" },
+    { "speaker": "B", "line": "Yes, you can pay by card or cash." }
+  ],
+  "exercises": {
+    "multipleChoice": [
+      {
+        "prompt": "Paper and coins you use to pay are...",
+        "options": ["Money", "Maps", "Keys", "Menus"],
+        "answerIndex": 0,
+        "explanation": "Money is what you use to pay."
+      },
+      {
+        "prompt": "You pay with paper notes and coins, not a card. This is...",
+        "options": ["Cash", "A gate", "A fare", "A room"],
+        "answerIndex": 0,
+        "explanation": "Cash is paper notes and coins."
+      },
+      {
+        "prompt": "Where do you change dollars into local money?",
+        "options": [
+          "At an exchange",
+          "At a gate",
+          "At a table",
+          "At a platform"
+        ],
+        "answerIndex": 0,
+        "explanation": "You change money at an exchange."
+      },
+      {
+        "prompt": "The extra money you get back after paying is the...",
+        "options": ["Change", "Corner", "Ticket", "Menu"],
+        "answerIndex": 0,
+        "explanation": "Change is the money you get back."
+      },
+      {
+        "prompt": "A small round piece of metal money is a...",
+        "options": ["Coin", "Card", "Bill", "Bag"],
+        "answerIndex": 0,
+        "explanation": "A coin is metal money."
+      }
+    ],
+    "fillBlank": [
+      {
+        "prompt": "I want to ___ money.",
+        "answer": "exchange",
+        "hint": "đổi tiền",
+        "explanation": "Exchange means to change one money for another."
+      },
+      {
+        "prompt": "Can I pay by ___?",
+        "answer": "card",
+        "hint": "thẻ",
+        "explanation": "A card lets you pay without cash."
+      },
+      {
+        "prompt": "Here is your ___.",
+        "answer": "change",
+        "hint": "tiền thối",
+        "explanation": "Change is the money you get back."
+      }
+    ],
+    "matching": [
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "money", "right": "tiền" },
+          { "left": "cash", "right": "tiền mặt" },
+          { "left": "card", "right": "thẻ" },
+          { "left": "exchange", "right": "đổi tiền" }
+        ]
+      },
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "coin", "right": "tiền xu" },
+          { "left": "bank", "right": "ngân hàng" },
+          { "left": "change", "right": "tiền thối" },
+          { "left": "dollar", "right": "đô la" }
+        ]
+      }
+    ]
+  },
+  "reviewFocus": ["money", "cash", "card", "exchange", "change"]
+}

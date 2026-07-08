@@ -1,0 +1,20 @@
+{
+  "id": "general",
+  "key": "general",
+  "title": "General English",
+  "goal": "general",
+  "cefr": "A1",
+  "description": "A beginner-friendly General English track for Vietnamese learners. Build everyday vocabulary and simple conversation skills across ten practical themes.",
+  "missionIds": [
+    "general-01",
+    "general-02",
+    "general-03",
+    "general-04",
+    "general-05",
+    "general-06",
+    "general-07",
+    "general-08",
+    "general-09",
+    "general-10"
+  ]
+}

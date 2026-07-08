@@ -1,0 +1,150 @@
+{
+  "id": "general-10",
+  "trackId": "general",
+  "order": 10,
+  "title": "Hobbies & Free Time",
+  "goal": "Talk about your hobbies and free time.",
+  "difficulty": "hard",
+  "estimatedMinutes": 15,
+  "prerequisite": "general-09",
+  "completionCriteria": {
+    "type": "min_quiz_score",
+    "minQuizScore": 0.8,
+    "summary": "Finish the quiz with at least 80%."
+  },
+  "vocabulary": [
+    {
+      "word": "hobby",
+      "ipa": "/ˈhɑːbi/",
+      "meaning": "sở thích",
+      "example": "My hobby is reading."
+    },
+    {
+      "word": "read",
+      "ipa": "/riːd/",
+      "meaning": "đọc",
+      "example": "I read a book at night."
+    },
+    {
+      "word": "music",
+      "ipa": "/ˈmjuːzɪk/",
+      "meaning": "âm nhạc",
+      "example": "I love to listen to music."
+    },
+    {
+      "word": "dance",
+      "ipa": "/dæns/",
+      "meaning": "nhảy, khiêu vũ",
+      "example": "We dance at the party."
+    },
+    {
+      "word": "swim",
+      "ipa": "/swɪm/",
+      "meaning": "bơi",
+      "example": "I swim in the summer."
+    },
+    {
+      "word": "game",
+      "ipa": "/ɡeɪm/",
+      "meaning": "trò chơi",
+      "example": "We play a game after school."
+    },
+    {
+      "word": "paint",
+      "ipa": "/peɪnt/",
+      "meaning": "vẽ, sơn",
+      "example": "She likes to paint pictures."
+    },
+    {
+      "word": "run",
+      "ipa": "/rʌn/",
+      "meaning": "chạy",
+      "example": "I run in the park every day."
+    }
+  ],
+  "dialogue": [
+    { "speaker": "A", "line": "What is your hobby?" },
+    { "speaker": "B", "line": "I like to read and paint." },
+    { "speaker": "A", "line": "Do you like music too?" },
+    { "speaker": "B", "line": "Yes, I dance to music at home." },
+    { "speaker": "A", "line": "I like sports. I swim and run." },
+    { "speaker": "B", "line": "That is great for your health." },
+    { "speaker": "A", "line": "Do you play any game?" },
+    { "speaker": "B", "line": "Yes, I play a game with my friends." }
+  ],
+  "exercises": {
+    "multipleChoice": [
+      {
+        "prompt": "A thing you enjoy in free time is a ___.",
+        "options": ["hobby", "game", "music", "run"],
+        "answerIndex": 0,
+        "explanation": "A hobby is a fun free-time activity."
+      },
+      {
+        "prompt": "You do this with a book.",
+        "options": ["swim", "read", "dance", "paint"],
+        "answerIndex": 1,
+        "explanation": "You read a book."
+      },
+      {
+        "prompt": "You do this in water.",
+        "options": ["run", "paint", "swim", "read"],
+        "answerIndex": 2,
+        "explanation": "You swim in water."
+      },
+      {
+        "prompt": "What word means 'âm nhạc'?",
+        "options": ["music", "game", "dance", "hobby"],
+        "answerIndex": 0,
+        "explanation": "'Music' means âm nhạc."
+      },
+      {
+        "prompt": "You use a brush to ___.",
+        "options": ["run", "swim", "paint", "read"],
+        "answerIndex": 2,
+        "explanation": "You paint with a brush."
+      }
+    ],
+    "fillBlank": [
+      {
+        "prompt": "My ___ is reading books.",
+        "answer": "hobby",
+        "hint": "sở thích",
+        "explanation": "'Hobby' is a free-time activity."
+      },
+      {
+        "prompt": "I ___ in the park every day.",
+        "answer": "run",
+        "hint": "chạy",
+        "explanation": "'Run' is a sport activity."
+      },
+      {
+        "prompt": "We ___ to music at the party.",
+        "answer": "dance",
+        "hint": "nhảy",
+        "explanation": "'Dance' means move to music."
+      }
+    ],
+    "matching": [
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "hobby", "right": "sở thích" },
+          { "left": "read", "right": "đọc" },
+          { "left": "music", "right": "âm nhạc" },
+          { "left": "dance", "right": "nhảy, khiêu vũ" }
+        ]
+      },
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "swim", "right": "bơi" },
+          { "left": "game", "right": "trò chơi" },
+          { "left": "paint", "right": "vẽ, sơn" },
+          { "left": "run", "right": "chạy" }
+        ]
+      }
+    ]
+  },
+  "reviewFocus": ["hobby", "read", "music", "swim", "run"]
+}

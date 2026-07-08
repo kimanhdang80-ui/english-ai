@@ -1,0 +1,152 @@
+{
+  "id": "construction-08",
+  "trackId": "construction",
+  "order": 8,
+  "title": "Problems & Repairs",
+  "goal": "Report problems and talk about simple repairs on site.",
+  "difficulty": "medium",
+  "estimatedMinutes": 14,
+  "prerequisite": "construction-07",
+  "completionCriteria": {
+    "type": "min_quiz_score",
+    "minQuizScore": 0.8,
+    "summary": "Finish the quiz with at least 80%."
+  },
+  "vocabulary": [
+    {
+      "word": "broken",
+      "ipa": "/ˈbrəʊ.kən/",
+      "meaning": "bị hỏng",
+      "example": "The drill is broken."
+    },
+    {
+      "word": "leak",
+      "ipa": "/liːk/",
+      "meaning": "rò rỉ",
+      "example": "There is a leak in the pipe."
+    },
+    {
+      "word": "crack",
+      "ipa": "/kræk/",
+      "meaning": "vết nứt",
+      "example": "I see a crack in the wall."
+    },
+    {
+      "word": "fix",
+      "ipa": "/fɪks/",
+      "meaning": "sửa chữa",
+      "example": "Can you fix the machine?"
+    },
+    {
+      "word": "replace",
+      "ipa": "/rɪˈpleɪs/",
+      "meaning": "thay thế",
+      "example": "We must replace the pipe."
+    },
+    {
+      "word": "loose",
+      "ipa": "/luːs/",
+      "meaning": "lỏng lẻo",
+      "example": "This bolt is loose."
+    },
+    {
+      "word": "tight",
+      "ipa": "/taɪt/",
+      "meaning": "chặt",
+      "example": "Make the screw tight."
+    },
+    {
+      "word": "problem",
+      "ipa": "/ˈprɒb.ləm/",
+      "meaning": "vấn đề",
+      "example": "We have a problem here."
+    }
+  ],
+  "dialogue": [
+    { "speaker": "A", "line": "We have a problem with the pipe." },
+    { "speaker": "B", "line": "What is wrong? Is there a leak?" },
+    { "speaker": "A", "line": "Yes, there is a leak. Water is on the floor." },
+    { "speaker": "B", "line": "Can you fix it now?" },
+    { "speaker": "A", "line": "No, we must replace the pipe." },
+    { "speaker": "B", "line": "Okay. This bolt is loose too." },
+    { "speaker": "A", "line": "Please make it tight with the wrench." },
+    { "speaker": "B", "line": "The drill is broken. I cannot use it." },
+    { "speaker": "A", "line": "I see a crack in the wall as well." },
+    { "speaker": "B", "line": "Let us tell the foreman about the problem." }
+  ],
+  "exercises": {
+    "multipleChoice": [
+      {
+        "prompt": "The machine does not work. It is ___.",
+        "options": ["tight", "broken", "level", "straight"],
+        "answerIndex": 1,
+        "explanation": "Broken means it does not work."
+      },
+      {
+        "prompt": "Water comes out of the pipe. There is a ___.",
+        "options": ["crack", "leak", "size", "team"],
+        "answerIndex": 1,
+        "explanation": "A leak is water coming out."
+      },
+      {
+        "prompt": "The bolt moves and is not tight. It is ___.",
+        "options": ["loose", "fixed", "level", "straight"],
+        "answerIndex": 0,
+        "explanation": "Loose is the opposite of tight."
+      },
+      {
+        "prompt": "The old pipe is bad. We must ___ it.",
+        "options": ["lift", "replace", "push", "wait"],
+        "answerIndex": 1,
+        "explanation": "Replace means put a new one."
+      },
+      {
+        "prompt": "I see a line in the wall. It is a ___.",
+        "options": ["leak", "team", "crack", "size"],
+        "answerIndex": 2,
+        "explanation": "A crack is a line or break in the wall."
+      }
+    ],
+    "fillBlank": [
+      {
+        "prompt": "The drill does not work. It is ___.",
+        "answer": "broken",
+        "hint": "bị hỏng",
+        "explanation": "Broken means not working."
+      },
+      {
+        "prompt": "Use the wrench to make the bolt ___.",
+        "answer": "tight",
+        "hint": "chặt",
+        "explanation": "Tight is the opposite of loose."
+      },
+      {
+        "prompt": "Can you ___ the machine today?",
+        "answer": "fix",
+        "hint": "sửa chữa",
+        "explanation": "Fix means repair."
+      }
+    ],
+    "matching": [
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "broken", "right": "bị hỏng" },
+          { "left": "leak", "right": "rò rỉ" },
+          { "left": "crack", "right": "vết nứt" },
+          { "left": "fix", "right": "sửa chữa" }
+        ]
+      },
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "replace", "right": "thay thế" },
+          { "left": "loose", "right": "lỏng lẻo" },
+          { "left": "tight", "right": "chặt" },
+          { "left": "problem", "right": "vấn đề" }
+        ]
+      }
+    ]
+  },
+  "reviewFocus": ["broken", "leak", "fix", "loose", "tight"]
+}

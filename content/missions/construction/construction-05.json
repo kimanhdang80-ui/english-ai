@@ -1,0 +1,152 @@
+{
+  "id": "construction-05",
+  "trackId": "construction",
+  "order": 5,
+  "title": "Measurements & Sizes",
+  "goal": "Talk about size, length, and measurements on site.",
+  "difficulty": "medium",
+  "estimatedMinutes": 13,
+  "prerequisite": "construction-04",
+  "completionCriteria": {
+    "type": "min_quiz_score",
+    "minQuizScore": 0.8,
+    "summary": "Finish the quiz with at least 80%."
+  },
+  "vocabulary": [
+    {
+      "word": "meter",
+      "ipa": "/ˈmiː.tər/",
+      "meaning": "mét",
+      "example": "The wall is three meters long."
+    },
+    {
+      "word": "centimeter",
+      "ipa": "/ˈsen.tɪˌmiː.tər/",
+      "meaning": "xăng-ti-mét",
+      "example": "Cut ten centimeters off the board."
+    },
+    {
+      "word": "length",
+      "ipa": "/leŋθ/",
+      "meaning": "chiều dài",
+      "example": "What is the length of the pipe?"
+    },
+    {
+      "word": "width",
+      "ipa": "/wɪdθ/",
+      "meaning": "chiều rộng",
+      "example": "The width is one meter."
+    },
+    {
+      "word": "height",
+      "ipa": "/haɪt/",
+      "meaning": "chiều cao",
+      "example": "The height of the wall is two meters."
+    },
+    {
+      "word": "level",
+      "ipa": "/ˈlev.əl/",
+      "meaning": "bằng phẳng, thăng bằng",
+      "example": "Make sure the floor is level."
+    },
+    {
+      "word": "straight",
+      "ipa": "/streɪt/",
+      "meaning": "thẳng",
+      "example": "Keep the line straight."
+    },
+    {
+      "word": "size",
+      "ipa": "/saɪz/",
+      "meaning": "kích thước",
+      "example": "What size do you need?"
+    }
+  ],
+  "dialogue": [
+    { "speaker": "A", "line": "What is the length of this wall?" },
+    { "speaker": "B", "line": "It is three meters long." },
+    { "speaker": "A", "line": "And the width?" },
+    { "speaker": "B", "line": "The width is one meter." },
+    { "speaker": "A", "line": "Good. Cut ten centimeters off the board." },
+    { "speaker": "B", "line": "Okay. Is the line straight?" },
+    { "speaker": "A", "line": "Yes, keep it straight, please." },
+    { "speaker": "B", "line": "What is the height of the door?" },
+    { "speaker": "A", "line": "Two meters. Check that the floor is level." },
+    { "speaker": "B", "line": "The floor is level. The size is correct." }
+  ],
+  "exercises": {
+    "multipleChoice": [
+      {
+        "prompt": "How long is the wall? 'It is three ___ long.'",
+        "options": ["meters", "sizes", "levels", "widths"],
+        "answerIndex": 0,
+        "explanation": "Length is measured in meters."
+      },
+      {
+        "prompt": "Which word means how tall something is?",
+        "options": ["width", "length", "height", "size"],
+        "answerIndex": 2,
+        "explanation": "Height means how tall."
+      },
+      {
+        "prompt": "The floor must be flat. It must be ___.",
+        "options": ["straight", "level", "wide", "long"],
+        "answerIndex": 1,
+        "explanation": "A flat floor is level."
+      },
+      {
+        "prompt": "100 centimeters is equal to one ___.",
+        "options": ["size", "height", "width", "meter"],
+        "answerIndex": 3,
+        "explanation": "100 cm equals 1 meter."
+      },
+      {
+        "prompt": "Keep the line ___, not curved.",
+        "options": ["straight", "level", "wide", "tall"],
+        "answerIndex": 0,
+        "explanation": "Straight means not curved."
+      }
+    ],
+    "fillBlank": [
+      {
+        "prompt": "The wall is three ___ long.",
+        "answer": "meters",
+        "hint": "mét (số nhiều)",
+        "explanation": "Length is measured in meters."
+      },
+      {
+        "prompt": "Please keep the line ___.",
+        "answer": "straight",
+        "hint": "thẳng",
+        "explanation": "Straight means not curved."
+      },
+      {
+        "prompt": "Check that the floor is ___.",
+        "answer": "level",
+        "hint": "bằng phẳng",
+        "explanation": "A level floor is flat."
+      }
+    ],
+    "matching": [
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "meter", "right": "mét" },
+          { "left": "centimeter", "right": "xăng-ti-mét" },
+          { "left": "length", "right": "chiều dài" },
+          { "left": "width", "right": "chiều rộng" }
+        ]
+      },
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "height", "right": "chiều cao" },
+          { "left": "level", "right": "bằng phẳng" },
+          { "left": "straight", "right": "thẳng" },
+          { "left": "size", "right": "kích thước" }
+        ]
+      }
+    ]
+  },
+  "reviewFocus": ["meter", "length", "height", "level", "straight"]
+}

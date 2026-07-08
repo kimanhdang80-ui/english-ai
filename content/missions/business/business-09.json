@@ -1,0 +1,152 @@
+{
+  "id": "business-09",
+  "trackId": "business",
+  "order": 9,
+  "title": "Small Talk at Work",
+  "goal": "Make friendly small talk with colleagues during the workday.",
+  "difficulty": "hard",
+  "estimatedMinutes": 15,
+  "prerequisite": "business-08",
+  "completionCriteria": {
+    "type": "min_quiz_score",
+    "minQuizScore": 0.8,
+    "summary": "Finish the quiz with at least 80%."
+  },
+  "vocabulary": [
+    {
+      "word": "weekend",
+      "ipa": "/ˌwiːkˈend/",
+      "meaning": "cuối tuần",
+      "example": "How was your weekend?"
+    },
+    {
+      "word": "weather",
+      "ipa": "/ˈweð.ər/",
+      "meaning": "thời tiết",
+      "example": "The weather is nice today."
+    },
+    {
+      "word": "busy",
+      "ipa": "/ˈbɪz.i/",
+      "meaning": "bận rộn",
+      "example": "I am busy this week."
+    },
+    {
+      "word": "coffee",
+      "ipa": "/ˈkɒf.i/",
+      "meaning": "cà phê",
+      "example": "Let's get a coffee."
+    },
+    {
+      "word": "break",
+      "ipa": "/breɪk/",
+      "meaning": "giờ nghỉ",
+      "example": "It is time for a break."
+    },
+    {
+      "word": "tired",
+      "ipa": "/taɪəd/",
+      "meaning": "mệt mỏi",
+      "example": "I feel tired today."
+    },
+    {
+      "word": "hobby",
+      "ipa": "/ˈhɒb.i/",
+      "meaning": "sở thích",
+      "example": "My hobby is reading."
+    },
+    {
+      "word": "great",
+      "ipa": "/ɡreɪt/",
+      "meaning": "tuyệt vời",
+      "example": "That's great news!"
+    }
+  ],
+  "dialogue": [
+    { "speaker": "A", "line": "Good morning! How was your weekend?" },
+    { "speaker": "B", "line": "It was great, thank you. And yours?" },
+    { "speaker": "A", "line": "Nice and quiet. The weather was good." },
+    { "speaker": "B", "line": "Yes, the weather is lovely today." },
+    { "speaker": "A", "line": "Are you busy this morning?" },
+    { "speaker": "B", "line": "A little, but I need a break." },
+    { "speaker": "A", "line": "Let's get a coffee together." },
+    { "speaker": "B", "line": "Good idea. I feel a bit tired." },
+    { "speaker": "A", "line": "What is your hobby these days?" },
+    { "speaker": "B", "line": "I like running. It helps a lot." }
+  ],
+  "exercises": {
+    "multipleChoice": [
+      {
+        "prompt": "Saturday and Sunday are the ___.",
+        "options": ["weekend", "office", "invoice", "meeting"],
+        "answerIndex": 0,
+        "explanation": "The weekend is Saturday and Sunday."
+      },
+      {
+        "prompt": "Rain and sun are the ___.",
+        "options": ["weather", "chair", "phone", "email"],
+        "answerIndex": 0,
+        "explanation": "The weather is rain, sun, and so on."
+      },
+      {
+        "prompt": "A short rest at work is a ___.",
+        "options": ["break", "river", "door", "shoe"],
+        "answerIndex": 0,
+        "explanation": "A break is a short rest."
+      },
+      {
+        "prompt": "A thing you like to do for fun is a ___.",
+        "options": ["hobby", "cloud", "hat", "cup"],
+        "answerIndex": 0,
+        "explanation": "A hobby is a fun activity."
+      },
+      {
+        "prompt": "When you have a lot to do, you are ___.",
+        "options": ["busy", "green", "tall", "cold"],
+        "answerIndex": 0,
+        "explanation": "\"Busy\" means having much to do."
+      }
+    ],
+    "fillBlank": [
+      {
+        "prompt": "How was your ___?",
+        "answer": "weekend",
+        "hint": "cuối tuần",
+        "explanation": "The weekend is Saturday and Sunday."
+      },
+      {
+        "prompt": "Let's get a ___ together.",
+        "answer": "coffee",
+        "hint": "cà phê",
+        "explanation": "Coffee is a common work drink."
+      },
+      {
+        "prompt": "I feel a bit ___ today.",
+        "answer": "tired",
+        "hint": "mệt mỏi",
+        "explanation": "\"Tired\" means needing rest."
+      }
+    ],
+    "matching": [
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "weekend", "right": "cuối tuần" },
+          { "left": "weather", "right": "thời tiết" },
+          { "left": "busy", "right": "bận rộn" },
+          { "left": "coffee", "right": "cà phê" }
+        ]
+      },
+      {
+        "instruction": "Match the word to its meaning.",
+        "pairs": [
+          { "left": "break", "right": "giờ nghỉ" },
+          { "left": "tired", "right": "mệt mỏi" },
+          { "left": "hobby", "right": "sở thích" },
+          { "left": "great", "right": "tuyệt vời" }
+        ]
+      }
+    ]
+  },
+  "reviewFocus": ["weekend", "weather", "busy", "break", "hobby"]
+}
