@@ -28,6 +28,9 @@ prisma/*.generated.sql
 # Testing
 coverage
 
+# TypeScript build cache
+*.tsbuildinfo
+
 # Misc
 .DS_Store
 *.pem
